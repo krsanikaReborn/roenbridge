@@ -1,0 +1,103 @@
+<style>
+
+    .psudoCard{
+        width : 424px;
+        min-height: 518px;
+        padding : 40px;
+        border-radius : 10px;
+        display: inline;
+    }
+    #logo{
+        width : 124px;
+        height : 30px;    
+        background-image : url("../image/logo.png");
+        margin-bottom : 40px;
+    }
+    #areaWrapper{        
+        width : 100%;
+        min-height : 1080px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cardWrapper{
+        width : 100%;
+        display : flex;
+        align-items: center;        
+        flex-direction: column;
+        flex-wrap : nowrap;
+        gap : 20px;
+    }
+
+    .socialIcon {
+        width : 44px;
+        height: 44px;
+    }
+
+    .socialIcon.kakao {
+        background-image : url('./image/social_kakao.png');
+        background-size : cover;
+    }
+    .socialIcon.naver {
+        background-image : url('./image/social_naver.png');
+        background-size : cover;
+    }
+    .socialIcon.google {
+        background-image : url('./image/social_google.png');
+        background-size : cover;
+    }
+    .socialIcon.facebook {
+        background-image : url('./image/social_facebook.png');
+        background-size : cover;
+    }
+
+    #socialLoginBox {
+        width : calc(100% - 80px);
+        text-align: center;
+        padding : 30px 40px;        
+    }
+
+    .divideBox{
+        margin : 0;
+    }
+
+    @media screen and (max-width : 578px) {
+        #areaWrapper{
+            min-height: auto;
+        }
+
+        .psudoCard{
+            min-width : 100%;
+        }
+    }
+</style>
+<div id="areaWrapper">
+    <article class="psudoCard">
+        <div class="cardWrapper">
+            <div id="logo" class="pc"></div>            
+            <div class="text2">회원가입</div>    
+            <div class="basicBtn bg_color_primary color_white text-center">이메일로 시작하기</div>
+            <div class="divideBox">
+                <div class="line"></div>
+                <div class="color_black">또는</div>
+            </div>
+            <div id="socialLoginBox" class="bg_gray6 p20">
+                <div class="pd20">소셜계정으로 로그인하기</div>
+                <div class="d-flex space-between w100">
+                    <div class="socialIcon kakao"></div>
+                    <div class="socialIcon naver"></div>
+                    <div class="socialIcon google"></div>
+                    <div class="socialIcon facebook"></div>
+                </div>
+            </div>    
+            <div class="d-flex space-between w100">
+                <div>이미 계정이 있으신가요?</div>
+                <a href="">
+                    <div class="color_primary">로그인하러 가기</div>
+                </a>
+            </div>
+        </div>
+    
+    </article>
+</div>

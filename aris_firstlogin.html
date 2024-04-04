@@ -1,0 +1,129 @@
+<style>
+
+    .psudoCard{
+        min-height: 518px;
+        width : 424px;
+        padding : 40px;
+        border-radius : 10px;
+        display: inline;
+    }
+    #logo{
+        width : 124px;
+        height : 30px;    
+        background-image : url("../image/logo.png");
+        margin-bottom : 40px;
+    }
+    #areaWrapper{        
+        width : 100%;
+        min-height : 1080px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cardWrapper{
+        width : 100%;
+        display : flex;
+        align-items: center;        
+        flex-direction: column;
+        flex-wrap : nowrap;
+        gap : 20px;
+    }
+
+    .userTypeBox{
+        padding : 33px 36px 34px;
+        width : calc(100% - 72px);
+        border-radius : 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color : #f5f5f5;
+    }
+
+    .usertype {
+        line-height: 34px;
+        font-size : 28px;
+        font-weight: 700;
+    }
+
+    #goPrev{
+        color : #F16B6C;
+        border : #F16B6C 2px solid;        
+    }
+
+    #goNext{
+        color : white;
+        background-color: #d1d1d1;
+    }
+    #goNext.active{
+        background-color: #F16B6C;       
+    }
+
+    #btnBox{
+        gap : 24px;
+    }
+
+
+    @media screen and (max-width : 578px) {
+        #areaWrapper{
+            min-height: auto;
+        }
+        .psudoCard{
+            min-width : 100%;
+            padding : 40px;
+        }
+
+        .fs20{
+            font-size : 14px;
+        }
+
+        .usertypeBox > div:first-child{
+            font-size : 20px;
+        } 
+        .userTypeBox > div:last-child{
+            font-size : 12px;
+        }
+        #btnBox{
+            gap : 16px;
+        }
+
+    }
+</style>
+<div id="areaWrapper">
+    <article class="psudoCard">
+        <div class="cardWrapper">
+            <div class="text-center mb3010">
+                <span class="subtitle3">Aris</span>
+                <span class="gray2 fs1412">_프로젝트 의뢰자</span>
+                <br>
+                <span class="subtitle3">정보입력</span>
+            </div>
+            <div class="mb40 text-center fs1612">원활한 서비스 이용을 위해 기본 정보를 입력해주세요.</div>
+            
+            <div class="w100 mb1400">
+                <div class="mb3420 fs1612">
+                    <div class="loginLabel mb1404"><b>이메일</b></div>
+                    <div class="mb14">담당자의 이메일주소를 입력해주세요.</div>
+                    <input id="email" type="email" placeholder="이메일을 입력하세요">
+                </div>
+                <div class="mb3420 fs1612">
+                    <div class="loginLabel mb1404"><b>소속기관명</b></div>
+                    <div class="mb14">소속기관명은 추후 변경할 수 없으니 신중히 작성해주세요.</div>
+                    <input id="company" type="text" placeholder="소속기관명을 입력하세요">
+                </div>
+                <div class="mb3420 fs1612">
+                    <div class="loginLabel mb14"><b>담당자명</b></div>
+                    <input id="company" type="text" placeholder="담당자명을 입력해주세요">
+                </div>
+                <div class="fs1612">
+                    <div class="loginLabel mb14"><b>연락처</b></div>
+                    <input id="company" type="text" placeholder="휴대폰 번호를 입력해 주세요">
+                </div>
+
+            </div>
+            <div class="basicBtn fs2012 fw-bold f-white bg_gray4">기본정보 등록완료</div>
+            <!-- .active 붙이면 색 바뀝니다. -->
+        </div>    
+    </article>
+</div>
+

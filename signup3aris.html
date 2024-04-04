@@ -1,0 +1,203 @@
+<style>
+
+    .psudoCard{
+        min-height: 518px;
+        width : 424px;
+        padding : 40px;
+        border-radius : 10px;
+        display: inline;
+    }
+    #logo{
+        width : 124px;
+        height : 30px;    
+        background-image : url("../image/logo.png");
+        margin-bottom : 40px;
+    }
+    #areaWrapper{        
+        width : 100%;
+        min-height : 1080px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cardWrapper{
+        width : 100%;
+        display : flex;
+        align-items: center;        
+        flex-direction: column;
+        flex-wrap : nowrap;
+        gap : 20px;
+    }
+
+    .userTypeBox{
+        padding : 33px 36px 34px;
+        width : calc(100% - 72px);
+        border-radius : 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color : #f5f5f5;
+    }
+
+    .usertype {
+        line-height: 34px;
+        font-size : 28px;
+        font-weight: 700;
+    }
+
+    #goPrev{
+        color : #F16B6C;
+        border : #F16B6C 2px solid;        
+    }
+
+    #goNext{
+        color : white;
+        background-color: #d1d1d1;
+    }
+    #goNext.active{
+        background-color: #F16B6C;       
+    }
+
+    #btnBox{
+        gap : 24px;
+    }
+
+
+    @media screen and (max-width : 578px) {
+        #areaWrapper{
+            min-height: auto;
+        }
+        .psudoCard{
+            min-width : 100%;
+            padding : 40px;
+        }
+
+        .fs20{
+            font-size : 14px;
+        }
+
+        .usertypeBox > div:first-child{
+            font-size : 20px;
+        } 
+        .userTypeBox > div:last-child{
+            font-size : 12px;
+        }
+        #btnBox{
+            gap : 16px;
+        }
+
+        
+    }
+</style>
+<div id="areaWrapper">
+    <article class="psudoCard">
+        <div class="cardWrapper">
+            <div class="text-center">
+                <span class="subtitle3">Aris</span>
+                <span class="gray2">_프로젝트 의뢰자</span>
+                <br>
+                <span class="subtitle3">회원가입</span>
+            </div>
+            <div class="mb34">
+                <div class="mb34">
+                    <div class="loginLabel mb14"><b>이메일 아이디</b></div>
+                    <input id="email" type="email" placeholder="이메일을 입력하세요">
+                    <!--에러는 필요에 의해 쓰시면 됩니다.-->
+                    <div class="error">이메일이 올바르지 않습니다.</div>
+                    <div class="error">이미 등록되어있는 이메일입니다.</div>    
+                </div>
+                <div class="loginLabel mb14"><b>비밀번호</b></div>
+                <div class="mb14">비밀번호는 숫자 포함 8자 이상으로 입력해주세요.</div>
+                <input id="password" class="mb14" type="password" placeholder="비밀번호를 입력하세요">
+                <input id="passwordConfirm" class="" type="password" placeholder="비밀번호를 한 번 더 입력하세요">
+                <div class="error">비밀번호가 올바르지 않습니다.</div>
+            </div>
+            <div class="w100 checkboxDiv">
+                <input id="chk0" type="checkbox">
+                모든 약관에 동의하기
+            </div>
+            <div class="divideBox m0">
+                <div class="line"></div>
+                <div></div>
+            </div>
+            <div class="w100 checkboxDiv">
+                <input id="chk1" type="checkbox">
+                <a data-remodal-target="modal1" class="color_primary"><u>서비스 이용약관</u></a>에 동의합니다
+            </div>
+            <div class="w100 checkboxDiv">
+                <input id="chk2" type="checkbox">
+                <a data-remodal-target="modal2" class="color_primary"><u>개인정보처리방침</u></a>에 동의합니다
+            </div>
+            <div id="btnBox" class="d-flex space-between w100">
+                <div id="goPrev" class="basicBtn text2">이전으로</div>                
+                <div id="goNext" class="basicBtn text2">다음으로</div>
+                <!-- .active 붙이면 색 바뀜 -->
+            </div>
+        </div>    
+    </article>
+</div>
+
+<div id="modal1" class="remodal" data-remodal-id="modal1">
+    <!-- <button data-remodal-action="close" class="remodal-close"></button> -->
+    <div class="popupTitle">서비스 이용약관</div>
+    <div class="popupTextbox">
+        본 약관에서 다루는 내용<br>
+        본 서비스 약관을 확인하는 것이 번거로울 수 있다는 점은 이해하지만, 귀하가 Google 서비스를 사용하면서 Google에 기대할 수 있는 부분과 Google이 귀하에게 기대하는 부분을 명확히 해 두는 것은 중요합니다.<br>
+        본 서비스 약관에는 Google의 사업 운영 방식, Google에 적용되는 법률, Google이 항상 진실이라고 여기는 특정 내용이 반영되어 있습니다. 따라서 귀하가 Google 서비스와 상호작용하면 본 서비스 약관을 근거로 Google과의 관계가 정의됩니다. 예를 들어, 약관에는 다음과 같은 제목의 주제들이 포함됩니다.<br>
+        Google에 기대할 수 있는 사항. Google이 서비스를 제공 및 개발하는 방법을 설명합니다.<br>
+        Google이 귀하에게 기대하는 사항. Google 서비스 사용과 관련된 일정한 규칙들을 정합니다.<br>
+        Google 서비스 내 콘텐츠. Google 서비스에서 찾을 수 있는 콘텐츠의 지적 재산권에 대해 설명하며, 이러한 콘텐츠의 소유권이 귀하, Google 또는 다른 사람에게 있는지 설명합니다.<br>
+        문제 또는 의견 충돌이 있는 경우. 귀하가 갖는 기타 법적 권리와 타인이 본 약관을 위반했을 때를 대비해 알아 두어야 할 사항을 설명합니다.<br>
+        Google 서비스를 이용함으로써 귀하는 본 약관에 동의하게 되므로 본 약관을 숙지하는 것이 중요합니다.<br>
+        본 약관 외에도 Google은 개인정보처리방침을 게시합니다. 개인정보처리방침은 본 약관에 포함되지는 않지만 정보의 업데이트, 관리, 내보내기 및 삭제 방법을 더 잘 이해하기 위해 읽어 볼 것을 권장합니다.<br>
+        약관<br>
+        서비스 제공자<br>
+        Google 서비스를 제공하고 귀하와 계약을 체결하는 주체는 다음과 같습니다.<br>
+        Google LLC미국 델라웨어주 법률에 따라 설립되고 미국법에 따라 운영됨1600 Amphitheatre ParkwayMountain View, California 94043USA<br>
+        연령 요건<br>
+        Google 계정을 직접 관리할 수 있는 연령 미만인 경우 Google 계정을 사용하기 위해서는 부모 또는 법정대리인의 허락이 필요합니다. 본 약관을 부모 또는 법정대리인과 함께 읽으시기 바랍니다.<br>
+        귀하가 부모 또는 법정대리인으로서 아동이 서비스를 사용하도록 허락하는 경우, 본 약관은 귀하에게 적용되며 서비스 내 아동의 활동에 대해 귀하가 책임을 집니다.<br>
+        일부 Google 서비스에는 서비스별 추가 약관 및 정책에 명시된 추가적인 연령 요건이 적용됩니다.<br>
+        귀하와 Google의 관계<br>
+        본 약관은 귀하와 Google 간의 관계를 정의하는 데 도움이 됩니다. 간단하게 설명하면, 귀하가 Google의 사업 운영 및 수익 창출 방식이 반영된 본 약관을 따르기로 동의할 경우 Google은 귀하가 Google 서비스를 사용할 수 있도록 허락합니다. 본 약관에서 'Google' 또는 '당사'는 Google LLC와 그 계열사를 의미합니다.<br>
+        Google에 기대할 수 있는 사항<br>
+        다양하고 유용한 서비스 제공<br>
+    </div>
+    <div class="remodalBtnArea">
+        <button data-remodal-action="cancel" class="remodal-cancel">닫기</button>
+        <button data-remodal-action="confirm" class="remodal-confirm">동의하기</button>    
+    </div>
+</div>  
+
+<div id="modal2" class="remodal" data-remodal-id="modal2">
+    <!-- <button data-remodal-action="close" class="remodal-close"></button> -->
+    <div class="popupTitle">개인정보 처리방침</div>
+    <div class="popupTextbox">
+        본 약관에서 다루는 내용<br>
+        본 서비스 약관을 확인하는 것이 번거로울 수 있다는 점은 이해하지만, 귀하가 Google 서비스를 사용하면서 Google에 기대할 수 있는 부분과 Google이 귀하에게 기대하는 부분을 명확히 해 두는 것은 중요합니다.
+        본 서비스 약관에는 Google의 사업 운영 방식, Google에 적용되는 법률, Google이 항상 진실이라고 여기는 특정 내용이 반영되어 있습니다. 따라서 귀하가 Google 서비스와 상호작용하면 본 서비스 약관을 근거로 Google과의 관계가 정의됩니다. 예를 들어, 약관에는 다음과 같은 제목의 주제들이 포함됩니다.
+        Google에 기대할 수 있는 사항. Google이 서비스를 제공 및 개발하는 방법을 설명합니다.
+        Google이 귀하에게 기대하는 사항. Google 서비스 사용과 관련된 일정한 규칙들을 정합니다.
+        Google 서비스 내 콘텐츠. Google 서비스에서 찾을 수 있는 콘텐츠의 지적 재산권에 대해 설명하며, 이러한 콘텐츠의 소유권이 귀하, Google 또는 다른 사람에게 있는지 설명합니다.
+        문제 또는 의견 충돌이 있는 경우. 귀하가 갖는 기타 법적 권리와 타인이 본 약관을 위반했을 때를 대비해 알아 두어야 할 사항을 설명합니다.
+        Google 서비스를 이용함으로써 귀하는 본 약관에 동의하게 되므로 본 약관을 숙지하는 것이 중요합니다.
+        본 약관 외에도 Google은 개인정보처리방침을 게시합니다. 개인정보처리방침은 본 약관에 포함되지는 않지만 정보의 업데이트, 관리, 내보내기 및 삭제 방법을 더 잘 이해하기 위해 읽어 볼 것을 권장합니다.
+        약관
+        서비스 제공자
+        Google 서비스를 제공하고 귀하와 계약을 체결하는 주체는 다음과 같습니다.
+        Google LLC미국 델라웨어주 법률에 따라 설립되고 미국법에 따라 운영됨1600 Amphitheatre ParkwayMountain View, California 94043USA
+        연령 요건
+        Google 계정을 직접 관리할 수 있는 연령 미만인 경우 Google 계정을 사용하기 위해서는 부모 또는 법정대리인의 허락이 필요합니다. 본 약관을 부모 또는 법정대리인과 함께 읽으시기 바랍니다.
+        귀하가 부모 또는 법정대리인으로서 아동이 서비스를 사용하도록 허락하는 경우, 본 약관은 귀하에게 적용되며 서비스 내 아동의 활동에 대해 귀하가 책임을 집니다.
+        일부 Google 서비스에는 서비스별 추가 약관 및 정책에 명시된 추가적인 연령 요건이 적용됩니다.
+        귀하와 Google의 관계
+        본 약관은 귀하와 Google 간의 관계를 정의하는 데 도움이 됩니다. 간단하게 설명하면, 귀하가 Google의 사업 운영 및 수익 창출 방식이 반영된 본 약관을 따르기로 동의할 경우 Google은 귀하가 Google 서비스를 사용할 수 있도록 허락합니다. 본 약관에서 'Google' 또는 '당사'는 Google LLC와 그 계열사를 의미합니다.
+        Google에 기대할 수 있는 사항
+        다양하고 유용한 서비스 제공
+    </div>
+    <div class="remodalBtnArea">
+        <button data-remodal-action="cancel" class="remodal-cancel">닫기</button>
+        <button data-remodal-action="confirm" class="remodal-confirm">동의하기</button>    
+    </div>
+</div>  

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+    <title>ROEN BRIDGE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <!-- <link rel="stylesheet" href="normalize.css"> -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/layout.css">
+</head>
+
+<body>
+    <div data-include-path="./header.html"></div>   
+    <section id="main">
+        <div data-include-path="./aris_myproject.html"></div>
+    </section>
+    <div data-include-path="./footer.html"></div>  
+</body>
+<script>
+    window.addEventListener('load', function() {
+        var allElements = document.getElementsByTagName('*');
+        Array.prototype.forEach.call(allElements, function(el) {
+            var includePath = el.dataset.includePath;
+            if (includePath) {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        el.outerHTML = this.responseText;
+                    }
+                };
+                xhttp.open('GET', includePath, true);
+                xhttp.send();
+            }
+        });
+    });    
+
+ </script>
+ 
+<script  src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />  
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>    
+
+<script>
+
+    $(()=>{ 
+        setTimeout(()=>{
+            //햄버거 온오프
+            $('#hamburgerButton').click(()=>{
+                $('#hamburgerButton').toggleClass('close');
+                $('#mMenuArea').toggleClass('active')
+            });
+
+            var bannerSwiper = new Swiper('#bannerSwiper', {
+                grabCursor:true,
+                autoplay : false,
+                pagination : {
+                    el : '.swiper-pagination',
+                    type : 'fraction',
+                },
+                navigation: {
+                    nextEl : '.swiper-button-next',
+                    prevEl : '.swiper-button-prev'
+                },
+
+            });
+
+            var reviewSwiper = new Swiper ('#reviewSwiper', {
+                centeredSlides : true,
+                loop : true,
+                slidesPerView : 'auto',
+                spaceBetween : 24,            
+            });
+
+            //버튼
+            const btn = document.querySelector('.btn-select');
+            const list = document.querySelector('.list-member');
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('on');
+            });
+            list.addEventListener('click', (event) => {
+                if (event.target.nodeName === "BUTTON") {
+                    btn.innerText = event.target.innerText;
+                    btn.classList.remove('on');
+                }
+            });
+
+        }, 1000);
+    });
+</script>
+

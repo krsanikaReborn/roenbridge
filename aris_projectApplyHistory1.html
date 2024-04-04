@@ -1,0 +1,685 @@
+<style> 
+#abbreviation{
+    background-color: #f8f8f8;
+    width : 100%;
+}
+
+#abbreviation > #mainInner {
+    width : 1320px;
+    margin : 0 auto;
+}
+
+#inner2{
+    padding : 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tagArea{
+    display: flex;
+    gap : 13px;
+}
+
+.blacktags > .tag{
+    color :#474747;
+    background :white;
+}
+
+.whitetags > .tag{
+    color : white;
+    background : #474747;
+
+}
+.tags{
+    display: flex;
+    gap : 4px;
+}
+
+.tag{
+    font-size : 12px;
+    padding : 6px 10px;
+    border-radius : 10px;
+    font-weight: 700;
+}
+
+#btnArea{
+    display: flex;
+    gap : 24px;
+}
+
+#btnArea > div:first-child{
+    gap : 24px;
+}
+
+#btnArea .btn{
+    padding : 17px 20px;
+    font-weight : 700;
+    background : white;
+    border-radius : 10px;
+    font-size : 16px;
+    width : 200px;
+    height : 84px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap : 8px;
+}
+
+#btnArea .btn.primary{
+    background : #F16B6C;
+    color : white;
+}
+
+.withSidebarBox{
+    display: flex;
+    width :100%;
+    gap : 112px;
+    max-width: 1320px;
+    margin : 0 auto;
+    position : relative;
+}
+
+#whiteMarginCover{
+    position: absolute;
+    background-color: white;
+    width: 30px;
+    height: 86px;
+    top: 36px;
+    bottom: 0;
+    right: 0;
+    z-index: 1;  
+}
+
+.withSidebarBox > aside{
+    width : 288px;    
+    height : 340px;
+    display : flex;
+    flex-direction: column;
+    align-items: start;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+.withSidebarBox > aside > div {
+    padding : 22px 0;
+}
+
+.withSidebarBox > aside > div.active {
+    color : #F16B6C;
+}
+
+.withSidebarBox > article {
+    width : 964px;
+}
+
+article{
+    padding-top : 50px;
+}
+
+#arisDataArea{
+    display: flex;    
+    gap : 40px;
+}
+
+#aiMatchingArea {
+    display: flex;
+    padding : 30px 40px;    
+    background: #f8f8f8;
+    border-radius : 10px;
+    min-height : 54px;
+    justify-content: space-between;
+}
+
+
+.volunteerBox{
+    border-radius: 10px;
+    border: #e8e8e8 2px solid;
+    height: 104px;
+    padding: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin-bottom: 14px;
+}
+
+.volunteerBox .volunteerPicture{
+    width: 86 px;
+    height: 86px;
+    border-radius: 100px;
+    margin-right: 30px;
+}
+.volunteerBox .volunteerPicture img{
+    width: 86px;
+    height: 86px;
+    border-radius: 100px;
+}
+.volunteerHeader{
+    display: flex;
+}
+.volunteerBox .volunteerName{
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+.volunteerBox .volunteerDetail{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    width: 478px;
+    height: 60px;
+    margin-top: -40px;
+    margin-left: 116px;
+    overflow: hidden;
+    white-space: wrap;
+    word-wrap:break-word;
+    text-overflow: ellipsis;  
+    font-weight: 400;
+    line-height: 20px;
+    color: #474747;
+}
+.volunteerHeader .textBox{
+    display: flex;
+    flex-direction: row;
+}
+.volunteerBox .aiRatingBox{
+    margin-left: 62px;
+    width: 397px;
+    gap: 14px;
+}
+.volunteerBox .aiRatingBox .row{
+    display: flex;
+    justify-content: space-between;
+}
+.volunteerBox .ratingHader{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+.volunteerBox .ratingColumn{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+
+.projectBtn {
+        width : 170px;
+        line-height: 20px;
+        padding: 13px 20px;
+        background-color: white;
+    }
+
+#iconInfo{
+    width : 20px;
+    height : 20px;
+    background-image: url('../image/iconInfo.png');
+    background-size: cover;
+    display : inline-block;
+    position: absolute;
+    right : -30px;
+    top : -2px;
+}
+
+#attachmentFilesBox{
+    display : flex;
+    gap : 24px;
+}
+#attachmentFilesBox > div{
+    display : flex;
+    justify-content: space-between;
+    padding : 15px 20px;
+    box-sizing: border-box;
+    border : #d1d1d1 1px solid;
+    border-radius: 10px;
+}
+
+.iconDown{
+    width : 20px;
+    height : 20px;
+    background-image: url('../image/iconDownload.png');
+    background-size: cover;
+    display : inline-block;
+}
+
+#contentBox{
+    width : 100%;
+    padding : 24px;
+    box-sizing: border-box;
+    border : #d1d1d1 1px solid;
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width : 578px){   
+    #main{
+        max-width: 100% !important;
+    }
+
+    .withSidebarBox{
+        flex-direction: column;
+        gap : 24px;        
+    }
+
+    #abbreviation{
+        position: absolute;
+        z-index: 10;
+    }
+
+    #abbreviation > #mainInner {
+        width: 100%;
+    }       
+    #inner2 {
+        padding : 0;
+        width : 100%;
+        flex-direction: column;
+        overflow: hidden;
+        height : 60px;
+    }
+
+    #inner2 .subtitle3 {
+        padding : 21px 32px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom : 0 !important;
+        box-sizing: border-box;
+    }
+    .foldArrow{
+        width : 20px;
+        height : 20px;
+        background : url('../image/iconArrowDown.png');        
+    }
+
+    .foldArrow.on{
+        background : url('../image/iconArrowUp.png') !important; 
+    }
+
+    .tagArea{
+        margin-top : 14px;
+        padding-left : 32px;
+        padding-right : 32px;
+        margin-bottom : 16px;
+    }
+
+    .tag{
+        font-size : 9px;
+    }
+
+    #userdata{
+        flex-direction: row;
+        padding: 21px 30px;
+        gap : 20px;
+        width: 100%;
+    }
+    #userdata .userImg {
+        margin-bottom: 0;
+    }
+
+    #btnArea {
+        gap : 16px;
+        flex-direction: column;
+        width : calc(100% - 64px);
+        margin : 0 auto;
+        box-sizing: border-box;        
+        padding-bottom : 30px;
+    }
+
+    #btnArea > div:first-child{
+        gap : 16px;
+    }
+    #btnArea .btn{
+        padding : 13px 20px;
+        font-size :12px;
+        width: 100%;   
+        height : 40px;
+        flex-direction: row; 
+    }
+
+
+    .withSidebarBox > aside{      
+        margin-top : 60px;
+        flex-direction: row;
+        width : 100%;
+        height : auto;
+        margin-left : 32px;
+        margin-right : 32px;
+        overflow-x: auto;
+        transform : translateX(0px);
+        -ms-overflow-style: none; /* 인터넷 익스플로러 */
+        scrollbar-width: none; /* 파이어폭스 */        
+    }
+    .withSidebarBox > aside::-webkit-scrollbar {
+        display: none;
+    }
+    .withSidebarBox > aside > div{
+        display: flex;
+        justify-content: center;
+        min-width : 100px;
+        padding : 14px 0;
+        font-size : 14px;
+    }
+    
+    .withSidebarBox > article{
+        width : calc(100% - 64px);
+        margin : 0 auto;
+        padding-top : 0;
+    }
+
+
+    #arisDataArea{
+        flex-direction: column;
+        gap : 10px;
+    }
+
+    #nameArea{
+        gap : 0;
+    }
+
+    #aiMatchingArea{
+        padding: 30px;
+        font-size : 14px;
+        min-height : auto;
+        height : 118px;
+        flex-direction: column;
+    }
+    #aiMatchingArea > div {
+        gap: 10px;
+        float: left;
+        /* margin-right : 20px; */
+    } 
+    #aiMatchingArea .projectBtn{
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    #contentBox{
+        font-size : 12px;
+        padding : 20px;
+    }
+    
+    #attachmentFilesBox{        
+        flex-direction: column;
+        gap : 10px;
+    }
+
+    #asideDivide{
+        margin: 24px 0;
+    }
+
+    .projectTypeBox{
+        width: calc(50% - 8px);
+        height: auto;
+        padding: 20px 35px;
+    }
+    
+    .w6980{
+        width: 80%;
+    }
+
+    .withSidebarBox .basicBtn {
+        width: calc(50% - 8px);
+        margin : 0 !important;
+    }
+    #asideBtnArea{
+        flex-direction: row;
+        gap : 16px;        
+    }
+
+    .mb1203{
+        margin-bottom: 3px;
+    }
+
+
+    .volunteerBox{
+        position: relative;
+        border-radius: 6px;
+        height: 236px;
+        padding: 20px;
+        margin-bottom: 14px;
+        flex-direction: column;
+    }
+
+    .volunteerBox .volunteerPicture{
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    .volunteerBox .volunteerPicture img{
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+    }
+    .volunteerHeader{
+        display: flex;
+        flex-direction: row;
+    }
+    .volunteerHeader .textBox{
+        display: flex;
+        flex-direction: column;
+    }
+    .volunteerBox .volunteerName{
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 4px;
+    }
+
+    .volunteerTypetag{
+        padding: 6px 10px;
+        font-size: 10px;
+        line-height: 12px;
+        gap: 8px;
+        height: 12px;
+    }
+    .volunteerBox .volunteerDetail{
+        -webkit-line-clamp: 5;
+        width: 100%;
+        height: 70px;
+        margin-top: 14px;
+        margin-bottom: 14px;
+        margin-left: 0px;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0px;
+        white-space: normal;
+        word-wrap: break-word;
+
+        text-overflow: ellipsis;
+    }
+    
+    .volunteerBox .aiRatingBox{
+        margin-left: 0px;
+        width: 100%;
+        gap: 10px;
+    }
+    .volunteerBox .aiRatingBox .row{
+        display: flex;
+        justify-content: space-between;
+    }
+    .volunteerBox .aiRatingBox .row:first-child{
+        padding-top: 14px;
+        padding-bottom: 0px;
+        border-top: #e8e8e8 2px solid;
+        border-bottom: 0px;
+    }
+    .volunteerBox .ratingHader{
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .volunteerBox .ratingStarBox img{
+        width: 14px;
+        height: 14px;
+    }
+    .volunteerBox .ratingStarBox img~img{
+        margin-left: 4px;
+    }
+    .volunteerBox .ratingColumn{
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+    }
+}
+
+</style>
+
+<div id="abbreviation">
+    <div id="mainInner">     
+        <div id="inner2">
+            <div>
+                <div class="subtitle3 mb14">
+                    <div class="">Vue.js기반 웹 UX/UI 화면 디자인</div>
+                    <div class="mobile foldArrow"></div>
+                </div>
+                <div class="tagArea">
+                    <div class="whitetags tags">
+                        <div class="tag">기술거래</div>
+                        <div class="tag">디자인</div>
+                    </div>
+                    <div class="blacktags tags">
+                        <div class="tag">UX/UI 디자인</div>
+                        <div class="tag">UX/UI</div>
+                        <div class="tag">Vue.js기반</div>
+                    </div>
+                </div>
+            </div>    
+            <div id="btnArea" class="fs2014">
+                <div class="d-flex">
+                    <div class="btn">
+                        <div>프로젝트 상태</div>
+                        <div class="color_primary">모집</div>
+                    </div>
+                    <div class="btn">
+                        <div>지원자</div>
+                        <div class="color_primary">10명</div>
+                    </div>
+                </div>
+                <div class="btn primary">
+                    <div>PM 매칭 신청</div>
+                </div>
+            </div>
+        </div>   
+    </div>
+</div>
+<div class="withSidebarBox">
+    <div id="whiteMarginCover" class="mobile"></div>
+    <aside id="mAside" class="fs2014">
+        <div class="active">프로젝트 정보</div>
+        <div class="">신청 내역</div>
+        <div class="">미팅</div>
+        <div class="">선정</div>
+        <div class="">평가</div>
+    </aside>
+    <article>
+        <div class="mb20">
+            <div class="fs1814 fw-bold mb2010 pc">신청 내역</div>
+            <div class="fs1814 fw-bold mb2010 mobile">아리스 정보</div>
+            <div id="aiMatchingArea">
+                <div>
+                    <div class="fs1814 fw-bold mb0614">
+                        AI의 베테랑 추천을 받아보세요
+                    </div>
+                    <div class="fs1612">
+                        AI가 프로젝트와 베테랑의 매칭 점수를 산정해 점수가 높은 순서로 추천해드립니다.
+                    </div>
+                </div>
+                <div class="mobile mb0614"></div>
+                <div class="projectBtnBox">
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">AI 매칭받기</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="matchingList">
+            <div class="volunteerBox">
+                <div class="volunteerItem">
+                    <div class="volunteerHeader">
+                        <div class="volunteerPicture">
+                            <img src="../image/IT_tip101t030793 1.png"/>
+                        </div>
+                        <div class="textBox">
+                            <span class="volunteerName">디자이너 이수영</span>
+                            <div class="typeTagList">
+                                <div class="volunteerTypetag">개인&팀</div>
+                                <div class="volunteerTypetag">디자인</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="volunteerDetail fs1612">
+                        10년차 UX/UI 디자이너입니다. 중소기업에서 근무중이며 유동적인 시간 활용이 가능합니다.
+                        UX/UI 프로젝트를 다수 진행하였으니 포트폴리오 확인해보시고 연락주세요. 10년차 UX/UI 디자이너입니다.
+                        중소기업에서 근무중이며 유동적인 시간 활용이 가능합니다. UX/UI 프로젝트를 다수 진행하였으니 포트폴리오 확인하시고...
+                    </div>
+                </div>
+                <div class="aiRatingBox d-flex direction-column">
+                    <div class="d-flex row"><span></span><div class="ratingHader">신청자</div></div>
+                    <div class="d-flex row"><span class="ratingHader">계약한 프로젝트</span><div class="ratingColumn">10건</div></div>
+                    <div class="d-flex row"><span class="ratingHader">평점</span><div class="ratingColumn">4.6</div></div>
+                </div>
+            </div>
+            <div class="volunteerBox">
+                <div class="volunteerItem">
+                    <div class="volunteerHeader">
+                        <div class="volunteerPicture">
+                            <img src="../image/IT_tip1010003681 1.png"/>
+                        </div>
+                        <div class="textBox">
+                            <span class="volunteerName">디자이너 박찬혁</span>
+                            <div class="typeTagList">
+                                <div class="volunteerTypetag">개인&팀</div>
+                                <div class="volunteerTypetag">기획</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="volunteerDetail fs1612">
+                        10년차 UX/UI 디자이너입니다. 중소기업에서 근무중이며 유동적인 시간 활용이 가능합니다. 
+                        UX/UI 프로젝트를 다수 진행하였으니 포트폴리오 확인해보시고 연락주세요. 10년차 UX/UI 디자이너입니다.
+                        중소기업에서 근무중이며 유동적인 시간 활용이 가능합니다. UX/UI 프로젝트를 다수 진행하였으니 포트폴리오 확인하시고...
+                    </div>
+                </div>
+                <div class="aiRatingBox d-flex direction-column">
+                    <div class="d-flex row"><span></span><div class="ratingHader">AI 매칭</div></div>
+                    <div class="d-flex row"><span class="ratingHader">계약한 프로젝트</span><div class="ratingColumn">10건</div></div>
+                    <div class="d-flex row"><span class="ratingHader">평점</span><div class="ratingColumn">4.6</div></div>
+                </div>
+            </div>
+            <div class="volunteerBox">
+                <div class="volunteerItem">
+                    <div class="volunteerHeader">
+                        <div class="volunteerPicture">
+                            <img src="../image/profileDefault.png"/>
+                        </div>
+                        <div class="textBox">
+                            <span class="volunteerName">디자인맥스</span>
+                            <div class="typeTagList">
+                                <div class="volunteerTypetag">개인&법인회사</div>
+                                <div class="volunteerTypetag">기획</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="volunteerDetail fs1612">
+                        10년차 UX/UI 디자이너입니다. 중소기업에서 근무중이며 유동적인 시간 활용이 가능합니다. <br/>
+                        UX/UI 프로젝트를 다수 진행하였으니 포트폴리오 확인해보시고 연락주세요. 10년차 UX/UI 디자이너입니다. <br/>
+                        중소기업에서 근무중이며 유동적인 시간 활용이 가능합니다. UX/UI 프로젝트를 다수 진행하였으니 포트폴리오 확인하시고...
+                    </div>
+                </div>
+                <div class="aiRatingBox d-flex direction-column">
+                    <div class="d-flex row"><span></span><div class="ratingHader">신청자</div></div>
+                    <div class="d-flex row"><span class="ratingHader">계약한 프로젝트</span><div class="ratingColumn">10건</div></div>
+                    <div class="d-flex row"><span class="ratingHader">평점</span><div class="ratingColumn">4.6</div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb7080"></div>
+        
+    </article>
+</div>

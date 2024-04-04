@@ -1,0 +1,959 @@
+<style>  
+.mb2014{
+    margin-bottom: 20px;
+}  
+.mb30{
+    margin-bottom: 30px;
+}
+.mb150100{
+    margin-bottom: 150px;
+}
+.mb4030{
+    margin-bottom: 40px;
+}
+#abbreviation{
+    background-color: #f8f8f8;
+    width : 100%;
+}
+
+#abbreviation > #mainInner {
+    width : 1320px;
+    margin : 0 auto;
+}
+
+#inner2{
+    padding : 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tagArea{
+    display: flex;
+    gap : 13px;
+}
+
+.whitetags > .tag{
+    color : white;
+    background : #474747;
+}
+.tags{
+    display: flex;
+    gap : 4px;
+}
+
+.tag{
+    font-size : 12px;
+    padding : 6px 10px;
+    border-radius : 100px;
+    font-weight: 700;
+}
+
+.graytags.tags{
+    flex-wrap: wrap;
+    gap : 10px;
+}
+.graytags > .tag{
+    color : white;
+    padding : 9px 14px;
+    border-radius : 100px;
+    background : #757575;
+}
+
+#btnArea{
+    display: flex;
+    gap : 24px;
+}
+
+#btnArea > div:first-child{
+    gap : 24px;
+}
+
+#btnArea .btn{
+    padding : 17px 20px;
+    font-weight : 700;
+    background : white;
+    border-radius : 10px;
+    font-size : 16px;
+    width : 200px;
+    height : 84px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap : 8px;
+}
+
+#btnArea .btn.primary{
+    background : #F16B6C;
+    color : white;
+}
+
+.withSidebarBox{
+    display: flex;
+    width :100%;
+    gap : 112px;
+    max-width: 1320px;
+    margin : 0 auto;
+    position : relative;
+}
+
+#whiteMarginCover{
+    position: absolute;
+    background-color: white;
+    width: 30px;
+    height: 86px;
+    top: 36px;
+    bottom: 0;
+    right: 0;
+    z-index: 1;  
+}
+
+.withSidebarBox > aside{
+    margin-top: 30px;
+    width : 288px;    
+    height : 340px;
+    display : flex;
+    flex-direction: column;
+    align-items: start;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+.withSidebarBox > aside > div {
+    padding : 22px 0;
+}
+
+.withSidebarBox > aside > div.active {
+    color : #F16B6C;
+}
+
+.withSidebarBox > article {
+    width : 984px;
+}
+
+article{
+    padding-top : 50px;
+}
+
+#arisDataArea{
+    display: flex;    
+    gap : 40px;
+}
+
+#userdata{
+    width : 348px;
+    box-sizing: border-box;
+    background: #f8f8f8;
+    padding : 22px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#userdata .userImg{
+    width : 64px;
+    height : 64px;
+    border-radius : 32px;
+    background-image : url('../image/profileDefault.png');
+    background-size: cover;
+    margin-bottom : 20px;
+}
+
+#userdata .userTag{
+    background : #474747;
+    color : white;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 13px;
+}
+
+#nameArea{
+    width: 984px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap : 30px;
+    align-items: flex-start;
+    border: #E8E8E8 solid 1px;
+    padding: 30px;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.nameBox{
+    display: flex;
+    align-items: center;
+}
+
+.nameBox > div:first-child {
+    width : 80px;
+    margin-right: 24px;
+}
+.nameBox > div:last-child {
+    width : fit-content;
+    max-width: 803px;
+}
+
+.iconCalPrev{
+    width: 20px;
+    height: 20px;
+    background: url('./image/iconCalPrev.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+#categoryArea{
+    display: flex;
+    flex-wrap : wrap;
+    gap : 16px;
+}
+
+.categoryBox{
+    display: flex;
+    width : 280px;
+    height : 80px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: 700;
+    color : #a3a3a3;
+    border : #a3a3a3 2px solid;
+    background : white;
+    box-sizing: border-box;
+}
+
+.categoryBox.active{
+    border : #F16B6C 2px solid;
+    color : #F16B6C;
+}
+
+
+#expectationsMoney{
+    display: flex;
+    gap : 10px;
+}
+
+#iconInfo{
+    width : 20px;
+    height : 20px;
+    background-image: url('../image/iconInfo.png');
+    background-size: cover;
+}
+
+.veteranHeaderItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.veteranHeaderItem .veteranText{
+    width: 100%;
+}
+.veteranPicture{
+    width: 84px;
+    height: 84px;
+    border-radius: 100px;
+}
+img.union{
+    width: 20px;
+    height: 20px;
+    margin-left: 4px;
+}
+
+.remodal.resource.small{
+    min-height : 318px;
+    padding: 50px 40px 40px;
+    letter-spacing: -0.02em;
+}
+
+.remodal.small{
+    min-height : 244px;
+}
+.remodal.small .popupContent .popupResource{
+    width: 100%;
+} 
+.remodal.small .popupContent{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+} 
+.remodalBtnArea{
+    gap:0px;
+}
+.remodalBtnArea > button:first-child:not(:only-child){
+    margin-right: 24px;
+}
+.smallFlexBox {
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+}
+
+.smallFlexBox.rowBox {
+    align-items: center;
+}
+.smallFlexBox .textBox {
+    gap: 0px;
+}
+
+.smallFlexBox .line {
+    width: 2px;
+    height: 20px;
+    background: #e8e8e8;
+}
+.evaluationBox {
+    width: 984px;
+    border-radius: 10px;
+    border: #e8e8e8 2px solid;
+    height: 194px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.evaluationBox .ratingStarBox img{
+    width: 60px;
+    height: 60px;
+}
+.evaluationBox .ratingStarBox img~img{
+    margin-left: 20px;
+}
+.evaluationBox .textBox{
+    color: #757575;
+}
+
+.profileInfoBox {
+    display: flex;
+    align-items: center;
+}
+
+.profileInfoItem {
+    display: flex;
+    align-items: center;
+}
+
+.profileInfoItem>div {
+    margin-right: 14px;
+}
+.evaluationList{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.evaluationItem {
+    display: flex;
+    padding: 30px;
+    border-radius: 10px;
+    min-height: 54px;
+    justify-content: flex-start;
+    gap:10px;
+}
+
+.evaluationItem.aris{
+    background: #f8f8f8;
+}
+
+.evaluationItem .profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.evaluationItem .profile .profileInfoBox>div {
+    margin-right: 14px;
+}
+
+.evaluationItem .profile .userTypeTag {
+    font-size: 12px;
+    width: fit-content;
+    padding: 6px 10px;
+    gap: 10px;
+    border-radius: 100px;
+}
+
+.evaluationItem.aris .profile .userTypeTag {
+    background-color: #FFFFFF;
+}
+
+.evaluationItem.veteran .profile .userTypeTag {
+    background-color: #f5f5f5;
+}
+
+.evaluationItem img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    margin-right: 14px;
+}
+
+.evaluationItem .dateBox {
+    color: #a3a3a3;
+}
+
+.evaluationItem .evaluationContents {
+    max-width: 814px;
+}
+
+.userName {
+    font-size: 18px;
+    margin: 0;
+}
+.smallEvaluationBox{
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+}
+.smallEvaluationItem{
+    display: flex;
+    gap: 10px;
+    color: #474747;
+}
+
+.grayBox{
+    display: flex;
+    flex-direction: column;
+    padding : 39px;
+    width : 100%;
+    border-radius : 6px;
+    background-color : #f5f5f5;
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    color: #474747;
+}
+
+@media screen and (max-width : 578px){    
+    .mb2014{
+        margin-bottom: 14px;
+    }  
+    .mb150100{
+        margin-bottom: 100px;
+    }
+    .mb4030{
+        margin-bottom: 30px;
+    }
+    #main{
+        max-width: 100% !important;
+    }
+
+    .withSidebarBox{
+        flex-direction: column;
+        gap : 24px;        
+    }
+
+    #abbreviation{
+        position: absolute;
+        z-index: 10;
+    }
+
+    #abbreviation > #mainInner {
+        width: 100%;
+    }       
+    #inner2 {
+        padding : 0;
+        width : 100%;
+        flex-direction: column;
+        overflow: hidden;
+        height : 60px;
+    }
+
+    #inner2 .subtitle3 {
+        padding : 21px 32px 21px 0px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom : 0 !important;
+        box-sizing: border-box;
+    }
+    .foldArrow{
+        width : 20px;
+        height : 20px;
+        background : url('../image/iconArrowDown.png');        
+    }
+
+    .foldArrow.on{
+        background : url('../image/iconArrowUp.png') !important; 
+    }
+
+    .tagArea{
+        margin-top : 14px;
+        margin-left : -44px;
+        /* padding-left : 32px;
+        padding-right : 32px; */
+        margin-bottom : 16px;
+    }
+    .keywordBox.tagArea{
+        margin-left : 0px;
+    }
+    .keywordBox .tag{
+        padding: 8px 14px;
+        font-size : 12px;
+    }
+    .tag{
+        font-size : 9px;
+    }
+
+    #userdata{
+        flex-direction: row;
+        padding: 21px 30px;
+        gap : 20px;
+        width: 100%;
+    }
+    #userdata .userImg {
+        margin-bottom: 0;
+    }
+
+    #btnArea {
+        gap : 16px;
+        flex-direction: column;
+        width : calc(100% - 64px);
+        margin : 0 auto;
+        box-sizing: border-box;        
+        padding-bottom : 30px;
+    }
+
+    #btnArea > div:first-child{
+        gap : 16px;
+    }
+    #btnArea .btn{
+        padding : 13px 20px;
+        font-size :10px;
+        width: 100%;   
+        height : 40px;
+        flex-direction: row; 
+    }
+
+    #btnArea .btn.primary{
+        font-size :12px;
+    }
+
+    .withSidebarBox > aside{      
+        margin-top : 60px;
+        flex-direction: row;
+        width : 100%;
+        height : auto;
+        margin-left : 32px;
+        margin-right : 32px;
+        overflow-x: auto;
+        transform : translateX(0px);
+        -ms-overflow-style: none; /* 인터넷 익스플로러 */
+        scrollbar-width: none; /* 파이어폭스 */        
+    }
+    .withSidebarBox > aside::-webkit-scrollbar {
+        display: none;
+    }
+    .withSidebarBox > aside > div{
+        display: flex;
+        justify-content: center;
+        min-width : 100px;
+        padding : 14px 0;
+        font-size : 14px;
+    }
+    
+    .withSidebarBox > article{
+        width : calc(100% - 64px);
+        margin : 0 auto;
+        padding-top : 0;
+    }
+
+    #arisDataArea{
+        flex-direction: column;
+        gap : 10px;
+    }
+    
+    #userdata > .userImg{
+        float : right;
+    }
+
+    #userDataArea{
+        flex-direction: row;
+    }
+
+    #userdata .userTag {
+        margin-bottom: 6px;
+        margin-left : 0;
+        margin-right : auto;
+        justify-content: start;
+    }
+
+    #nameArea{
+        width: 100%;
+        gap : 20px;
+    }
+
+    #nameArea .nameBox > div:first-child{
+        width: fit-content;
+        gap : 10px;
+    }
+    #nameArea .nameBox:last-child{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap : 20px;
+    }
+
+    #attachmentFilesBox{        
+        flex-direction: column;
+        gap : 10px;
+    }
+
+    .categoryBox{
+        width : calc(50% - 8px);
+        flex-direction: column;
+        border: #e8e8e8 1px solid;
+    }
+
+    #userDataArea > div:last-child{
+        width : calc(100% - 62px);
+    }
+    #userImageBox{
+        width : 40px;
+        height : 40px;
+        margin-right: 22px;        
+    }
+
+    #asideDivide{
+        margin: 24px 0;
+    }
+
+    #userTypeBox{
+        display: flex;
+        margin : 0;
+    }
+    .userTypeTag{
+        font-size : 10px;
+        padding : 6px 10px;
+        margin: 0;
+        margin-right: 10px;
+        width: 19px;
+    }
+    .username{
+        font-size : 20px;
+        margin: 0;
+    }
+
+    .projectTypeBox{
+        width: calc(50% - 8px);
+        height: auto;
+        padding: 20px 35px;
+    }
+    #chargeButton {
+        font-size : 10px;
+    }
+    .w6980{
+        width: 80%;
+    }
+
+    .withSidebarBox .basicBtn {
+        width: calc(50% - 8px);
+        margin : 0 !important;
+    }
+    #asideBtnArea{
+        flex-direction: row;
+        gap : 16px;        
+    }
+
+    .mb1203{
+        margin-bottom: 3px;
+    }
+
+    .veteranHeaderItem{
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .veteranPicture{
+        margin: 13px 0px 13px 32px;
+        width: 34px;
+        height: 34px;
+        border-radius: 100px;
+    }
+    img.union.white{
+        width: 12px;
+        height: 12px;
+    }
+    img.union{
+        width: 14px;
+        height: 14px;
+        margin-left: 4px;
+    }
+
+    .remodal button{
+        width: 110px;
+    }
+
+    .remodal .popupResource{
+        width: 236px;
+        padding: 20px;
+        font-size: 12px;
+    }
+
+    .remodal.resource.small{
+        padding: 20px;
+        min-height : 244px;
+    }
+    .remodal.small .popupContent{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    } 
+    .remodal.small .popupTitle{
+        margin-bottom: 12px;
+    }
+    .remodalBtnArea > button:first-child:not(:only-child){
+        margin-right: 16px;
+    }
+    .smallFlexBox {
+        font-size: 12px;
+        align-items: center;
+    }
+
+    .smallFlexBox.rowBox {
+        gap: 10px;
+    }
+
+    .smallFlexBox>.line {
+        height: 10px;
+    }
+
+    .evaluationList{
+        gap:14px;
+    }
+    .evaluationBox {
+        width: 100%;
+        position: relative;
+        border-radius: 6px;
+        height: 118px;
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .evaluationBox .ratingStarBox img{
+        width: 30px;
+        height: 30px;
+    }
+    .evaluationBox .ratingStarBox img~img{
+        margin-left: 10px;
+    }
+    .smallFlexBox {
+        font-size: 12px;
+    }
+    .profileInfoBox {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .userName {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .evaluationContents{
+        font-size: 12px;
+    }
+    .smallEvaluationBox{
+        gap:10px;
+        flex-direction: column;
+    }
+    
+    .grayBox{
+        padding : 18px;
+    }
+}
+</style>
+
+<div id="abbreviation">
+    <div id="mainInner">     
+        <div id="inner2">
+            <div class="veteranHeaderItem">
+                <img class="veteranPicture" src="./image/IT_tip101t030793 1.png"/>
+                <div class="veteranText">
+                    <div class="subtitle3 mb14">
+                        <div class="">디자이너 이수영</div>
+                        <div class="mobile foldArrow"></div>
+                    </div>
+                    <div class="tagArea">
+                        <div class="whitetags tags">
+                            <div class="tag">베테랑</div>
+                            <div class="tag">개인&팀</div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <div id="btnArea" class="fs2014">
+                <div class="d-flex">
+                    <div class="btn">
+                        <div>진행중인 프로젝트</div>
+                        <div class="color_primary">0건</div>
+                    </div>
+                    <div class="btn">
+                        <div>완료한 프로젝트</div>
+                        <div class="color_primary">10건</div>
+                    </div>
+                </div>
+                <div class="btn primary"  data-remodal-target="suggestionsCase">
+                    <div>프로젝트 제안하기</div>
+                    <div class="d-flex items-center justify-center">100 <img class="union white" src="./image/union_w.png"></div>
+                </div>
+            </div>
+        </div>   
+    </div>
+</div>
+<div class="withSidebarBox">
+    <div id="whiteMarginCover" class="mobile"></div>
+    <aside id="mAside" class="fs2014">
+        <div class="">베테랑 정보</div>
+        <div class="">기술 정보</div>
+        <div class="">포트폴리오</div>
+        <div class="active">프로젝트 이력</div>
+    </aside>
+    <article>
+        <!-- 평가가 있는 경우 -->
+        <div>
+            <div class="header d-flex mb2014">
+                <div class="fs1814 fw-bold">평점</div>
+            </div>
+            <div class="evaluationBox mb4030">
+                <span class="fs2014 fw-bold mb2010">전체 평가 내용의 평균</span>
+                <div class="smallFlexBox rowBox ratingBox">
+                    <div class="ratingStarBox">
+                        <img src="../image/star_rate_big.png"/>
+                        <img src="../image/star_rate_big.png"/>
+                        <img src="../image/star_rate_big.png"/>
+                        <img src="../image/star_rate_big.png"/>
+                        <img src="../image/star_rate_empty_big.png"/>
+                    </div>
+                    <div class="textBox fw-bold fs2014">
+                        <span><span class="color_primary">4</span>/5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mb4020">
+                <div class="mb2014">
+                    <div class="fs1814 fw-bold mb2014">프로젝트별 평가 내용</div>
+                </div>
+                <div class="evaluationList">
+                    <div class="evaluationItem aris d-flex direction-column">
+                        <div class="profile">
+                            <img src="./image/profileDefault.png" />
+                            <div class="profileInfoBox">
+                                <div class="profileInfoItem">
+                                    <div class="fw-bold userName">김유나</div>
+                                    <div class="userTypeTag">아리스</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="evaluationProjectName fw-bold fs1814">Project Alpha</div>
+                        <div class="evaluationContents">요구사항이 적절히 반영되어서 금방 마무리할 수 있었던 것 같습니다.<br/>
+                            프로젝트의 퀄리티나 커뮤니케이션적인 부분들도 잘 챙겨주셔서 만족스러웠습니다. </div>
+                        <div class="smallEvaluationBox">
+                            <div class="smallEvaluationItem">
+                                <div class="fs1612 fw-bold">프로젝트 완료일</div>
+                                <div class="date fs1612">23-10-20</div>
+                            </div>
+                            <div class="smallEvaluationItem">
+                                <div class="fs1612 fw-bold">평점</div>
+                                <div class="rate fs1612">4/5</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="evaluationItem aris d-flex direction-column">
+                        <div class="profile">
+                            <img src="./image/profileDefault.png" />
+                            <div class="profileInfoBox">
+                                <div class="profileInfoItem">
+                                    <div class="fw-bold userName">김유나</div>
+                                    <div class="userTypeTag">아리스</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="evaluationProjectName fw-bold fs1814">Project Delta</div>
+                        <div class="evaluationContents">요구사항이 적절히 반영되어서 금방 마무리할 수 있었던 것 같습니다.<br/>
+                            프로젝트의 퀄리티나 커뮤니케이션적인 부분들도 잘 챙겨주셔서 만족스러웠습니다. </div>
+                        <div class="smallEvaluationBox">
+                            <div class="smallEvaluationItem">
+                                <div class="fs1612 fw-bold">프로젝트 완료일</div>
+                                <div class="date fs1612">23-10-20</div>
+                            </div>
+                            <div class="smallEvaluationItem">
+                                <div class="fs1612 fw-bold">평점</div>
+                                <div class="rate fs1612">4/5</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="mb150100"></div>
+        <!-- 평가가 없는 경우 -->
+        <div>
+            <div class="header d-flex mb2014">
+                <div class="fs1814 fw-bold">평점</div>
+            </div>
+            <div class="evaluationBox mb4030">
+                <span class="fs2014 fw-bold mb2010">전체 평가 내용의 평균</span>
+                <div class="smallFlexBox rowBox ratingBox">
+                    <div class="ratingStarBox">
+                        <img src="../image/star_rate_empty_big.png"/>
+                        <img src="../image/star_rate_empty_big.png"/>
+                        <img src="../image/star_rate_empty_big.png"/>
+                        <img src="../image/star_rate_empty_big.png"/>
+                        <img src="../image/star_rate_empty_big.png"/>
+                    </div>
+                    <div class="textBox fw-bold fs2014">
+                        <span><span class="color_primary">0</span>/5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mb4020">
+                <div class="mb2014">
+                    <div class="fs1814 fw-bold mb2014">프로젝트별 평가 내용</div>
+                </div>
+                <div class="grayBox fs1814 fw-bold">
+                    등록된 평가 내용이 없습니다.
+                </div>
+            </div>
+
+        </div>
+        <div class="mb150100"></div>
+        
+    </article>
+</div>
+<div id="suggestionsCase" class="remodal resource small" data-remodal-id="suggestionsCase">
+    <div class="popupTitle fs1814">포인트가 부족합니다</div>
+    <div class="popupContent fs1612 mb12">
+        프로젝트 제안에는 100포인트가 필요합니다.<br>
+포인트를 충전하시겠습니까?
+    </div>
+    <div class="popupContent">
+        <div class="popupResource color_primary fw-bold">
+            <div>현재 보유 포인트</div> <div class=" d-flex items-center justify-center"><span class="fw-normal color_black">80</span> <img class="union" src="./image/union.png"/></div>
+        </div>
+    </div>
+    <div class="remodalBtnArea">
+        <button data-remodal-action="cancel" class="remodal-cancel">취소</button>
+        <button data-remodal-action="confirm" class="remodal-confirm">충전하기</button>
+    </div>
+</div>
+<!-- 충분한 경우 -->
+<!-- <div id="suggestionsCase" class="remodal resource small" data-remodal-id="suggestionsCase">
+    <div class="popupTitle fs1814">프로젝트 제안하기</div>
+    <div class="popupContent fs1612 mb12">
+        이 베테랑에게 프로젝트를 제안할까요?<br>
+        프로젝트 제안에는 100포인트가 필요합니다.
+    </div>
+    <div class="popupContent">
+        <div class="popupResource color_primary fw-bold">
+            <div>현재 보유 포인트</div> <div class=" d-flex items-center justify-center"><span class="fw-normal color_black">3,000</span> <img class="union" src="./image/union.png"/></div>
+        </div>
+    </div>
+    <div class="remodalBtnArea">
+        <button data-remodal-action="cancel" class="remodal-cancel">취소</button>
+        <button data-remodal-action="confirm" class="remodal-confirm">제안하기</button>
+    </div>
+</div> -->

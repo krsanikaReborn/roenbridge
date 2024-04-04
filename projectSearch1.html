@@ -1,0 +1,1929 @@
+<style>
+.mb3014 {
+    margin-bottom: 30px;
+}
+.mainHeader {
+    display: flex;
+    justify-content: space-between;
+}
+.header.d-flex{
+    align-items: center;
+}
+.header.d-flex .line {
+    width: 2px;
+    height: 14px;
+    background: #e8e8e8;
+}
+
+.topSearchInput{
+    width: 362px;
+    padding: 15px 30px;
+    border-radius: 100px;
+    background: url('./image/iconSearch.png') no-repeat;
+    background-color: #F8F8F8;
+    background-position: 90% 15px;
+    box-sizing: border-box;
+    border: #F8F8F8 0px;
+}
+.searchResultHeader{
+    padding: 0px 0px 0px 30px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F5F5F5;
+    margin-bottom: 14px;
+}
+.list-member {
+    font-size: 16px;
+    top: 45px;
+    line-height: 20px;
+    border-radius: 6px;
+    border: 0px;
+}
+
+.list-member:hover {
+    border: 1px solid #C4C4C4;
+}
+
+.list-member li button {
+    line-height: 20px;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.list-member li button.active{
+    color: white;
+    background-color: #F16B6C;
+}
+
+.list-member li button.active:hover{
+    color: #F16B6C;
+}
+
+.btn-select {
+    border: #E8E8E8 2px solid;
+    color:#A3A3A3;
+
+    font-size: 16px;
+    padding: 15px 20px;
+    line-height: 20px;
+    border-radius: 6px;
+    background-image: url('./image/iconArrowDown.png');
+    background-position: 160px 15px;
+}
+
+.btn-select.on {
+    background-image: url('./image/iconArrowUp.png');
+    background-position: 160px 15px;
+}
+
+.alignList select {
+    width: 200px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: #d1d1d1 1px solid;
+    padding: 20px;
+
+    -o-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+/* .list-member li button:hover, .list-member li button:focus {
+    background-color: #F16B6C;
+    color: white;
+} */
+.alignList option:focus {
+    background-color: #F16B6C;
+    color: white;
+}
+
+.alignList {
+    width: 200px;
+}
+
+
+select::-ms-expand {
+    display: none;
+}
+
+.categoryList .line {
+    display: none;
+}
+
+.longText {
+    width: 75%;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: #d1d1d1 1px solid;
+}
+
+#projectSearchArea{
+    display: flex;
+    flex-direction: column;
+    gap : 14px;
+    margin : 20px 0;
+}
+
+.projectBox{
+    background: #fff;
+    border-radius: 10px;
+    padding : 30px 40px;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width : 100%;
+    box-sizing: border-box;
+    border: #e8e8e8 1px solid;
+    margin-bottom: 14px;
+}
+
+.projectTitleBox{
+    display: flex;
+    justify-content: start;
+    gap : 20px;
+    align-items: center;
+    margin-bottom : 20px;
+}
+
+.projectBtn {
+    width : 170px;
+    line-height: 20px;
+    padding: 13px 20px;
+    background-color: white;
+}
+
+.workTypetag{
+    font-size : 14px;
+    color : white;
+    background-color: #292929;
+    border-radius : 100px;
+    padding : 8px 14px;
+}
+.workTypetag+.workTypetag{
+    margin-left: 20px
+}
+
+
+.volunteerIcon{
+    width : 14px;
+    height : 14px;
+    background-image : url('../image/volunteer.png');
+    background-size: cover;
+    margin-left : 20px;
+    margin-right : 10px;
+}
+
+.projectNow{
+    display : flex;
+    align-items: center;
+}
+
+.projectDataBox{
+    display: flex;
+    justify-content: start;
+    gap : 60px;
+    margin-bottom : 10px;
+}
+#meetingContentBox {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+}
+
+#meetingContentBox>.basicBtn {
+    display: flex;
+    justify-content: center;
+    width: 182px;
+    padding: 15px 20px;
+    color: white;
+    border-radius: 6px;
+    background: #d1d1d1;
+    font-weight: 700;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#meetingContentBox>.basicBtn.active {
+    color: white;
+    background: #F16B6C;
+}
+
+
+#abbreviation {
+    background-color: #f8f8f8;
+    width: 100%;
+}
+
+#abbreviation>#mainInner {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+#inner2 {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tagArea {
+    display: flex;
+    gap: 13px;
+}
+
+.blacktags>.tag {
+    color: #474747;
+    background: white;
+}
+
+.whitetags>.tag {
+    color: white;
+    background: #474747;
+
+}
+
+.tags {
+    display: flex;
+    gap: 4px;
+}
+
+.tag {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+#btnArea {
+    display: flex;
+    gap: 24px;
+}
+
+#btnArea>div:first-child {
+    gap: 24px;
+}
+
+#btnArea .btn {
+    padding: 17px 20px;
+    font-weight: 700;
+    background: white;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 200px;
+    height: 84px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#btnArea .btn.primary {
+    background: #F16B6C;
+    color: white;
+}
+#btnArea .btn.gray {
+    background: #474747;
+    color: white;
+}
+#btnArea .btn.gray>div {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.withSidebarBox {
+    display: flex;
+    width: 100%;
+    gap: 112px;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.withSidebarBox>aside {
+    max-width: 424px;
+    height: 605px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+.withSidebarBox>aside>div.active {
+    color: #F16B6C;
+}
+
+.withSidebarBox>article {
+    width: 984px;
+}
+
+article {
+    padding-top: 50px;
+}
+
+aside#categoryArea{
+    background-color: #F8F8F8;
+    border-radius: 10px;
+    padding: 40px 40px 46px;
+}
+.categoryList{
+    display: flex;
+    flex-wrap : wrap;
+    gap : 14px;
+}
+.categoryBox{
+    display: flex;
+    width : 160px;
+    height : 68px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: 700;
+    color : #a3a3a3;
+    border: 2px solid #E8E8E8;
+    background : white;
+    box-sizing: border-box;
+}
+.categoryBox:nth-child(odd){
+    margin-right: 10px;
+}
+.categoryBox.active{
+    border : #F16B6C 2px solid;
+    color : #F16B6C;
+}
+
+#arisDataArea {
+    display: flex;
+    gap: 40px;
+}
+
+.suggestionsDataBox {
+    display: flex;
+    justify-content: start;
+    gap: 60px;
+    margin-bottom: 24px;
+}
+
+.smallFlexBox {
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+}
+
+.smallFlexBox.regionText {
+    margin-top: -40px;
+    margin-left: 116px;
+}
+
+.smallFlexBox .line {
+    width: 2px;
+    height: 20px;
+    background: #e8e8e8;
+}
+
+.volunteerBox {
+    border-radius: 10px;
+    border: #e8e8e8 2px solid;
+    height: 134px;
+    padding: 30px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    margin-bottom: 14px;
+}
+
+.volunteerBox .volunteerPicture {
+    width: 86px;
+    height: 86px;
+    border-radius: 100px;
+    margin-right: 30px;
+}
+
+.volunteerBox .volunteerPicture img {
+    width: 86px;
+    height: 86px;
+    border-radius: 100px;
+}
+
+.volunteerHeader {
+    display: flex;
+}
+
+.volunteerBox .volunteerName {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+.volunteerBox .volunteerDetail {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    width: 808px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 116px;
+    overflow: hidden;
+    white-space: normal;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    line-height: 20px;
+    color: #474747;
+}
+
+.volunteerHeader .textBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.meetingHistoryList {
+    height: 560px;
+    overflow-y: scroll;
+}
+
+.meetingHistoryList.empty {
+    height: fit-content;
+    background: #f8f8f8;
+    padding: 30px 267.5px;
+    text-align: center;
+}
+
+.meetingHistoryList.empty .title {
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+
+.meetingHistoryList.empty .contents {
+    color: #474747;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.meetingItem {
+    display: flex;
+    padding: 30px;
+    border-radius: 10px;
+    min-height: 54px;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.meetingItem.empty {
+    background: #f8f8f8;
+    padding: 237px 297px;
+    text-align: center;
+}
+
+.meetingItem.empty .title {
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+
+.meetingItem.empty .contents {
+    color: #474747;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.meetingItem.aris {
+    background: #f8f8f8;
+}
+
+.meetingItem.veteran {
+    background: #FFFFFF;
+    border: #E8E8E8 1px solid;
+}
+
+.meetingItem .meetingHeader {
+    display: flex;
+    width: 80px;
+    color: #F16B6C;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    word-break: keep-all;
+    margin-right: 30px;
+}
+
+.meetingItem .profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.meetingItem .profile .profileInfoBox>div {
+    margin-right: 14px;
+}
+
+.meetingItem .profile .userTypeTag {
+    width: fit-content;
+    padding: 6px 10px;
+    gap: 10px;
+    border-radius: 100px;
+}
+
+.meetingItem.aris .profile .userTypeTag {
+    background-color: #FFFFFF;
+}
+
+.meetingItem.veteran .profile .userTypeTag {
+    background-color: #f5f5f5;
+}
+
+.meetingItem img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    margin-right: 14px;
+}
+
+.meetingItem .dateBox {
+    color: #a3a3a3;
+}
+
+.meetingItem .meetingContents {
+    max-width: 814px;
+}
+
+.suggestionsDescript {
+    margin: 0px;
+    white-space: pre-wrap;
+    font-size: 16px;
+}
+
+.volunteerBox .aiRatingBox {
+    margin-left: 62px;
+    width: 397px;
+    gap: 14px;
+}
+
+.volunteerBox .volunteerBtnBox {
+    display: flex;
+    margin-left: -364px;
+    gap: 10px;
+}
+
+.volunteerBox .volunteerBtnBox .volunteerBtn {
+    margin-right: 14px;
+}
+
+.volunteerBox .aiRatingBox .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.volunteerBox .ratingHader {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+.volunteerBox .ratingColumn {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+}
+
+.volunteerBtn {
+    width: 170px;
+    line-height: 20px;
+    padding: 13px 20px;
+    background-color: white;
+}
+
+.volunteerBtn.bg_color_primary {
+    background-color: #F16B6C;
+}
+.meetingBtnBox {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.meetingBtn {
+    float: right;
+    width: 200px;
+    line-height: 20px;
+    padding: 13px 20px;
+}
+
+#iconInfo {
+    width: 20px;
+    height: 20px;
+    background-image: url('../image/iconInfo.png');
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    right: -30px;
+    top: -2px;
+}
+
+#attachmentFilesBox {
+    display: flex;
+    gap: 24px;
+}
+
+#attachmentFilesBox>div {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    border: #d1d1d1 1px solid;
+    border-radius: 10px;
+}
+
+.iconDown {
+    width: 20px;
+    height: 20px;
+    background-image: url('../image/iconDownload.png');
+    background-size: cover;
+    display: inline-block;
+}
+
+#contentBox {
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+    border: #d1d1d1 1px solid;
+    border-radius: 10px;
+}
+
+.iconCalPrev {
+    width: 20px;
+    height: 20px;
+    background: url('./image/iconCalPrev.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.remodal.tall.small { 
+    height: auto;
+    padding: 50px 40px 40px;
+    letter-spacing: -0.02em;
+}
+.remodal.small{
+    height: auto;
+}
+.remodalBtnArea {
+    gap: 0px;
+    margin-top: 30px;
+}
+
+.remodalBtnArea>button:first-child:not(:only-child) {
+    margin-right: 24px;
+}
+
+.popupSmallTitle{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: left;
+    margin-top: 20px;
+}
+.popupSmallContent{
+    margin-top: 4px;
+    text-align: left;
+}
+.remodal .volunteerPicture{
+    margin-right: 14px;
+}
+.remodal .volunteerPicture img{
+    width: 56px;
+    height: 56px;
+    border-radius: 100px;
+}
+.remodal .volunteerTypetag {
+    display: flex;
+    align-items: center;
+    height: 28px;
+    background-color: #FFFFFF;
+    padding: 6px 10px;
+}
+.remodal .typeTagList{
+    margin-bottom: 4px;
+}
+.remodal .volunteerName {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+}
+.remodal .textBox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.remodal .detailInput{
+    width: 90%;
+    box-sizing: border-box;
+}
+.remodal.small .popupTitle {
+    margin-bottom: 14px;
+}
+.popupResource{
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.pagination{    
+    margin : 50px auto;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination > .number{
+    width : 40px;
+    height : 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size : 16px;
+}
+
+.pagination > .number.active{
+    color : white;
+    background-color: #F16B6C;    
+}
+
+.pageIcon{
+    width: 20px;
+    height: 20px;
+}
+.pageIcon.next{
+    background-image : url('../image/pageNextIcon.png');
+    background-size : cover;
+    margin-left : 40px;
+}
+.pageIcon.prev{
+    background-image : url('../image/pagePrevIcon.png');
+    background-size : cover;
+    margin-right : 40px;
+}
+
+@media screen and (max-width : 578px) {
+
+    .mainHeader {
+        flex-direction: column-reverse;
+        gap: 30px
+    }
+    .header.d-flex{
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .searchResultHeader{
+        background-color: #fff;
+        font-size: 14px;
+        line-height: 18px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap:10px;
+    }
+    .meetingSearchList::-webkit-scrollbar{
+        display: none;
+    }
+    .header.mobile {
+        display: flex !important;
+    }
+
+    .topSearchInput{
+        width: 100%;
+        background-position: 90%;
+    }
+    #meetingContentBox {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    #meetingContentBox>.basicBtn {
+        width: 100%;
+        font-size: 12px;
+        height: 44px;
+        padding: 15px 11px;
+        box-sizing: border-box;
+    }
+
+    .longText {
+        font-size: 12px;
+        width: 100%;
+        height: 120px;
+        box-sizing: border-box;
+    }
+
+    #projectSearchArea{
+        margin-left : 0;
+        position: relative;
+    }
+    #projectSearchArea::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -25%; 
+        right: -25%;
+        bottom: 0;
+        background-color: #f8f8f8;
+        z-index: -1; /* content 아래에 위치하도록 */
+    }
+    .projectBox{
+        padding : 20px 24px;
+        font-size : 14px;
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: 20px;
+    }
+    .projectTitleBox{
+        flex-direction: column;
+        width: 100%;
+        align-items: start;
+        gap : 14px;
+        margin-bottom : 14px;
+    }
+
+    .workTypetag{
+        font-size : 10px;
+    }    
+    .workTypetag+.workTypetag{
+        margin-left: 4px;
+    }    
+
+    .volunteerIcon{
+        margin-left : 13px;
+        margin-right : 7px;
+    }
+    .projectDataBox{
+        flex-direction: column;
+        gap : 10px;
+    }
+    .mb3014 {
+        margin-bottom: 14px;
+    }
+
+    #main {
+        max-width: 100% !important;
+    }
+
+    .withSidebarBox {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    #abbreviation {
+        position: absolute;
+        z-index: 10;
+    }
+
+    #abbreviation>#mainInner {
+        width: 100%;
+    }
+
+    #inner2 {
+        padding: 0;
+        width: 100%;
+        flex-direction: column;
+        overflow: hidden;
+        height: 60px;
+    }
+
+    #inner2 .subtitle3 {
+        padding: 21px 32px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 0 !important;
+        box-sizing: border-box;
+    }
+
+    .foldArrow {
+        width: 20px;
+        height: 20px;
+        background: url('../image/iconArrowDown.png');
+    }
+
+    .foldArrow.on {
+        background: url('../image/iconArrowUp.png') !important;
+    }
+
+    .tagArea {
+        margin-top: 14px;
+        padding-left: 32px;
+        padding-right: 32px;
+        margin-bottom: 16px;
+    }
+
+    .tag {
+        font-size: 9px;
+    }
+
+    #btnArea {
+        gap: 16px;
+        flex-direction: column;
+        width: calc(100% - 64px);
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding-bottom: 30px;
+    }
+
+    #btnArea>div:first-child {
+        gap: 16px;
+    }
+
+    #btnArea .btn {
+        padding: 13px 20px;
+        font-size: 12px;
+        width: 100%;
+        height: 40px;
+        flex-direction: row;
+    }
+
+
+    .withSidebarBox>aside {
+        margin-top: 60px;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        margin-left: 32px;
+        margin-right: 32px;
+        overflow-x: auto;
+        transform: translateX(0px);
+    }
+
+    .withSidebarBox>aside>div {
+        display: flex;
+        justify-content: center;
+        width: 100px;
+        padding: 14px 0;
+        font-size: 14px;
+    }
+
+    .withSidebarBox>article {
+        width: calc(100% - 64px);
+        margin: 0 auto;
+        padding-top: 0;
+    }
+
+    #arisDataArea {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #aiMatchingArea {
+        font-size: 14px;
+        min-height: auto;
+        height: 106px;
+    }
+
+    #aiMatchingArea>div {
+        gap: 10px;
+        float: left;
+        margin-right: 20px;
+    }
+
+    #contentBox {
+        font-size: 12px;
+        padding: 20px;
+    }
+
+    #attachmentFilesBox {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #asideDivide {
+        margin: 24px 0;
+    }
+
+    #userTypeBox {
+        display: flex;
+        margin: 0;
+    }
+
+    .userTypeTag {
+        font-size: 10px;
+        padding: 6px 10px;
+        margin: 0;
+        margin-right: 10px;
+        width: 19px;
+    }
+
+    .username {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .projectTypeBox {
+        width: calc(50% - 8px);
+        height: auto;
+        padding: 20px 35px;
+    }
+
+    #chargeButton {
+        font-size: 10px;
+    }
+
+    .w6980 {
+        width: 80%;
+    }
+
+    .withSidebarBox .basicBtn {
+        width: calc(50% - 8px);
+        margin: 0 !important;
+    }
+
+    #asideBtnArea {
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .mb1203 {
+        margin-bottom: 3px;
+    }
+
+    .smallFlexBox {
+        font-size: 12px;
+        align-items: center;
+    }
+
+    .smallFlexBox.rowBox {
+        gap: 10px;
+    }
+
+    .smallFlexBox>.line {
+        height: 10px;
+    }
+
+    .volunteerBox {
+        position: relative;
+        border-radius: 6px;
+        height: 232px;
+        padding: 20px;
+        margin-bottom: 14px;
+        flex-direction: column;
+    }
+
+    .volunteerBox .volunteerPicture {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .volunteerBox .volunteerPicture img {
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+    }
+
+    .volunteerHeader {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .volunteerHeader .textBox {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .volunteerBox .volunteerName {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 4px;
+    }
+
+    .volunteerTypetag {
+        padding: 6px 10px;
+        font-size: 10px;
+        line-height: 12px;
+        gap: 8px;
+        height: 12px;
+    }
+
+    .volunteerBox .volunteerDetail {
+        -webkit-line-clamp: 5;
+        width: 100%;
+        height: 70px;
+        margin-top: 12px;
+        margin-bottom: 14px;
+        margin-left: 0px;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0px;
+        white-space: normal;
+        word-wrap: break-word;
+
+        text-overflow: ellipsis;
+    }
+
+    .volunteerBox .volunteerBtnBox {
+        width: 100%;
+        margin-left: 0px;
+
+        padding-top: 14px;
+        border-top: #f5f5f5 2px solid;
+    }
+
+    .volunteerBox .volunteerBtn {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    #suggestionsArea {
+        padding: 30px;
+        background-color: #f8f8f8;
+    }
+
+    #suggestionsBox {
+        padding: 0px;
+        min-height: 0px;
+    }
+
+    .suggestionsDataBox {
+        gap: 10px;
+    }
+
+    .suggestionsDataBox .textBox .fw-bold {
+        min-width: 44px;
+    }
+
+    #suggestionsArea .suggestionsDataBox {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .smallFlexBox {
+        font-size: 12px;
+    }
+
+    .smallFlexBox.regionText {
+        margin-top: 8px;
+        margin-left: 0px;
+    }
+
+    .suggestionsDescriptBox {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .suggestionsDescript {
+        font-size: 12px;
+        letter-spacing: -1.5px;
+    }
+
+    #suggestionsArea .meetingBtnBox {
+        width: 100%;
+    }
+
+    .meetingBtnBox>a {
+        width: 100%;
+    }
+
+    #suggestionsArea .meetingBtn {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .remodal button {
+        width: 110px;
+    }
+
+    .remodal .popupResource {
+        width: 100%;
+        padding: 20px;
+        font-size: 12px;
+        box-sizing: border-box;
+    }
+
+    .remodal.tall.small {
+        padding: 40px 33px;
+        min-height: 244px;
+    }
+
+    .remodal.small .popupContent {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+        flex-direction: column;
+    }
+
+    .remodal.small .popupTitle {
+        margin-bottom: 12px;
+    }
+
+    .remodalBtnArea>button:first-child:not(:only-child) {
+        margin-right: 16px;
+    }
+
+    .popupSmallTitle{
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .popupSmallContent{
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .remodal .volunteerPicture{
+        margin-right: 14px;
+    }
+    .remodal .volunteerPicture img{
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+    }
+    .remodal .volunteerTypetag {
+        height: 20px;
+        padding: 4px 6px;
+    }
+    .remodal .typeTagList{
+        margin-bottom: 4px;
+    }
+    .remodal .volunteerName {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .remodal .textBox{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .remodal .detailInput{
+        width: 85%;
+        box-sizing: border-box;
+    }
+    .remodal.small .popupTitle {
+        margin-bottom: 14px;
+    }
+    .popupResource{
+        justify-content: flex-start;
+        margin-top: 20px;
+    }
+    .detailInputBox{
+        margin-top: 10px;
+        font-size: 12px;
+    }
+    ul.tabs {
+        width: 100%;
+        border-bottom: #F16B6C 2px solid;
+        border-top: #F16B6C 2px solid;
+        padding: 20px 0px 10px;
+    }
+
+    ul.tabs li {
+        width: 100%;
+        display: flex;
+        padding: 20px;
+        border-radius: 6px;
+        background-color: #f8f8f8;
+        margin-bottom: 10px;
+        align-items: center;
+    }
+
+    .tab-link>div:not(:last-child) {
+        margin-right: 14px;
+    }
+
+    .tab-link .volunteerPicture img {
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+    }
+
+    .tab-link .volunteerName {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 4px;
+    }
+
+    .tab-link .meetingContents {
+        font-weight: 400;
+        height: 28px;
+        width: 158px;
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        word-break: keep-all;
+        text-overflow: ellipsis;
+    }
+
+    .arrowRight {
+        width: 20px;
+        height: 20px;
+        background: url('./image/iconArrowRight.png') no-repeat;
+        background-size: cover;
+    }
+
+    /* 탭 활성화 스타일 */
+    ul.tabs li.current {
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+    }
+
+    /*  .tab-content.current {
+    display: block;
+}*/
+
+    .contactBox{
+        flex-direction: column;
+    } 
+    .meetingHistoryArea.empty {
+        border-bottom: #F16B6C 2px solid;
+        border-top: #F16B6C 2px solid;
+        padding: 20px 0px;
+    }
+
+    .meetingHistoryList.empty {
+        padding: 113px 37px;
+    }
+
+    .meetingHistoryList.empty .title {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .meetingHistoryList.empty .contents {
+        color: #474747;
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+
+    .meetingItem {
+        flex-direction: column;
+    }
+
+    .meetingItem .meetingHeader {
+        width: 100%;
+        font-size: 12px;
+        line-height: 14px;
+        justify-content: flex-start;
+        text-align: right;
+        margin-bottom: 14px;
+    }
+
+    .meetingItem .profile {
+        display: flex;
+        align-items: center;
+        margin-bottom: 14px;
+    }
+
+    .meetingItem .profile .userTypeTag {
+        font-size: 9px;
+        line-height: 12px;
+        width: fit-content;
+        padding: 4px 6px;
+        gap: 10px;
+        border-radius: 100px;
+    }
+
+    .meetingItem.aris .profile .userTypeTag {
+        background-color: #FFFFFF;
+    }
+
+    .meetingItem.veteran .profile .userTypeTag {
+        background-color: #f5f5f5;
+    }
+
+    .meetingItem img {
+        width: 38px;
+        height: 38px;
+        border-radius: 100px;
+        margin-right: 14px;
+    }
+
+    .meetingItem .dateBox {
+        color: #a3a3a3;
+    }
+
+    .meetingItem .meetingContents {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .profileInfoBox {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .profileInfoItem{
+        margin-bottom: 6px;
+    }
+    .profileInfoItem > div{
+        margin-right: 4px;
+    }
+    .userName{
+        font-size: 14px;
+        line-height: 18px;
+    }
+    
+    .list-member {
+        font-size: 12px;
+        bottom: 45px;
+        line-height: 14px;
+        border-radius: 6px;
+        border: 1px solid #C4C4C4;
+        height: max-content;
+    }
+
+    .list-member li button {
+        line-height: 14px;
+        font-size: 12px;
+        padding: 20px;
+    }
+
+    .list-member li button.active{
+        color: #F16B6C;
+        background-color: #fff;
+    }
+    .btn-select {
+        font-size: 12px;
+        padding: 15px 20px;
+        line-height: 14px;
+        border-radius: 6px;
+        background-position: 95% 15px;
+    }
+
+    .btn-select.on {
+        background-position: 95% 15px;
+    }
+
+    .alignList select {
+        width: 100%;
+        font-size: 12px;
+        border-radius: 6px;
+        border: #d1d1d1 1px solid;
+        padding: 20px;
+
+        -o-appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    .alignList option:focus {
+        background-color: #F16B6C;
+        color: white;
+    }
+
+    .alignBox,
+    .alignList {
+        width:  100%;
+    }
+
+
+    .meetingItem.empty {
+        padding: 235px 37px;
+    }
+
+    .meetingItem.empty .title {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .meetingItem.empty .contents {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .category-select{
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .category-select .btn-select.on+.list-member{
+        position: absolute;
+        width: 100vw;
+        top: 40px;
+        left: -10%;
+        display: flex;
+        flex-wrap : wrap;
+        gap : 16px;
+        justify-content: center;
+        z-index: 100;
+        border: 0px;
+        box-shadow: 0px 10px 20px 0px #00000014;
+        padding: 10px 32px 20px;
+    }
+    .category-select .btn-select{
+        background-image: url('./image/arrowDown.png');
+        background-color: #F8F8F8;
+        border: 0px;
+        padding: 16px 0px;
+        color: #292929;
+    }
+    .category-select .btn-select::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -50px; /* 좌우로 더 넓은 부분을 조절 */
+        right: -50px; /* 좌우로 더 넓은 부분을 조절 */
+        bottom: 0;
+        background-color: #F8F8F8; /* 원하는 배경색 설정 */
+        z-index: -1; /* content 아래에 위치하도록 */
+    }
+    .category-select .btn-select.on{
+        background-image: url('./image/arrowUp.png');
+    }
+    .categoryList{
+        display: none;
+        background: #F8F8F8;
+    }
+    .categoryBox{
+        width : 140px;
+        height : 64px;
+        border-radius: 6px;
+        padding: 14px 0px;
+    }
+
+    .categoryList>.categoryBox:nth-child(odd){
+        margin-bottom: 0px;
+        margin-right: 0px;
+    }
+    .categoryBox.active{
+        border : #F16B6C 2px solid;
+        color : #F16B6C;
+    }
+
+    .emptyBox {
+        width : 140px;
+        height : 64px;
+        border-radius: 6px;
+        padding: 14px 0px;                
+    }
+
+    .pagination{
+        gap: 10px;
+        margin: 30px 0;
+        justify-content: space-between;
+    }
+    
+    .pagination > .number{
+        width : 24px;
+        height : 24px;
+        font-size : 12px;
+        border-radius: 5px;
+    }
+
+    .pageIcon{
+        width: 24px;
+        height: 24px;
+    }
+    .pageIcon.next{
+        margin-left : 40px;
+    }
+    .pageIcon.prev{
+        margin-right : 40px;
+    }    
+
+    .pagination > .number.active{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        color: #474747;
+
+        background-color: transparent;    
+    }
+
+    .pageIcon.next{
+        background-image : url('../image/pageNextIcon_b.png');
+        background-size : cover;
+        margin-left : 40px;
+    }
+    .pageIcon.prev{
+        background-image : url('../image/pagePrevIcon_g.png');
+        background-size : cover;
+        margin-right : 40px;
+    }
+}
+</style>
+<div class="withSidebarBox">
+    <aside id="categoryArea" class="pc">
+        <div class="fs1814 fw-bold mb20">카테고리</div>
+        <div class="categoryList" class="fs1614">
+            <div class="categoryBox active">
+                <div>전체</div>
+            </div>
+            <div class="categoryBox">
+                <div>기술 및&nbsp;</div><div>마켓 조사분석</div>
+            </div>
+            <div class="categoryBox">
+                R&D
+            </div>
+            <div class="categoryBox">
+                <div>기술권리화</div><div>(특허 등)</div>
+            </div>
+            <div class="categoryBox">
+                서비스 디자인
+            </div>
+            <div class="categoryBox">
+                마케팅
+            </div>
+            <div class="categoryBox">
+                프로토타입
+            </div>
+            <div class="categoryBox">
+                <div>자금조달</div><div>(투자유치 등)</div>
+            </div>
+            <div class="categoryBox">
+                글로벌 진출
+            </div>
+            <div class="categoryBox">
+                <div>기술사업화 BM&nbsp;</div><div>기획 및 전략</div>
+            </div>
+            <div class="categoryBox">
+                기타
+            </div>
+            <div style="clear:both"></div>
+        </div>   
+    </aside>
+    <article>
+        <div class="mb20">
+            <div class="mainHeader mb2010">
+                <div class="header smallFlexBox d-flex">
+                    <div class="fs2016 fw-bold color_primary">검색 결과</div>
+                    <div class="line pc"></div>
+                    <div class="fs1814">
+                        나에게 맞는 프로젝트를 검색해보세요.
+                    </div>
+                </div>
+                <div class="searchInputBox fs1612">
+                    <input class="topSearchInput" type="text" placeholder="프로젝트를 검색해보세요"/>
+                </div>
+            </div>
+        </div>
+        <div class="category-select mobile">
+            <button class="btn-select">카테고리 선택</button>
+            <div class="categoryList list-member fs1614">
+                <div class="categoryBox active">
+                    <div>전체</div>
+                </div>
+                <div class="categoryBox">
+                    <div>기술 및&nbsp;</div><div>마켓 조사분석</div>
+                </div>
+                <div class="categoryBox">
+                    R&D
+                </div>
+                <div class="categoryBox">
+                    <div>기술권리화</div><div>(특허 등)</div>
+                </div>
+                <div class="categoryBox">
+                    서비스 디자인
+                </div>
+                <div class="categoryBox">
+                    마케팅
+                </div>
+                <div class="categoryBox">
+                    프로토타입
+                </div>
+                <div class="categoryBox">
+                    <div>자금조달</div><div>(투자유치 등)</div>
+                </div>
+                <div class="categoryBox">
+                    글로벌 진출
+                </div>
+                <div class="categoryBox">
+                    <div>기술사업화 BM&nbsp;</div><div>기획 및 전략</div>
+                </div>
+                <div class="categoryBox">
+                    기타
+                </div>
+                <div class="emptyBox">                    
+                </div>
+            </div>
+        </div>
+        <div class="searchResultHeader d-flex">
+            <div class="searchCountBox">
+                총 <span class="fw-bold">40건</span> 의 검색 결과가 있습니다.
+            </div>
+            <div class="alignBox d-flex space-between items-center">
+                <div class="alignList cont-select">
+                    <button class="btn-select">최신순</button>
+                    <ul class="list-member">
+                        <li><button type="button" class="active">최신순</button></li>
+                        <li><button type="button">마감일 빠른 순</button></li>
+                        <li><button type="button">마감일 느린 순</button></li>
+                        <li><button type="button">금액 높은 순</button></li>
+                        <li><button type="button">금액 낮은 순</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <div class="projectSearchArea">
+                <div class="projectSearchList">
+                    <div class="projectBox" data-remodal-target="loginCase">
+                        <div class="projectContentBox">
+                            <div class="projectTitleBox">
+                                <div class="subtitle3">Vue.js 기반 웹 UX/UI 화면 디자인</div>
+                                <div class="projectNow">
+                                    <div class="workTypetag">서비스 디자인</div>
+                                    <div class="workTypetag">디자인</div>
+                                    <div class="volunteerIcon"></div>
+                                    <div class="fs1612">0명 지원</div>
+                                </div>
+                            </div>
+                            <div class="projectDataBox fs1612">
+                                <div class="smallFlexBox">
+                                    <div class="fw-bold">예상 기간</div>
+                                    <div class="">30일</div>
+                                </div>
+                                <div class="smallFlexBox">
+                                    <div class="fw-bold">예상 금액</div>
+                                    <div class="">4,000,000원</div>
+                                </div>
+                                <div class="smallFlexBox rowBox">
+                                    <div class="fw-bold">지원 마감일</div>
+                                    <div class="">2023-10-17</div>
+                                    <div class="line"></div>
+                                    <div class="">1일 남음</div>
+                                </div>
+                            </div>
+                            <div class="projectDescriptBox">
+                                본 프로젝트는 기존 1차 개발 적용한 vue.js 화면에 대한 리뉴얼 작업입니다. 당사가 직접 개발한 SW를 판매 및 서비스합니다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projectBox"  data-remodal-target="loginCase">
+                        <div class="projectContentBox">
+                            <div class="projectTitleBox">
+                                <div class="subtitle3">Vue.js 기반 웹 UX/UI 화면 디자인</div>
+                                <div class="projectNow">
+                                    <div class="workTypetag">서비스 디자인</div>
+                                    <div class="workTypetag">디자인</div>
+                                    <div class="volunteerIcon"></div>
+                                    <div class="fs1612">0명 지원</div>
+                                </div>
+                            </div>
+                            <div class="projectDataBox fs1612">
+                                <div class="smallFlexBox">
+                                    <div class="fw-bold">예상 기간</div>
+                                    <div class="">30일</div>
+                                </div>
+                                <div class="smallFlexBox">
+                                    <div class="fw-bold">예상 금액</div>
+                                    <div class="">4,000,000원</div>
+                                </div>
+                                <div class="smallFlexBox rowBox">
+                                    <div class="fw-bold">지원 마감일</div>
+                                    <div class="">2023-10-17</div>
+                                    <div class="line"></div>
+                                    <div class="">1일 남음</div>
+                                </div>
+                            </div>
+                            <div class="projectDescriptBox">
+                                본 프로젝트는 기존 1차 개발 적용한 vue.js 화면에 대한 리뉴얼 작업입니다. 당사가 직접 개발한 SW를 판매 및 서비스합니다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projectBox" data-remodal-target="loginCase">
+                        <div class="projectContentBox">
+                            <div class="projectTitleBox">
+                                <div class="subtitle3">Vue.js 기반 웹 UX/UI 화면 디자인</div>
+                                <div class="projectNow">
+                                    <div class="workTypetag">서비스 디자인</div>
+                                    <div class="workTypetag">디자인</div>
+                                    <div class="volunteerIcon"></div>
+                                    <div class="fs1612">0명 지원</div>
+                                </div>
+                            </div>
+                            <div class="projectDataBox fs1612">
+                                <div class="smallFlexBox">
+                                    <div class="fw-bold">예상 기간</div>
+                                    <div class="">30일</div>
+                                </div>
+                                <div class="smallFlexBox">
+                                    <div class="fw-bold">예상 금액</div>
+                                    <div class="">4,000,000원</div>
+                                </div>
+                                <div class="smallFlexBox rowBox">
+                                    <div class="fw-bold">지원 마감일</div>
+                                    <div class="">2023-10-17</div>
+                                    <div class="line"></div>
+                                    <div class="">1일 남음</div>
+                                </div>
+                            </div>
+                            <div class="projectDescriptBox">
+                                본 프로젝트는 기존 1차 개발 적용한 vue.js 화면에 대한 리뉴얼 작업입니다. 당사가 직접 개발한 SW를 판매 및 서비스합니다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projectBox" data-remodal-target="loginCase">
+                        <div class="projectContentBox">
+                            <div class="projectTitleBox">
+                                <div class="subtitle3">Vue.js 기반 웹 UX/UI 화면 디자인</div>
+                                <div class="projectNow">
+                                    <div class="workTypetag">서비스 디자인</div>
+                                    <div class="workTypetag">디자인</div>
+                                    <div class="volunteerIcon"></div>
+                                    <div class="fs1612">0명 지원</div>
+                                </div>
+                            </div>
+                            <div class="projectDataBox fs1612">
+                                <div class="smallFlexBox">
+                                    <div class="fw-bold">예상 기간</div>
+                                    <div class="">30일</div>
+                                </div>
+                                <div class="smallFlexBox">
+                                    <div class="fw-bold">예상 금액</div>
+                                    <div class="">4,000,000원</div>
+                                </div>
+                                <div class="smallFlexBox rowBox">
+                                    <div class="fw-bold">지원 마감일</div>
+                                    <div class="">2023-10-17</div>
+                                    <div class="line"></div>
+                                    <div class="">1일 남음</div>
+                                </div>
+                            </div>
+                            <div class="projectDescriptBox">
+                                본 프로젝트는 기존 1차 개발 적용한 vue.js 화면에 대한 리뉴얼 작업입니다. 당사가 직접 개발한 SW를 판매 및 서비스합니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pagination">
+                    <div class="pageIcon prev"></div>
+                    <div class="number active">1</div>
+                    <div class="number">2</div>
+                    <div class="number">3</div>
+                    <div class="number">4</div>
+                    <div class="number">5</div>
+                    <div class="pageIcon next"></div>
+                </div>
+            </div>
+        <div class="pb140"></div>
+        <!-- 데이터가 없는 경우 -->
+        <div class="mt20 mb20">
+
+            <div class="mb20">
+                <div class="mainHeader mb2010">
+                    <div class="header smallFlexBox d-flex">
+                        <div class="fs2016 fw-bold color_primary">검색 결과</div>
+                        <div class="line pc"></div>
+                        <div class="fs1814">
+                            나에게 맞는 프로젝트를 검색해보세요.
+                        </div>
+                    </div>
+                    <div class="searchInputBox fs1612">
+                        <input class="topSearchInput" type="text" placeholder="프로젝트를 검색해보세요"/>
+                    </div>
+                </div>
+            </div>
+            <div class="searchResultHeader d-flex">
+                <div class="searchCountBox">
+                    총 <span class="fw-bold">0건</span> 의 검색 결과가 있습니다.
+                </div>
+                <div class="alignBox d-flex space-between items-center">
+                    <div class="alignList cont-select">
+                        <button class="btn-select">최신순</button>
+                        <ul class="list-member">
+                            <li><button type="button" class="active">최신순</button></li>
+                            <li><button type="button">마감일 빠른 순</button></li>
+                            <li><button type="button">마감일 느린 순</button></li>
+                            <li><button type="button">금액 높은 순</button></li>
+                            <li><button type="button">금액 낮은 순</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="projectSearchArea empty">
+                <div class="projectSearchList empty">
+                    검색 결과에 맞는 프로젝트가 없습니다.
+                </div>
+            </div>
+        </div>
+</div>
+<div class="pb140"></div>
+</article>
+</div>
+
+<div id="loginCase" class="remodal small" data-remodal-id="loginCase">
+    <!-- <button data-remodal-action="close" class="remodal-close"></button> -->
+    <div class="popupTitle">로그인이 필요한 서비스입니다.</div>
+    <div class="popupContent fs1612 mb12">
+        로그인 페이지로 이동하시겠습니까?
+    </div>
+    <div class="remodalBtnArea">
+        <button data-remodal-action="cancel" class="remodal-cancel">취소</button>
+        <button data-remodal-action="confirm" class="remodal-confirm">확인</button>
+    </div>
+</div>

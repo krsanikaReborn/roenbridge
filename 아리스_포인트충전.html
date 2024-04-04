@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+    <title>ROEN BRIDGE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <!-- <link rel="stylesheet" href="normalize.css"> -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/layout.css">
+</head>
+
+<body>
+    <div data-include-path="./header.html"></div>   
+    <section id="main">
+        <div data-include-path="./aris_point1.html"></div>
+    </section>
+    <div data-include-path="./footer.html"></div>  
+</body>
+<script>
+    window.addEventListener('load', function() {
+        var allElements = document.getElementsByTagName('*');
+        Array.prototype.forEach.call(allElements, function(el) {
+            var includePath = el.dataset.includePath;
+            if (includePath) {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        el.outerHTML = this.responseText;
+                    }
+                };
+                xhttp.open('GET', includePath, true);
+                xhttp.send();
+            }
+        });
+    });    
+ </script>
+ 
+<script  src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />  
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>    
+
+<script>
+let money = 10000;
+
+    $(()=>{ 
+        setTimeout(()=>{
+            //햄버거 온오프
+            $('#hamburgerButton').click(()=>{
+                $('#hamburgerButton').toggleClass('close');
+                $('#mMenuArea').toggleClass('active')
+            });
+
+            var bannerSwiper = new Swiper('#bannerSwiper', {
+                grabCursor:true,
+                autoplay : false,
+                pagination : {
+                    el : '.swiper-pagination',
+                    type : 'fraction',
+                },
+                navigation: {
+                    nextEl : '.swiper-button-next',
+                    prevEl : '.swiper-button-prev'
+                },
+
+            });
+
+            var reviewSwiper = new Swiper ('#reviewSwiper', {
+                centeredSlides : true,
+                loop : true,
+                slidesPerView : 'auto',
+                spaceBetween : 24,            
+            });
+
+
+            $('.radioSelector').click(e=>{
+                $('.radioSelector').removeClass('active');
+                $('.radio').removeClass('active');                
+                $(e.target).addClass('active');
+                $(e.target).find('.radio').addClass('active');
+                money = $(e.target).attr('data-current');
+                $('#currency').html(money.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));                
+            });
+            $('#agreeBox').click(e=>{
+                $('#agree').toggleClass('active');
+
+                //버튼활성화
+                if($('#agree').prop('checked')){
+                    $('#goPurchase').addClass('active');
+                    //버튼클릭 시 해야할 동작 넣는곳. point에 결제액 들어있습니다.
+                }else{
+                    $('#goPurchase').removeClass('active');
+                }
+            });
+
+        }, 1000);
+
+
+
+    });
+</script>
+

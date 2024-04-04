@@ -1,0 +1,467 @@
+<style>
+
+#addProjectHeader{
+    width : 1320px;
+    margin : 0 auto;
+}
+
+#addHeaderTitleBox{
+    margin-top : 50px;
+    margin-bottom : 36px;
+    max-width : 1320px;
+    display : flex;
+    justify-content: center;
+}
+
+#addGuageBox{
+    width : 1320px;
+    margin : 0 auto;
+    position: relative;
+}
+
+#grayGuage{
+    background : #f5f5f5;
+    width : 100%;
+    height : 6px;
+    border-radius: 3px;
+}
+
+#progress1{
+    width : calc((100% / 5) * 0 + (100% / 5 / 2) + 60px);
+    height : 6px;
+    background: #F16B6C;
+}
+#progress2{
+    width : calc((100% / 5) * 1 + (100% / 5 / 2) + 30px);
+    height : 6px;
+    background: #F16B6C;
+}
+
+.progressGuage{    
+    position : absolute;
+    height : 6px;
+    background: #F16B6C;    
+    border-radius: 3px;
+    top : 0;
+}
+
+#progressDot{
+    position : absolute;
+    width : 18px;
+    height : 18px;
+    top: -6px;
+    right: -6px;
+    border-radius : 10px;
+    background: #F16B6C;
+}
+
+#progressContent{
+    display: flex;
+    justify-content: space-evenly;
+    width : 100%;
+    margin-top : 14px;
+    margin-bottom : 24px;
+    color : #a3a3a3;
+    font-size : 16px;    
+}
+#progressContent .active{
+    color : #F16B6C;
+    font-weight: 700;
+}
+
+article {
+    width : 100%; 
+    background : #f8f8f8;
+    padding-top: 40px;
+}
+
+#mainInner{
+    width : 872px;
+    margin : 0 auto;
+}
+
+input .longText{
+    width : 100%;
+    padding : 15px 20px;
+    font-size : 16px;
+    border-radius : 6px;
+    border : #d1d1d1 1px solid;
+}
+
+.lastMargin{
+    width : 100%;
+    height : 208px;
+}
+
+#categoryArea{
+    display: flex;
+    flex-wrap : wrap;
+    gap : 16px;
+}
+
+.categoryBox{
+    display: flex;
+    width : 280px;
+    height : 80px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: 700;
+    color : #a3a3a3;
+    border : #a3a3a3 2px solid;
+    background : white;
+    box-sizing: border-box;
+}
+
+.categoryBox.active{
+    border : #F16B6C 2px solid;
+    color : #F16B6C;
+}
+
+#keywordArea{
+    display: flex;
+    flex-wrap : wrap;
+    gap : 20px;
+}
+.keywords{
+    background : white;
+    padding : 8px 20px;
+    border-radius : 10px;
+    font-weight: 700;   
+    font-size : 14px;
+    display: flex;
+    align-items: center;
+    gap : 10px;
+}
+
+.keywords.none{
+    font-weight: 400;
+    color : #a3a3a3;
+}
+
+.removeKeyword{
+    display : inline-block;
+    background-image : url('../image/iconClose.png');
+    background-size : cover;
+    width : 20px;
+    height : 20px;
+}
+
+#directService{
+    display: flex;
+    gap : 10px;
+}
+
+#directService > input{
+    width : 20px !important;
+    height : 20px !important;
+}
+
+#persenalInfo{
+    display: flex;
+    gap : 24px;
+}
+
+#persenalInfo > div{
+    width : 50%;
+    background : white;
+    border-radius: 6px;
+    border : #e8e8e8 2px solid;
+    color : #e8e8e8;
+    font-weight : 700;
+    padding : 23px;
+    display: flex;
+    justify-content: center;
+}
+
+#persenalInfo > div.active{
+    border : #F16B6C 2px solid;
+    color : #F16B6C;
+}
+
+#techInfo{
+    display: flex;
+    gap : 24px;
+}
+
+#techInfo > div{
+    width : 50%;
+    background : white;
+    border-radius: 6px;
+    border : #e8e8e8 2px solid;
+    color : #474747;
+    text-align: center;
+    padding : 30px;
+    gap : 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;    
+}
+
+#prevNextController{
+    width : 872px;
+    margin : 0 auto;
+    display: flex;   
+    justify-content: center;
+    gap : 40px;
+}
+
+#prevNextController > div{
+    display: flex;   
+    justify-content: center;
+    width : 200px;
+    padding : 15px 20px;
+    color : white;
+    border-radius : 10px;
+    background : #d1d1d1;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+
+#prevNextController > div.back{
+    color : #F16B6C;
+    border : #F16B6C 2px solid;
+    background : white;
+}
+
+#prevNextController > div.active{
+    color : white;
+    border : #F16B6C 2px solid;
+    background : #F16B6C;
+}
+
+#dragArea{
+    width : 100%;
+    min-height : 172px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: white;
+    color : #a3a3a3;
+    padding : 44px 132px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#dragArea > div {
+    margin-bottom : 10px;
+}
+
+#dragArea > div:nth-child(2){
+    display :flex;   
+}
+
+.iconPlus{
+    background: url('../image/iconPlus.png');
+    width : 24px;
+    height : 24px;
+}
+
+.files{
+
+}
+
+.files > div {
+    gap : 24px;
+}
+.files > div > div:first-child {
+    width : 100%;
+    background: white;
+    border : #d1d1d1 1px solid;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding : 15px 20px;
+}
+
+.files .basicBtn{
+    width : 200px;
+}
+
+.iconCloseWhite{    
+    background-image : url('../image/iconCloseWhite.png');
+    background-size : cover;
+    width : 20px;
+    height : 20px;
+}
+
+
+
+
+@media screen and (max-width : 578px){    
+    #addProjectHeader{
+        max-width : calc(100% - 64px);
+        margin : 0 auto;
+    }
+    #main {
+       max-width : 100% !important;
+    }
+    article {
+        width : 100%;
+    }
+    #mainInner{
+        max-width : calc(100% - 64px);
+    }
+    #addHeaderTitleBox{
+        margin-top : 24px;
+        margin-bottom : 14px;
+        max-width : 100%;
+        justify-content: space-between;
+    }
+
+    #mProgress{
+        font-size : 14px;
+        font-weight: 700;
+        margin-bottom : 24px;
+    }
+
+    #categoryArea{
+        flex-wrap : nowrap;
+        gap : 7px;
+    }
+
+    .categoryBox{
+        width : calc(33%);
+        height : 64px;
+        border: #e8e8e8 1px solid;
+    }
+
+    #dragArea{
+        min-height : 172px;
+        padding : 36px 48px;
+    }
+
+    #dragArea > div:nth-child(2){
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #dragArea > div:nth-child(3){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }    
+
+    .files > div{
+        gap : 16px;
+    }
+
+    .files .basicBtn{
+        width : 44px;
+        height : 44px;
+        box-sizing: border-box;
+        padding : 12px;
+    }
+
+    #prevNextController{
+        margin : 0 auto;
+        width : calc(100% - 64px);
+        gap : 16px;
+    }
+    #prevNextController > div{
+
+    }
+
+
+
+    
+}
+
+</style>    
+
+<div id="addProjectHeader">
+    <div id="addHeaderTitleBox">
+        <div id="" class="fs2014 fw-bold color_primary">프로젝트 등록하기</div>
+        <div class="fs12 mobile color_primary"> 
+            <b>2</b> / 5
+        </div>
+    </div>
+    <div id="mProgress" class="mobile">
+        2. 준비상태
+    </div>
+    <div id="addGuageBox" class="pc">
+        <div id="grayGuage"></div>
+        <div id="progress2" class="progressGuage">
+            <div id="progressDot"></div>
+        </div>
+        <div id="progressContent">
+            <div class="">1. 기본정보</div>
+            <div class="active">2. 준비상태</div>
+            <div class="">3. 상세정보 </div>
+            <div class="">4. 예산 및 일정</div>
+            <div class="">5. 모집요건</div>
+        </div>
+    </div>
+</div>
+<article class="">
+    <div id="mainInner">
+        <div class="mb40">
+            <div class="fs1814 fw-bold mb2010">프로젝트 준비상태</div>
+                <div id="categoryArea">
+                    <div class="categoryBox active">
+                        아이디어
+                    </div>
+                    <div class="categoryBox">
+                        기술구현
+                    </div>
+                    <div class="categoryBox">
+                        고도화
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
+            </div>
+            <div class="mb40">
+                <div class="fs1814 fw-bold mb20">관련 자료 등록</div>
+                <a data-remodal-target="file3Over">
+                    <div id="dragArea" class="mb2010">
+                        <div class="iconPlus"></div>
+                        <div class="fw-bold fs1612">
+                            <div>이 곳을 클릭하거나&nbsp;</div>
+                            <div>파일을 드래그해서 자료를 등록하세요</div>
+                        </div>
+                        <div class="fs1612">
+                            <div>최대 20MB, 파일 2개,&nbsp;</div>
+                            <div>PDF/JPG/PNG 포맷만 가능합니다.</div>
+
+                        </div>
+                    </div>    
+                </a>
+                <div class="files">
+                    <div class="d-flex mb2010">
+                        <div class="fs1612">프로젝트_자료.pptx</div>
+                        <div class="basicBtn f-white fs1612 bg_color_primary">
+                            <div class="pc">삭제하기</div>
+                            <div class="iconCloseWhite mobile"></div>
+                        </div>
+                    </div>
+                    <div class="d-flex mb2010">
+                        <div class="fs1612">프로젝트_자료.pptx</div>
+                        <div class="basicBtn f-white fs1612 bg_color_primary">
+                            <div class="pc">삭제하기</div>
+                            <div class="iconCloseWhite mobile"></div>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+        <div id="prevNextController">
+            <div class="fs1612 back">이전으로</div>
+            <div class="fs1612">다음으로</div>
+            <!-- active붙이면 버튼이 활성화됩니다.-->                
+        </div>
+        <div class="lastMargin"></div>    
+</article>
+
+
+
+<div id="file3Over" class="remodal small" data-remodal-id="file3Over">
+    <!-- <button data-remodal-action="close" class="remodal-close"></button> -->
+    <div class="popupTitle">파일을 등록할 수 없습니다</div>
+    <div class="mb20">
+        파일은 최대 2개까지 가능합니다.<br>
+        기존의 파일을 삭제해주세요.
+    </div>
+    <div class="remodalBtnArea">
+        <button data-remodal-action="confirm" class="remodal-confirm">확인</button>
+    </div>
+</div>  
+

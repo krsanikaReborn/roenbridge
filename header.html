@@ -1,0 +1,101 @@
+
+<header class="pc">
+    <div id="headerArea">
+        <div id="headerLogo"></div>
+        <div id=headerNavbar class="">
+            <div id="headerGnb">
+                <!-- 클래스에 active 붙이면 색 바뀜-->
+                <div class="nav text1 active">
+                    서비스 소개
+                </div>
+                <div class="nav text1">
+                    프로젝트 찾기
+                </div>
+                <div class="nav text1">                
+                    프로젝트 등록
+                </div>
+                <div class="nav text1">
+                    커뮤니티
+                </div>
+                <div class="nav text1">
+                    블로그
+                    <div id="toBlogIcon"></div>
+                </div>
+            </div>
+            <div id="headerAccountBox">
+                <!--로그아웃시-->
+                <div class="logOut bg_gray5">
+                    <span class="fw-bold">로그인</span>
+                    <span>|</span>
+                    <span>회원가입</span>                    
+                </div>
+                <!--로그인시-->
+                <div id="my" class="logIn d-flex items-center">
+                    <img src="../image/profileDefault.png">
+                    <!--메뉴는 기본값이 display:none. block으로 바꾸면 출현합니다.-->
+                    <div id="myMenu">
+                        <div class="">대시보드</div>
+                        <div class="">내프로젝트</div>
+                        <div class="">계정설정</div>
+                        <div class="">포인트충전</div>
+                        <div class="">로그아웃</div>
+                    </div>
+                </div>
+    
+            </div>    
+        </div>
+    </div>
+
+</header>
+
+<header class="mobile">
+    <div id="mHeaderArea">
+        <div id="headerLogo"></div>
+        <!-- 햄버거 여닫는 소스는 메인화면.html참고.-->
+        <div id="hamburgerButton">
+        </div>
+    </div>
+    <aside id="mMenuArea">
+        <div id="mMenu">
+            <div class="login">
+                <div id="userBox" class="gray5Box">
+                    <div class="">
+                        <img id="mProfile" src="../image/profileDefault.png">
+                        <span class="color_primary text1">로그인 되었습니다.</span>    
+                    </div>
+                    <img id="mLogOutButton" src="../image/logoutIcon.png">
+                </div>
+                <div id="mMyMenu">
+                    <div class="text1">대시보드</div>
+                    <div class="text1">내 프로젝트</div>
+                    <div class="text1">계정설정</div>
+                    <div class="text1">포인트 충전</div>
+                </div>
+            </div>
+            <div class="logout">
+    
+            </div>
+            <div class="line hor"></div>
+            <div id="mNav">
+                <div class="subtitle2 active">매칭서비스 소개</div>
+                <div class="subtitle2">프로젝트 찾기</div>
+                <div class="subtitle2">프로젝트 등록</div>
+                <div class="subtitle2">커뮤니티</div>
+                <div class="subtitle2">블로그  <img src="../image/toBlogIcon.png"></div>
+            </div>
+
+        </div>
+
+    </aside>
+</header>
+
+<aside id="remocon" class="">
+    <a href="">
+        <div id="remoconKakao"></div>
+    </a>
+    <div id="scrollHome" onclick="window.scrollTo(0,0)"></div>
+</aside>
+
+
+
+

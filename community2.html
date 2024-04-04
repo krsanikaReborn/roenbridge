@@ -1,0 +1,507 @@
+<style>
+    #communityWrapper{
+        width : 648px;
+        margin : 0 auto;
+    }
+
+    #pageTitle{
+        text-align: center;
+        margin-top : 70px;
+        margin-bottom : 60px;
+    }
+
+    ul.tabs {
+        list-style: none;
+        padding-left : 0;
+        margin : 0;
+        border-bottom : 1px solid #F16B6C;
+    }
+
+    ul.tabs li {
+        display: inline-block;
+        padding: 20px 0px;
+        cursor: pointer;
+        width: 213px;
+        border-bottom: 1px solid #e6e6e6;
+        text-align: center;
+        font-weight: 700;
+        box-sizing: border-box;
+    }
+
+    ul.tabs li.current {
+        background-color: #F16B6C;
+        color : white;
+        border-radius : 10px 10px 0px 0px;
+    }
+
+
+    .tab-content{
+        display : none;
+    }
+
+    .tab-content.current{
+        display : block;
+    }
+
+    .boardListWrapper{
+
+    }
+    .boardList, .qList{
+        width : 100%;
+        display : flex;
+        justify-content: start;
+        align-items: center;
+        padding : 20px 0px;
+        border-bottom : 1px solid #e8e8e8;
+    }
+
+    .boardList .number, .aList .number, .qList .number{
+        width :32px;        
+        padding : 0 20px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .boardList .title{
+        padding : 0 20px;
+        min-width : 424px;
+    }
+
+    .boardList .date{
+        color : #a3a3a3;
+    }
+
+    .aList{
+        display : none;
+    }
+
+    .aBox {
+        width : 100%;
+    }
+
+    .aList.active{
+        width : 100%;
+        display : flex;
+        justify-content: start;
+        align-items: center;
+        padding : 20px 20px 20px 0px;
+        background:#e8e8e8;
+        border-bottom : 1px solid #e8e8e8;
+        box-sizing: border-box;
+    }
+
+
+    .pagination{    
+        width : 320px;
+        margin : 50px auto;
+        display : flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pagination > .number{
+        width : 40px;
+        height : 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        font-size : 16px;
+    }
+
+    .pagination > .number.active{
+        color : white;
+        background-color: #F16B6C;    
+    }
+
+    .pageIcon{
+        width: 20px;
+        height: 20px;
+    }
+    .pageIcon.next{
+        background-image : url('../image/pageNextIcon.png');
+        background-size : cover;
+        margin-left : 40px;
+    }
+    .pageIcon.prev{
+        background-image : url('../image/pagePrevIcon.png');
+        background-size : cover;
+        margin-right : 40px;
+    }
+
+    #content {
+        width : calc(100% - 42px);
+        height: 280px;
+        font-size : 16px;
+        padding : 15px 20px;
+        border-radius: 10px;
+        border : #d1d1d1 1px solid;
+        resize: none;
+    }
+
+    #sendBtn{
+        width : 200px;
+        margin : 0 auto;
+    }
+
+    .qList{
+        cursor: pointer;
+    }
+    .qList .title{
+        min-width :520px;
+    }
+
+    .arrowBtn{
+        width : 20px;
+        height : 20px;
+        background-image : url('../image/arrowDown.png');
+        background-size : cover;
+        margin-left : 20px;        
+    }
+
+    .arrowBtn.active{
+        transform: rotateX(180deg);
+    }
+
+    #titleBox{
+        padding : 30px;
+        width : 100%;
+        box-sizing: border-box;
+    }
+
+    #contentBox{
+        box-sizing: border-box;
+        padding : 20px 30px;
+        width : 100%;
+        box-sizing: border-box;
+        line-height: 30px;
+        background-color: #f8f8f8;
+    }
+
+    #goList{
+        margin-top : 30px;
+        width : 100%;
+        text-align: right;
+    }
+
+    @media screen and (max-width : 578px) {
+        #pageTitle{
+            margin-top : 80px;
+            margin-bottom : 50px;
+        }
+
+        #communityWrapper{
+            width : 100%;
+            margin : 0;
+        }
+
+        ul.tabs{
+            width : 100%;
+        }
+
+        ul.tabs li {
+            width : 106.9px;
+            font-size: 12px;
+            padding : 14px;
+        }
+        
+        .tab-content > div {
+            width : 100%;
+        }
+        .boardList{
+            margin : 10px 0px;
+        }
+
+        .boardList .number{
+            padding-left : 0px;
+            padding-right : 20px;
+        }
+        .boardList .title, .aList .aBox, .qList .title{
+            min-width :250px;
+            padding-left : 0;
+            padding-right : 0;
+        }
+        .boardList .date{
+            padding-left : 20px;
+            padding-right : 0;
+        }
+        
+
+        .pagination{
+            gap: 10px;
+            margin: 30px 0;
+            justify-content: space-between;
+        }
+        
+        .pagination > .number{
+            width : 24px;
+            height : 24px;
+            font-size : 12px;
+            border-radius: 5px;
+        }
+
+        .pageIcon{
+            width: 24px;
+            height: 24px;
+        }
+        .pageIcon.next{
+            margin-left : 40px;
+        }
+        .pageIcon.prev{
+            margin-right : 40px;
+        }    
+
+        .pagination > .number.active{
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+            color: #474747;
+
+            background-color: transparent;    
+        }
+
+        .pageIcon.next{
+            background-image : url('../image/pageNextIcon_b.png');
+            background-size : cover;
+            margin-left : 40px;
+        }
+        .pageIcon.prev{
+            background-image : url('../image/pagePrevIcon_g.png');
+            background-size : cover;
+            margin-right : 40px;
+        }       
+
+        #content {
+            height: 298px;
+            font-size : 12px;
+        }
+        #sendBtn{
+            width : calc(100% - 38px);
+        }
+        
+        .qList .number, .aList .number{
+            padding : 0;
+        }
+
+        .aList .title{
+            min-width :254px;
+        }
+
+        #titleBox{
+            padding : 20px;
+        }
+
+        #contentBox{
+            padding : 20px 30px;
+            line-height: 14px;
+        }        
+
+    }
+</style>
+<div id="communityWrapper">
+    <div id="pageTitle" class="fs2014 color_primary fw-bold">커뮤니티</div>
+    <article class="tabBox01">        
+        <ul class="tabs fs1612">
+            <li class="tab-link current" data-tab="tab-1">공지사항</li>
+            <li class="tab-link " data-tab="tab-2">문의하기</li>
+            <li class="tab-link " data-tab="tab-3">FAQ</li>    
+        </ul>
+        <div id="tabWrapper">
+            <div id="tab-1" class="tab-content current">
+                <div id="titleBox">
+                    <div class="fs2014 fw-bold">10월 25일 공지사항입니다.</div>
+                    <div class="color_gray2 fs1410">2023-11-10</div>    
+                </div>
+                <div id="contentBox" class="fs1612">
+                    여러분, 혹시 독도의 날이 지정되어 있었던 것을 알고 계셨나요? <br>
+                    ‘독도는 우리땅’이라는 노래는 잘 알지만, 어쩌면 독도의 날은 처음 들어보시는 분들도 많으실 것 같습니다. 사실 저도 이번에 찾아보면서 알게 되었거든요! <br>
+                    <br>
+                    오늘은 ‘독도의 날’을 기념하여 독도의 날 의미와 독도에 대해 자세히 알아보고, 독도에 대해 생각하는 시간을 가져 보아요!<br>
+                    <br>
+                    독도의 날은 10월 25일로, 2000년 민간단체인 독도 수호대가 처음으로 10월 25일에 지정하였다고 해요. 이후, 2005년부터 국가기념일로 제정하기 위해 서명운동을 시작했는데요. 2008년 8월 27일에 독도의 날 제정을 위한 법안이 국회에 제출되었고, 2010년에 한국교원단체총연합회에서 16개 시·도 교총, 우리역사교육연구회, 한국청소년연맹, 독도학회와 공동 주체로 경술국치 100주년을 맞아 전국 단위 독도의 날을 선포하였다고 합니다.<br>
+                    독도의 날이 10월 25일이 된 이유는 바로 1900년 10월 25일 고종황제가 대한제국 칙령 제41호에 독도를 울릉도의 부속 섬으로 명시한 것을 기념하기 위해서라고 해요.<br>
+                    <br>
+                    독도교육주간은 집중적이고 체계적인 독도 교육을 통해 독도주권 수호 의지를 높이고 독도사랑 공감대를 확산하기 위해 실시하게 되었다고 해요. 시·도 및 학교별로 독도교육주간을 자율적이고 탄력적으로 운영할 수 있도록 해 놓았는데요. 다만, 교과와 연계하여 1시간 이상 교과 및 창의적 체험활동을 연계하여 교육을 하도록 하고 있습니다. 또한, 지역과 학교의 특성을 반영하여 활동을 할 수 있는 프로그램을 계획하여 진행하고 있으며, 교육부에서 관련 활동을 지원한다고 합니다!<br>
+                </div>
+                <div id="goList" class="fs1610 fw-bold color_primary">목록으로</div>
+            </div>
+
+
+
+            <div id="tab-2" class="tab-content">
+                <div class="mb3420"></div>
+                <div class="mb3420">
+                    <div class="fw-bold fs1612 mb14">제목</div>
+                    <input id="qTitle" type="text" placeholder="문의 제목을 입력하세요.">
+                </div>
+                <div class="mb30" style="position: relative;">
+                    <div class="fw-bold fs1612 mb14">문의 내용</div>
+                    <textarea id="content" placeholder="문의 내용을 입력하세요"></textarea>                    
+                </div>
+                <div id="sendBtn" class="basicBtn fw-bold bg_gray5 f-white">문의하기</div>
+            </div>
+
+
+            <div id="tab-3" class="tab-content">
+                <div class="faqListWrapper">
+                    <div class="faqWrapper">
+                        <div class="qList">
+                            <div class="number fs1612">Q.</div>
+                            <div class="title fs1612">등록은 어떻게 하나요?</div>
+                            <div class="arrowBtn fs1612"></div>                        
+                        </div>
+                        <div class="aList d-none">
+                            <div class="number fs1612">A.</div>
+                            <div class="aBox fs1612">
+                                등록은 상단 GNB에서 프로젝트 등록을 눌러주세요.<br>
+                                내용을 모두 작성하고 등록 버튼을 누르면 프로젝트가 등록됩니다.<br>
+                                프로젝트 등록 후에는 AI를 통해 적절한 베테랑을 추천해주는 서비스도 있으니<br>
+                                여러 방면으로 활용해보시는 것을 추천드립니다.<br>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="faqWrapper">
+                        <div class="qList">
+                            <div class="number fs1612">Q.</div>
+                            <div class="title fs1612">프로젝트를 찾으려면 어떻게 해야 하나요?</div>
+                            <div class="arrowBtn fs1612"></div>                        
+                        </div>
+                        <div class="aList d-none">
+                            <div class="number fs1612">A.</div>
+                            <div class="aBox fs1612">
+                                등록은 상단 GNB에서 프로젝트 등록을 눌러주세요.<br>
+                                내용을 모두 작성하고 등록 버튼을 누르면 프로젝트가 등록됩니다.<br>
+                                프로젝트 등록 후에는 AI를 통해 적절한 베테랑을 추천해주는 서비스도 있으니<br>
+                                여러 방면으로 활용해보시는 것을 추천드립니다.<br>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="faqWrapper">
+                        <div class="qList">
+                            <div class="number fs1612">Q.</div>
+                            <div class="title fs1612">프로젝트를 중단하고 싶어요.</div>
+                            <div class="arrowBtn fs1612"></div>                        
+                        </div>
+                        <div class="aList d-none">
+                            <div class="number fs1612">A.</div>
+                            <div class="aBox fs1612">
+                                등록은 상단 GNB에서 프로젝트 등록을 눌러주세요.<br>
+                                내용을 모두 작성하고 등록 버튼을 누르면 프로젝트가 등록됩니다.<br>
+                                프로젝트 등록 후에는 AI를 통해 적절한 베테랑을 추천해주는 서비스도 있으니<br>
+                                여러 방면으로 활용해보시는 것을 추천드립니다.<br>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="faqWrapper">
+                        <div class="qList">
+                            <div class="number fs1612">Q.</div>
+                            <div class="title fs1612">베테랑 AI 추천을 받고싶어요.</div>
+                            <div class="arrowBtn fs1612"></div>                        
+                        </div>
+                        <div class="aList d-none">
+                            <div class="number fs1612">A.</div>
+                            <div class="aBox fs1612">
+                                등록은 상단 GNB에서 프로젝트 등록을 눌러주세요.<br>
+                                내용을 모두 작성하고 등록 버튼을 누르면 프로젝트가 등록됩니다.<br>
+                                프로젝트 등록 후에는 AI를 통해 적절한 베테랑을 추천해주는 서비스도 있으니<br>
+                                여러 방면으로 활용해보시는 것을 추천드립니다.<br>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="faqWrapper">
+                        <div class="qList">
+                            <div class="number fs1612">Q.</div>
+                            <div class="title fs1612">PM으로 등록하려면 어떻게 해야 하나요?</div>
+                            <div class="arrowBtn fs1612"></div>                        
+                        </div>
+                        <div class="aList d-none">
+                            <div class="number fs1612">A.</div>
+                            <div class="aBox fs1612">
+                                등록은 상단 GNB에서 프로젝트 등록을 눌러주세요.<br>
+                                내용을 모두 작성하고 등록 버튼을 누르면 프로젝트가 등록됩니다.<br>
+                                프로젝트 등록 후에는 AI를 통해 적절한 베테랑을 추천해주는 서비스도 있으니<br>
+                                여러 방면으로 활용해보시는 것을 추천드립니다.<br>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="faqWrapper">
+                        <div class="qList">
+                            <div class="number fs1612">Q.</div>
+                            <div class="title fs1612">제 프로젝트에 PM을 신청하고 싶어요.</div>
+                            <div class="arrowBtn fs1612"></div>                        
+                        </div>
+                        <div class="aList d-none">
+                            <div class="number fs1612">A.</div>
+                            <div class="aBox fs1612">
+                                등록은 상단 GNB에서 프로젝트 등록을 눌러주세요.<br>
+                                내용을 모두 작성하고 등록 버튼을 누르면 프로젝트가 등록됩니다.<br>
+                                프로젝트 등록 후에는 AI를 통해 적절한 베테랑을 추천해주는 서비스도 있으니<br>
+                                여러 방면으로 활용해보시는 것을 추천드립니다.<br>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="faqWrapper">
+                        <div class="qList">
+                            <div class="number fs1612">Q.</div>
+                            <div class="title fs1612">회원 탈퇴는 어떻게 하나요?</div>
+                            <div class="arrowBtn fs1612"></div>                        
+                        </div>
+                        <div class="aList d-none">
+                            <div class="number fs1612">A.</div>
+                            <div class="aBox fs1612">
+                                등록은 상단 GNB에서 프로젝트 등록을 눌러주세요.<br>
+                                내용을 모두 작성하고 등록 버튼을 누르면 프로젝트가 등록됩니다.<br>
+                                프로젝트 등록 후에는 AI를 통해 적절한 베테랑을 추천해주는 서비스도 있으니<br>
+                                여러 방면으로 활용해보시는 것을 추천드립니다.<br>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="faqWrapper">
+                        <div class="qList">
+                            <div class="number fs1612">Q.</div>
+                            <div class="title fs1612">프로젝트를 완료 상태로 변경하고 싶어요.</div>
+                            <div class="arrowBtn fs1612"></div>                        
+                        </div>
+                        <div class="aList d-none">
+                            <div class="number fs1612">A.</div>
+                            <div class="aBox fs1612">
+                                등록은 상단 GNB에서 프로젝트 등록을 눌러주세요.<br>
+                                내용을 모두 작성하고 등록 버튼을 누르면 프로젝트가 등록됩니다.<br>
+                                프로젝트 등록 후에는 AI를 통해 적절한 베테랑을 추천해주는 서비스도 있으니<br>
+                                여러 방면으로 활용해보시는 것을 추천드립니다.<br>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="faqWrapper">
+                        <div class="qList">
+                            <div class="number fs1612">Q.</div>
+                            <div class="title fs1612">프로젝트를 변경하고 싶어요.</div>
+                            <div class="arrowBtn fs1410"></div>                        
+                        </div>
+                        <div class="aList d-none">
+                            <div class="number fs1612">A.</div>
+                            <div class="aBox fs1612">
+                                등록은 상단 GNB에서 프로젝트 등록을 눌러주세요.<br>
+                                내용을 모두 작성하고 등록 버튼을 누르면 프로젝트가 등록됩니다.<br>
+                                프로젝트 등록 후에는 AI를 통해 적절한 베테랑을 추천해주는 서비스도 있으니<br>
+                                여러 방면으로 활용해보시는 것을 추천드립니다.<br>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <div class="pagination">
+                    <div class="pageIcon prev"></div>
+                    <div class="number active">1</div>
+                    <div class="number">2</div>
+                    <div class="number">3</div>
+                    <div class="number">4</div>
+                    <div class="number">5</div>
+                    <div class="pageIcon next"></div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+</div>
+<div class="pb140"></div>

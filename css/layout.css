@@ -1,0 +1,332 @@
+#headerArea{
+    position: relative;
+    margin : 0 auto;
+    max-width: 1320px;
+    padding-top : 20px;
+    padding-bottom : 20px;
+}
+
+#headerLogo{
+    width : 124px;
+    height : 30px;    
+    background-image : url("../image/logo.png");
+    margin-top : 10px;
+    margin-bottom : 10px;
+}
+
+#toBlogIcon{
+    background : url('../image/toBlogIcon.png');
+    width : 20px;
+    height : 20px;
+    display: inline-block;    
+}
+#headerNavbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+#headerGnb{
+    margin-top : 10px;
+    margin-bottom : 10px;
+    display : flex;    
+    gap : 60px;
+    align-items: center;
+}
+
+
+#headerGnb .nav {
+    color : #757575;
+    display : flex;
+    gap : 4px;
+    align-items: center;
+}
+
+#headerGnb .nav.active{
+    color : #F16B6C;
+}
+
+#headerGnb .nav img{
+    top : 2px;
+    position: relative;
+}
+
+#headerAccountBox{   
+    display: flex;
+    justify-content: right;
+}
+
+#headerAccountBox .logOut{
+    border-radius : 20px;
+    padding : 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    gap : 20px;
+    line-height : 28px;
+    
+}
+
+#headerProfileImg {
+    width : 44px;
+    height : 44px;
+}
+
+#headerAccountBox .logIn{
+    position : relative;
+}
+
+#myMenu{
+    position: absolute;
+    z-index : 100;
+    width : 200px;
+    right : 0;
+    box-shadow:0px 24px 48px 0 rgba(0,0,0,0.16);
+    background-color: #ffffff;
+    border-radius : 10px;
+    margin-top : 20px;  
+    display: none;
+    top : 40px;  
+}
+
+#myMenu div {
+    padding : 24px;
+    font-weight: 700;    
+}
+
+#myMenu div:hover{
+    background-color: #f5f5f5;
+}
+
+.headerProvision{
+    padding : 0 30px;    
+}   
+
+footer{
+    min-height : 420px;
+}
+
+
+#innerFooter{
+    padding-top : 40px;
+    max-width: 1320px;
+    margin : 0 auto;
+}
+
+#socialBox{
+    gap : 10px;
+}
+
+#socialBox a{
+    display: block;
+    width : 24px;
+    height : 24px
+}
+
+#socialBox img{
+    width : 24px;
+    height : 24px
+}
+
+#logoCube{
+    background-image: url('../image/logoCube.png');
+    width : 156px;
+    height : 30px;
+}
+#footerNavbar{
+    margin : 30px 0;
+}
+
+#footerNavbar > div{
+    gap : 30px;
+}
+
+#footerNavbar a{
+    color : white;
+}
+
+#companyData{
+    color : white;
+    display: flex;
+    gap : 30px;  
+    margin-bottom : 20px;  
+}
+
+#companyData .fw-bold{
+    margin-right : 30px;
+}
+
+#copyright {
+    color : white;
+}
+
+
+#remocon {
+    position: fixed;
+    z-index: 120;
+    right : calc((100% - 1320px)/2 - 20px);
+    bottom : 70px;
+}
+
+#remocon div {
+    margin : -20px 0;
+    width : 120px;
+    height : 120px;
+}
+
+#remoconKakao {
+    background-image: url('../image/remoconKakao.png');
+}
+
+#scrollHome {
+    background-image: url('../image/scrollHome.png');
+}
+
+
+
+@media screen and (max-width : 578px){
+    #mHeaderArea{
+        background-color: #ffffff;
+        height : 20px;
+        position : sticky;
+        display: flex;
+        padding : 30px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #headerLogo{
+        margin-top : 0;                
+    }
+    #hamburgerButton{
+        background-image: url('../image/hamburgerOpen.png');
+        width : 20px;
+        height : 20px;
+    }
+    #hamburgerButton.close{
+        background-image: url('../image/hamburgerClose.png');
+    }
+
+    #mMenuArea{
+        position: fixed;
+        top : 80px;
+        left : 0;
+        right : 0;
+        bottom : 0;
+        z-index : 100;
+        display: none;
+    }
+
+    #mMenuArea.active{
+        display: block;
+    }   
+
+    #mMenu{
+        width : calc(100% - 60px);
+        height : calc(100% - 60px);
+        padding: 30px;
+        background: white;
+    }
+
+    #userBox{        
+        display: flex;
+        justify-content: space-between;
+        padding : 20px 17px;
+    }
+    #userBox div:first-child{
+        display: flex;
+        gap : 10px;
+    }
+    #mProfile {
+        width : 24px;
+        height : 24px;
+    }
+    #logOutButton {
+        width : 20px;
+        height : 20px;
+    }
+
+
+    #mNav{
+        width : 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap : 30px;
+    }
+
+    #mNav div{
+        text-align: center;
+    }
+
+    #mNav div.active{
+        color :#F16B6C;
+    }    
+
+    #mMyMenu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap : 16px;
+        margin-top : 18px;
+    }
+
+    #mMyMenu div{
+        width : 47%;
+        text-align: center;
+        padding : 14px 0;
+    }
+
+    #innerFooter{
+        width : calc(100% - 64px);
+        height : 310px;
+        padding : 40px 32px;
+    }
+    #logoCube{
+        width : 104px;
+        height : 20px;
+        background-size: cover;
+    }
+
+    #socialBox a {
+        width : 20px;
+        height : 20px;
+    }
+    #socialBox img {
+        width : 20px;
+        height : 20px;
+    }
+
+    #footerNavbar {        
+        display: block;
+    }
+    #footerNavbar > div{        
+        gap : 10px;        
+    }
+
+    #footerNavbar > div:first-child{
+        margin-bottom : 20px;
+    }
+
+    #companyData{
+        display: block;
+        font-size : 12px;
+    }
+
+    #companyData > div{
+        margin-bottom : 10px;
+    }
+
+    #copyright {
+        font-size : 12px;
+    }
+
+    #remocon {
+        right : 18px;
+    }    
+    #remocon div{
+        background-size: cover;
+        width : 93px;
+        height : 93px;
+    }    
+
+
+}

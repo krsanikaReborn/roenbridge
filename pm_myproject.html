@@ -1,0 +1,825 @@
+<style>
+
+article {
+    width : 1320px;
+    margin : 0 auto;
+}
+
+#historyList{
+    margin-top : 50px;
+}
+
+.prevIcon {
+    width : 24px;
+    height : 24px;
+    background-image: url('../image/prevIcon.png');
+    background-size : cover;
+    margin-right : 30px;
+}
+
+.w6980{
+    width : 69%;
+}
+
+.w75{
+    width : 75%;
+}
+
+.mt20{
+    margin-top : 20px;
+}
+
+.projectTypeBox{
+    width : 220px;
+    height : 120px;
+    border : #e8e8e8 1px solid;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    padding : 29px 22px;
+}
+
+.historyBtn{
+    width : 170px;
+    height : 50px;
+    background-image: url('../image/confirmButton.png');
+    background-size : cover;
+}
+
+.line.ver20{
+    margin : 0 20px;
+    width : 2px;
+    height : 20px;
+    background : #f5f5f5;
+}
+
+.line.ver14{
+    margin : 0 14px;
+    width : 2px;
+    height : 14px;
+    background : #e8e8e8;
+}
+
+#projectHistoryArea{
+    display: flex;
+    flex-direction: column;
+    gap : 14px;
+    margin : 20px 0;
+}
+
+.projectBox{
+    background: #f8f8f8;
+    border-radius: 10px;
+    padding : 30px 40px;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width : 100%;
+    box-sizing: border-box;
+}
+
+.projectBox >div:first-child{
+    width : 80px;
+    font-size : 20px;
+    color : #F16B6C;
+    font-weight: 700;
+    text-align: center;
+}
+
+.projectBox .line.ver{
+    width : 2px;
+    height : 103px;
+    background-color: #e8e8e8;
+    margin : 0 40px;
+}
+
+.mb144{
+    margin-bottom : 144px;
+}
+#asideBtnArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mb1203{
+    margin-bottom : 12px;
+}
+
+.projectContent{
+    display: flex;
+}
+
+.tabs{
+    border-bottom: #F16B6C 2px solid;
+    width : 100%;
+    display: flex;
+}
+
+.tab{    
+    width : calc(100% /4);
+    font-size : 16px;
+    font-weight: 700;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    padding : 20px 0;
+}
+
+.tab.active{
+    background-color: #F16B6C;
+    color : white;
+}
+
+.projectContentBox{
+
+}
+
+.projectTitleBox{
+    display: flex;
+    justify-content: start;
+    gap : 20px;
+    align-items: center;
+    margin-bottom : 20px;
+}
+
+.projectBtn {
+    width : 200px;
+    background-color: white;
+}
+
+.workTypetag{
+    font-size : 14px;
+    color : white;
+    background-color: black;
+    border-radius : 10px;
+    padding : 8px 14px;
+}
+
+.volunteerIcon{
+    width : 14px;
+    height : 14px;
+    background-image : url('../image/volunteer.png');
+    background-size: cover;
+    margin-left : 20px;
+    margin-right : 10px;
+}
+
+.projectNow{
+    display : flex;
+    align-items: center;
+}
+
+.projectDataBox{
+    display: flex;
+    justify-content: start;
+    gap : 60px;
+    margin-bottom : 10px;
+}
+
+.smallFlexBox{
+    display: flex;
+    gap : 20px;
+    font-size : 16px;   
+}
+
+.smallFlexBox .line{
+    width: 2px;
+    height: 20px;
+    background: #e8e8e8;
+}
+.projectDescriptBox{
+    font-size : 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}   
+
+.projectBtnBox{
+    display : flex;    
+    flex-direction: column;
+    gap : 14px;
+}
+
+@media screen and (max-width : 578px){    
+    article{
+        width : 100%;
+    }
+
+    
+    #historyList{
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top : 30px;
+        margin-bottom : 20px;
+    }
+
+    #mCategory select{
+        width : 140px;
+        font-size : 12px;
+        border-radius : 10px;
+        border : #d1d1d1 1px solid;
+        padding : 13px 20px;
+
+        -o-appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background : url('../image/arrowDown.png') no-repeat;
+        background-position: 100px 11px;
+    }
+
+    #mCategory option:focus {
+        background-color: #F16B6C;
+        color : white;
+    }
+
+    #mCategory{
+        width : 140px;
+
+    }
+
+
+    select::-ms-expand { 
+	    display: none;
+    }
+
+    #historyList > div:nth-child(2){
+        margin-bottom: 10px;
+    }
+    #historyList > div:nth-child(2){
+        margin-bottom: 10px;
+    }
+
+    #historyList .line {
+        display : none;
+    }
+
+    #projectHistoryArea{
+        margin-left : 0;
+    }
+
+    .projectBox{
+        padding : 20px;
+        font-size : 14px;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .projectBox > div:first-child{
+        font-size: 14px;
+        text-align: left;
+        padding-bottom: 14px;
+        border-bottom : #F16B6C 2px solid;
+        margin-bottom: 14px;
+        width : auto;
+    }
+
+    .projectTitleBox{
+        flex-direction: column;
+        width: 100%;
+        align-items: start;
+        gap : 14px;
+        margin-bottom : 14px;
+    }
+
+    .workTypetag{
+        font-size : 10px;
+    }    
+
+    .projectDataBox{
+        flex-direction: column;
+        gap : 10px;
+    }
+
+    .smallFlexBox{
+        font-size : 12px;
+    }
+
+    .smallFlexBox > .line{
+        height : 12px;
+    }
+
+
+    .historyBtn{
+        width : 17px;
+        height : 17px;
+        background-image: url('../image/confirmButtonm.png');
+        background-size : cover;
+    }
+
+    .projectHistoryBox> div:first-child{
+       width : calc(100%);
+    }    
+
+    .mb1203{
+        margin-bottom: 3px;
+    }
+
+    .projectContent{
+        flex-direction: column;
+    }
+
+    .projectBtnBox{
+        flex-direction: row;        
+        gap : 16px;
+        width: 100%;
+    }
+
+    .projectBtn{
+        width : calc(50% - 8px);
+    }
+}
+
+</style>    
+
+    <article class="">
+        <div id="historyList" class="w100 d-flex space-between items-center mb40">
+                <div class="color_primary subtitle3">내 프로젝트</div>
+                <div id="mCategory" class="cont-select mobile">
+                    <button class="btn-select">전체</button>
+                    <ul class="list-member">
+                        <li><button type="button" class="active">전체</button></li>
+                        <li><button type="button">매칭된 프로젝트</button></li>
+                        <li><button type="button">진행</button></li>
+                        <li><button type="button">완료</button></li>
+                    </ul>
+                </div>                
+        </div>
+        <div class="tabs pc">
+            <div class="tab active">전체</div>
+            <div class="tab">매칭된 프로젝트</div>
+            <div class="tab">진행</div>
+            <div class="tab">완료</div>
+        </div>
+        <!-- tab에 active를 붙이면 색이 바뀝니다.-->
+        <div id="projectHistoryArea">
+            <div class="projectBox">
+                <div class="fs2014">모집</div>
+                <div class="line ver pc"></div>
+                <div class="projectContentBox">
+                    <div class="projectTitleBox">
+                        <div class="subtitle3">Vue.js 기반 웹 UX/UI 화면 디자인 디자이너를 구인하고 있습니다.</div>
+                        <div class="projectNow">
+                            <div class="workTypetag">디자인</div>
+                            <div class="volunteerIcon"></div>
+                            <div class="fs1612">4명 지원</div>
+                        </div>
+                    </div>
+                    <div class="projectDataBox">
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 기간</div>
+                            <div class="">30일</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 금액</div>
+                            <div class="">4,000,000원</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">지원 마감일</div>
+                            <div class="">2023-10-17</div>
+                            <div class="line"></div>
+                            <div class="">1일 남음</div>
+                        </div>
+                    </div>
+                    <div class="projectDescriptBox pc">
+                        본 프로젝트는 기존 1차 개발 적용한 vue.js 화면에 대한 리뉴얼 작업입니다. 당사가 직접 개발한 SW를 판매 및 서비스합니다.
+                    </div>
+                </div>
+                <div class="projectBtnBox">
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">AI추천</div>
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">신청자보기</div>
+                </div>
+            </div>
+
+            <div class="projectBox">
+                <div class="fs2014">모집</div>
+                <div class="line ver pc"></div>
+                <div class="projectContentBox">
+                    <div class="projectTitleBox">
+                        <div class="subtitle3">Vue.js 기반 웹 UX/UI 화면디자인</div>
+                        <div class="projectNow">
+                            <div class="workTypetag">디자인</div>
+                            <div class="volunteerIcon"></div>
+                            <div class="fs1612">4명 지원</div>
+                        </div>
+                    </div>
+                    <div class="projectDataBox">
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 기간</div>
+                            <div class="">30일</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 금액</div>
+                            <div class="">4,000,000원</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">지원 마감일</div>
+                            <div class="">2023-10-17</div>
+                            <div class="line"></div>
+                            <div class="">1일 남음</div>
+                        </div>
+                    </div>
+                    <div class="projectDescriptBox pc">
+                        본 프로젝트는 기존 1차 개발 적용한 vue.js 화면에 대한 리뉴얼 작업입니다. 당사가 직접 개발한 SW를 판매 및 서비스합니다.
+                    </div>
+                </div>
+                <div class="projectBtnBox">
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">AI추천</div>
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">신청자보기</div>
+                </div>
+            </div>
+
+            <div class="projectBox">
+                <div class="fs2014">완료</div>
+                <div class="line ver pc"></div>
+                <div class="projectContentBox">
+                    <div class="projectTitleBox">
+                        <div class="subtitle3">Vue.js 기반 웹 UX/UI 화면디자인</div>
+                        <div class="projectNow">
+                            <div class="workTypetag">디자인</div>
+                            <div class="volunteerIcon"></div>
+                            <div class="fs1612">4명 지원</div>
+                        </div>
+                    </div>
+                    <div class="projectDataBox">
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 기간</div>
+                            <div class="">30일</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 금액</div>
+                            <div class="">4,000,000원</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">지원 마감일</div>
+                            <div class="">2023-10-17</div>
+                            <div class="line"></div>
+                            <div class="">1일 남음</div>
+                        </div>
+                    </div>
+                    <div class="projectDescriptBox pc">
+                        본 프로젝트는 기존 1차 개발 적용한 vue.js 화면에 대한 리뉴얼 작업입니다. 당사가 직접 개발한 SW를 판매 및 서비스합니다.
+                    </div>
+                </div>
+                <div class="projectBtnBox">
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">AI추천</div>
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">신청자보기</div>
+                </div>
+            </div>
+
+            <div class="projectBox">
+                <div class="fs2014">진행</div>
+                <div class="line ver pc"></div>
+                <div class="projectContentBox">
+                    <div class="projectTitleBox">
+                        <div class="subtitle3">Vue.js 기반 웹 UX/UI 화면디자인</div>
+                        <div class="projectNow">
+                            <div class="workTypetag">디자인</div>
+                            <div class="volunteerIcon"></div>
+                            <div class="fs1612">4명 지원</div>
+                        </div>
+                    </div>
+                    <div class="projectDataBox">
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 기간</div>
+                            <div class="">30일</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 금액</div>
+                            <div class="">4,000,000원</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">지원 마감일</div>
+                            <div class="">2023-10-17</div>
+                            <div class="line"></div>
+                            <div class="">1일 남음</div>
+                        </div>
+                    </div>
+                    <div class="projectDescriptBox pc">
+                        본 프로젝트는 기존 1차 개발 적용한 vue.js 화면에 대한 리뉴얼 작업입니다. 당사가 직접 개발한 SW를 판매 및 서비스합니다.
+                    </div>
+                </div>
+                <div class="projectBtnBox">
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">AI추천</div>
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">신청자보기</div>
+                </div>
+            </div>
+
+            <div class="projectBox">
+                <div class="fs2014">모집</div>
+                <div class="line ver pc"></div>
+                <div class="projectContentBox">
+                    <div class="projectTitleBox">
+                        <div class="subtitle3">Vue.js 기반 웹 UX/UI 화면디자인</div>
+                        <div class="projectNow">
+                            <div class="workTypetag">디자인</div>
+                            <div class="volunteerIcon"></div>
+                            <div class="fs1612">4명 지원</div>
+                        </div>
+                    </div>
+                    <div class="projectDataBox">
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 기간</div>
+                            <div class="">30일</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 금액</div>
+                            <div class="">4,000,000원</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">지원 마감일</div>
+                            <div class="">2023-10-17</div>
+                            <div class="line"></div>
+                            <div class="">1일 남음</div>
+                        </div>
+                    </div>
+                    <div class="projectDescriptBox pc">
+                        본 프로젝트는 기존 1차 개발 적용한 vue.js 화면에 대한 리뉴얼 작업입니다. 당사가 직접 개발한 SW를 판매 및 서비스합니다.
+                    </div>
+                </div>
+                <div class="projectBtnBox">
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">AI추천</div>
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">신청자보기</div>
+                </div>
+            </div>
+
+            <div class="projectBox">
+                <div class="fs2014">모집</div>
+                <div class="line ver pc"></div>
+                <div class="projectContentBox">
+                    <div class="projectTitleBox">
+                        <div class="subtitle3">Vue.js 기반 웹 UX/UI 화면디자인</div>
+                        <div class="projectNow">
+                            <div class="workTypetag">디자인</div>
+                            <div class="volunteerIcon"></div>
+                            <div class="fs1612">4명 지원</div>
+                        </div>
+                    </div>
+                    <div class="projectDataBox">
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 기간</div>
+                            <div class="">30일</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 금액</div>
+                            <div class="">4,000,000원</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">지원 마감일</div>
+                            <div class="">2023-10-17</div>
+                            <div class="line"></div>
+                            <div class="">1일 남음</div>
+                        </div>
+                    </div>
+                    <div class="projectDescriptBox pc">
+                        본 프로젝트는 기존 1차 개발 적용한 vue.js 화면에 대한 리뉴얼 작업입니다. 당사가 직접 개발한 SW를 판매 및 서비스합니다.
+                    </div>
+                </div>
+                <div class="projectBtnBox">
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">AI추천</div>
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">신청자보기</div>
+                </div>
+            </div>
+
+            <div class="projectBox">
+                <div class="fs2014">모집</div>
+                <div class="line ver pc"></div>
+                <div class="projectContentBox">
+                    <div class="projectTitleBox">
+                        <div class="subtitle3">Vue.js 기반 웹 UX/UI 화면디자인</div>
+                        <div class="projectNow">
+                            <div class="workTypetag">디자인</div>
+                            <div class="volunteerIcon"></div>
+                            <div class="fs1612">4명 지원</div>
+                        </div>
+                    </div>
+                    <div class="projectDataBox">
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 기간</div>
+                            <div class="">30일</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 금액</div>
+                            <div class="">4,000,000원</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">지원 마감일</div>
+                            <div class="">2023-10-17</div>
+                            <div class="line"></div>
+                            <div class="">1일 남음</div>
+                        </div>
+                    </div>
+                    <div class="projectDescriptBox pc">
+                        본 프로젝트는 기존 1차 개발 적용한 vue.js 화면에 대한 리뉴얼 작업입니다. 당사가 직접 개발한 SW를 판매 및 서비스합니다.
+                    </div>
+                </div>
+                <div class="projectBtnBox">
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">AI추천</div>
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">신청자보기</div>
+                </div>
+            </div>
+
+            <div class="projectBox">
+                <div class="fs2014">모집</div>
+                <div class="line ver pc"></div>
+                <div class="projectContentBox">
+                    <div class="projectTitleBox">
+                        <div class="subtitle3">Vue.js 기반 웹 UX/UI 화면디자인</div>
+                        <div class="projectNow">
+                            <div class="workTypetag">디자인</div>
+                            <div class="volunteerIcon"></div>
+                            <div class="fs1612">4명 지원</div>
+                        </div>
+                    </div>
+                    <div class="projectDataBox">
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 기간</div>
+                            <div class="">30일</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 금액</div>
+                            <div class="">4,000,000원</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">지원 마감일</div>
+                            <div class="">2023-10-17</div>
+                            <div class="line"></div>
+                            <div class="">1일 남음</div>
+                        </div>
+                    </div>
+                    <div class="projectDescriptBox pc">
+                        본 프로젝트는 기존 1차 개발 적용한 vue.js 화면에 대한 리뉴얼 작업입니다. 당사가 직접 개발한 SW를 판매 및 서비스합니다.
+                    </div>
+                </div>
+                <div class="projectBtnBox">
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">AI추천</div>
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">신청자보기</div>
+                </div>
+            </div>
+
+            <div class="projectBox">
+                <div class="fs2014">모집</div>
+                <div class="line ver pc"></div>
+                <div class="projectContentBox">
+                    <div class="projectTitleBox">
+                        <div class="subtitle3">Vue.js 기반 웹 UX/UI 화면디자인</div>
+                        <div class="projectNow">
+                            <div class="workTypetag">디자인</div>
+                            <div class="volunteerIcon"></div>
+                            <div class="fs1612">4명 지원</div>
+                        </div>
+                    </div>
+                    <div class="projectDataBox">
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 기간</div>
+                            <div class="">30일</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 금액</div>
+                            <div class="">4,000,000원</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">지원 마감일</div>
+                            <div class="">2023-10-17</div>
+                            <div class="line"></div>
+                            <div class="">1일 남음</div>
+                        </div>
+                    </div>
+                    <div class="projectDescriptBox pc">
+                        본 프로젝트는 기존 1차 개발 적용한 vue.js 화면에 대한 리뉴얼 작업입니다. 당사가 직접 개발한 SW를 판매 및 서비스합니다.
+                    </div>
+                </div>
+                <div class="projectBtnBox">
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">AI추천</div>
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">신청자보기</div>
+                </div>
+            </div>
+
+            <div class="projectBox">
+                <div class="fs2014">완료</div>
+                <div class="line ver pc"></div>
+                <div class="projectContentBox">
+                    <div class="projectTitleBox">
+                        <div class="subtitle3">Vue.js 기반 웹 UX/UI 화면디자인</div>
+                        <div class="projectNow">
+                            <div class="workTypetag">디자인</div>
+                            <div class="volunteerIcon"></div>
+                            <div class="fs1612">4명 지원</div>
+                        </div>
+                    </div>
+                    <div class="projectDataBox">
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 기간</div>
+                            <div class="">30일</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 금액</div>
+                            <div class="">4,000,000원</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">지원 마감일</div>
+                            <div class="">2023-10-17</div>
+                            <div class="line"></div>
+                            <div class="">1일 남음</div>
+                        </div>
+                    </div>
+                    <div class="projectDescriptBox pc">
+                        본 프로젝트는 기존 1차 개발 적용한 vue.js 화면에 대한 리뉴얼 작업입니다. 당사가 직접 개발한 SW를 판매 및 서비스합니다.
+                    </div>
+                </div>
+                <div class="projectBtnBox">
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">AI추천</div>
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">신청자보기</div>
+                </div>
+            </div>
+
+            <div class="projectBox">
+                <div class="fs2014">완료</div>
+                <div class="line ver pc"></div>
+                <div class="projectContentBox">
+                    <div class="projectTitleBox">
+                        <div class="subtitle3">Vue.js 기반 웹 UX/UI 화면디자인</div>
+                        <div class="projectNow">
+                            <div class="workTypetag">디자인</div>
+                            <div class="volunteerIcon"></div>
+                            <div class="fs1612">4명 지원</div>
+                        </div>
+                    </div>
+                    <div class="projectDataBox">
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 기간</div>
+                            <div class="">30일</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 금액</div>
+                            <div class="">4,000,000원</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">지원 마감일</div>
+                            <div class="">2023-10-17</div>
+                            <div class="line"></div>
+                            <div class="">1일 남음</div>
+                        </div>
+                    </div>
+                    <div class="projectDescriptBox pc">
+                        본 프로젝트는 기존 1차 개발 적용한 vue.js 화면에 대한 리뉴얼 작업입니다. 당사가 직접 개발한 SW를 판매 및 서비스합니다.
+                    </div>
+                </div>
+                <div class="projectBtnBox">
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">AI추천</div>
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">신청자보기</div>
+                </div>
+            </div>
+
+            <div class="projectBox">
+                <div class="fs2014">진행</div>
+                <div class="line ver pc"></div>
+                <div class="projectContentBox">
+                    <div class="projectTitleBox">
+                        <div class="subtitle3">Vue.js 기반 웹 UX/UI 화면디자인</div>
+                        <div class="projectNow">
+                            <div class="workTypetag">디자인</div>
+                            <div class="volunteerIcon"></div>
+                            <div class="fs1612">4명 지원</div>
+                        </div>
+                    </div>
+                    <div class="projectDataBox">
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 기간</div>
+                            <div class="">30일</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">예상 금액</div>
+                            <div class="">4,000,000원</div>
+                        </div>
+                        <div class="smallFlexBox">
+                            <div class="fw-bold">지원 마감일</div>
+                            <div class="">2023-10-17</div>
+                            <div class="line"></div>
+                            <div class="">1일 남음</div>
+                        </div>
+                    </div>
+                    <div class="projectDescriptBox pc">
+                        본 프로젝트는 기존 1차 개발 적용한 vue.js 화면에 대한 리뉴얼 작업입니다. 당사가 직접 개발한 SW를 판매 및 서비스합니다.
+                    </div>
+                </div>
+                <div class="projectBtnBox">
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">AI추천</div>
+                    <div class="projectBtn basicBtn fw-bold fs1612 border_primary color_primary">신청자보기</div>
+                </div>
+            </div>
+
+
+
+            <!-- 내역이 없을 때-->
+            <div class="projectBox">
+                내 프로젝트가 없습니다.
+            </div>
+    
+        </div>
+        
+    </article>
+    <div class="mb144"></div>
+
+</div>

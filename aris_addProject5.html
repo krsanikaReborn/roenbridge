@@ -1,0 +1,421 @@
+<style>
+
+#addProjectHeader{
+    width : 1320px;
+    margin : 0 auto;
+}
+
+#addHeaderTitleBox{
+    margin-top : 50px;
+    margin-bottom : 36px;
+    max-width : 1320px;
+    display : flex;
+    justify-content: center;
+}
+
+#addGuageBox{
+    width : 1320px;
+    margin : 0 auto;
+    position: relative;
+}
+
+#grayGuage{
+    background : #f5f5f5;
+    width : 100%;
+    height : 6px;
+    border-radius: 3px;
+}
+
+#progress5{
+    width : calc((100% / 5) * 4 + (100% / 5 / 2) - 60px);
+    height : 6px;
+    background: #F16B6C;
+}
+
+.progressGuage{    
+    position : absolute;
+    height : 6px;
+    background: #F16B6C;    
+    border-radius: 3px;
+    top : 0;
+}
+
+#progressDot{
+    position : absolute;
+    width : 18px;
+    height : 18px;
+    top: -6px;
+    right: -6px;
+    border-radius : 10px;
+    background: #F16B6C;
+}
+
+#progressContent{
+    display: flex;
+    justify-content: space-evenly;
+    width : 100%;
+    margin-top : 14px;
+    margin-bottom : 24px;
+    color : #a3a3a3;
+    font-size : 16px;    
+}
+#progressContent .active{
+    color : #F16B6C;
+    font-weight: 700;
+}
+
+article {
+    width : 100%; 
+    background : #f8f8f8;
+    padding-top: 40px;
+}
+
+#mainInner{
+    width : 872px;
+    margin : 0 auto;
+}
+
+
+.durationArea{
+    display : flex;   
+    font-size : 18px;
+    font-weight: 700;
+}
+.durationArea > div{
+    display: flex;
+    gap : 20px;
+    align-items: center;
+}
+
+.durationArea input {
+    padding : 15px 20px;
+    font-size : 16px;
+    width : 320px;  
+}
+
+.tilde{
+    margin-left : 10px;
+    margin-right : 30px;
+}
+
+#calenderArea{
+    width : 100%;
+    display : flex;
+    gap : 24px;
+    position: relative;
+}
+
+#openCalenderBtn{
+    width : 200px;
+}
+
+#calenderWrapper{
+    position : absolute;
+    z-index : 100;
+    width : 388px;
+    /* height : 394px; */
+    height : auto;
+    box-shadow: 0px 4px 20px 0px #00000024;
+    background : white;
+    top : calc(100% + 10px);
+    right : 0;
+    border-radius: 10px;
+    padding-bottom : 10px;    
+}
+
+.longText{
+    width : 75%;
+    padding : 15px 20px;
+    font-size : 16px;
+    border-radius : 6px;
+    border : #d1d1d1 1px solid;
+}
+
+.checkArea{
+    display: flex;
+    gap : 10px;
+    align-items: center;
+}
+
+.checkArea input[type=checkbox]{
+    width : 20px !important;
+    height : 20px !important;
+}
+
+#etcBox{
+    display: flex;
+    gap : 24px;
+    width : 100%;
+}
+
+#etcBox > .basicBtn{
+    display: flex;   
+    justify-content: center;
+    width : 200px;
+    padding : 15px 20px;
+    color : white;
+    border-radius : 10px;
+    background : #d1d1d1;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+
+
+.lastMargin{
+    width : 100%;
+    height : 208px;
+}
+
+#prevNextController{
+    width : 872px;
+    margin : 0 auto;
+    display: flex;   
+    justify-content: center;
+    gap : 40px;
+}
+
+#prevNextController > div{
+    display: flex;   
+    justify-content: center;
+    width : 200px;
+    padding : 15px 20px;
+    color : white;
+    border-radius : 10px;
+    background : #d1d1d1;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+
+#prevNextController > div.back{
+    color : #F16B6C;
+    border : #F16B6C 2px solid;
+    background : white;
+}
+
+#prevNextController > div.active{
+    color : white;
+    border : #F16B6C 2px solid;
+    background : #F16B6C;
+}
+
+
+
+
+@media screen and (max-width : 578px){    
+    #addProjectHeader{
+        max-width : calc(100% - 64px);
+        margin : 0 auto;
+    }
+    #main {
+       max-width : 100% !important;
+    }
+    article {
+        width : 100%;
+    }
+    #mainInner{
+        max-width : calc(100% - 64px);
+    }
+    #addHeaderTitleBox{
+        margin-top : 24px;
+        margin-bottom : 14px;
+        max-width : 100%;
+        justify-content: space-between;
+    }
+
+    #mProgress{
+        font-size : 14px;
+        font-weight: 700;
+        margin-bottom : 24px;
+    }
+    
+    #content{
+        height : 300px;
+    }
+
+    .durationArea{
+        font-size : 12px;
+        flex-direction: column;
+        gap : 10px;
+    }
+
+    .durationArea > div{
+    }
+
+    .durationArea input{
+        font-size : 12px;
+        width : calc(100% - 65px);
+        width : 268px;
+    }
+
+    #prevNextController{
+        margin : 0 auto;
+        width : calc(100% - 64px);
+        gap : 16px;
+    }
+
+    #maxMoney, #maxDuration{
+        width : 228px;
+    }
+
+    .tilde{
+        margin-right : 0;
+        margin-left : 0;
+    }
+
+    #openCalenderBtn{
+        width : 44px;
+        height : 44px;
+        box-sizing: border-box;
+
+        padding : 12px;
+    }
+
+    #openCalenderBtn .mobile{
+        background : url('../image/iconCal.png');
+        width : 20px;
+        height : 20px;
+    }
+    #calenderArea {
+        gap : 18px;
+    }
+
+    #calenderWrapper{
+        width : 100%;
+    }
+
+    .checkArea input[type=checkbox]{
+        width : 18px !important;
+        height : 18px !important;
+    }
+    #etcBox{
+        gap : 18px;
+    }
+    #etcBox > .basicBtn{
+        width: 44px;
+        height: 44px;
+        padding: 15px 11px;
+        box-sizing: border-box;
+    }
+    .longText{
+        font-size : 12px;
+        width : 68%;
+    }
+}
+
+</style>    
+
+<div id="addProjectHeader">
+    <div id="addHeaderTitleBox">
+        <div id="" class="fs2014 fw-bold color_primary">프로젝트 등록하기</div>
+        <div class="fs12 mobile color_primary"> 
+            <b>5</b> / 5
+        </div>
+    </div>
+    <div id="mProgress" class="mobile">
+        5. 모집요건
+    </div>
+    <div id="addGuageBox" class="pc">
+        <div id="grayGuage"></div>
+        <div id="progress5" class="progressGuage">
+            <div id="progressDot"></div>
+        </div>
+        <div id="progressContent">
+            <div class="">1. 기본정보</div>
+            <div class="">2. 준비상태</div>
+            <div class="">3. 상세정보 </div>
+            <div class="">4. 예산 및 일정</div>
+            <div class="active">5. 모집요건</div>
+        </div>
+    </div>
+</div>
+<article class="">
+    <div id="mainInner">
+        <div class="mb40">
+            <div class="fs1814 fw-bold mb2010">지원 모집 마감일</div>
+            <div id="calenderArea">
+                <input id="date" type="text" placeholder="달력에서 프로젝트의 시작 날짜를 선택하세요.">
+                <div id="openCalenderBtn" class="basicBtn bg_color_primary f-white">
+                    <div class="pc">일정 선택하기</div>
+                    <div class="mobile"></div>
+                </div>
+                <div id="calenderWrapper" class="d-none">
+                    <table class="Calendar">
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <td onClick="prevCalendar();" style="cursor:pointer;">
+                                    <!-- &#60; -->
+                                    <div class="iconCalPrev"></div>
+                                </td>
+                                <td colspan="3">
+                                    <span id="calYear"></span>년
+                                    <span id="calMonth"></span>월
+                                </td>
+                                <td onClick="nextCalendar();" style="cursor:pointer;">
+                                    <!-- &#62; -->
+                                    <div class="iconCalNext"></div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>일</td>
+                                <td>월</td>
+                                <td>화</td>
+                                <td>수</td>
+                                <td>목</td>
+                                <td>금</td>
+                                <td>토</td>
+                            </tr>
+                        </thead>                
+                        <tbody>
+                        </tbody>
+                    </table>                    
+                </div>
+            </div>
+        </div>
+        <div class="mb40">
+            <div class="fs1814 fw-bold mb2010">지원자 필수 조건</div>
+            <div class="fs1612 mb2010">필수 조건은 중복 선택이 가능합니다.</div>            
+            <div class="checkArea fs1612 color_gray2 mb3020">
+                <input type="checkbox">
+                <div>세금계산서 발행</div>
+            </div>
+            <div class="checkArea fs1612 color_gray2 mb3020">
+                <input type="checkbox">
+                <div>동일 업력 1년 이상</div>
+            </div>
+            <div class="checkArea fs1612 color_gray2 mb3020">
+                <input type="checkbox">
+                <div>동일 프로젝트 진행 이력</div>
+            </div>
+            <div class="checkArea fs1612 color_gray2 mb3020">
+                <input type="checkbox">
+                <div>보증보험 발급 가능</div>
+            </div>
+            <div class="checkArea fs1612 color_gray2 mb3020">
+                <input type="checkbox">
+                <div>온라인 미팅 선호</div>
+            </div>
+            <div class="checkArea fs1612 color_gray2 mb3020">
+                <input type="checkbox">
+                <div>오프라인 미팅 선호</div>
+            </div>
+            <div class="checkArea fs1612 color_gray2 mb3020">
+                <input type="checkbox">
+                <div id="etcBox">
+                    <input class='longText' type="text" placeholder="기타(직접 입력)">
+                    <div class="basicBtn">저장</div>
+                    <!-- active붙이면 색 들어옵니다.-->    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="prevNextController">
+        <div class="fs1612 back">이전으로</div>
+        <div class="fs1612">다음으로</div>
+        <!-- active붙이면 버튼이 활성화됩니다.-->                
+    </div>
+    <div class="lastMargin"></div>    
+    </div>
+</article>
+

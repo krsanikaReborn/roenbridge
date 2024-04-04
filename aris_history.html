@@ -1,0 +1,411 @@
+<style>
+
+article {
+    width : 1320px;
+    margin : 0 auto;
+}
+
+.prevIcon {
+    width : 24px;
+    height : 24px;
+    background-image: url('../image/prevIcon.png');
+    background-size : cover;
+    margin-right : 30px;
+}
+
+#historyList{
+    margin-top : 30px;
+}
+.w6980{
+    width : 69%;
+}
+
+.w75{
+    width : 75%;
+}
+
+.mt20{
+    margin-top : 20px;
+}
+
+#asideDivide{
+    margin : 30px 0;
+}
+.projectTypeBox{
+    width : 220px;
+    height : 120px;
+    border : #e8e8e8 1px solid;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    padding : 29px 22px;
+}
+
+.historyBtn{
+    width : 170px;
+    height : 50px;
+    background-image: url('../image/confirmButton.png');
+    background-size : cover;
+}
+
+.line.ver20{
+    margin : 0 20px;
+    width : 2px;
+    height : 20px;
+    background : #f5f5f5;
+}
+
+.line.ver14{
+    margin : 0 14px;
+    width : 2px;
+    height : 14px;
+    background : #e8e8e8;
+}
+
+#projectHistoryArea{
+    margin-left : 54px;
+    display: flex;
+    flex-direction: column;
+    gap : 14px;    
+}
+.projectHistoryBox{
+    background: #f8f8f8;
+    border-radius: 10px;
+    padding : 30px 40px;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width : 100%;
+    box-sizing: border-box;
+}
+
+
+.mb144{
+    margin-bottom : 144px;
+}
+#asideBtnArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mb1203{
+    margin-bottom : 12px;
+}
+
+.projectContent{
+    display: flex;
+}
+
+.projectContent > div:first-child {
+    margin-right : 14px;
+}
+
+.pagination{    
+    margin : 50px auto;
+    display : flex;
+    align-items: center;
+}
+
+.pagination > .number{
+    width : 40px;
+    height : 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size : 16px;
+}
+
+.pagination > .number.active{
+    color : white;
+    background-color: #F16B6C;    
+}
+
+.pageIcon{
+    width: 20px;
+    height: 20px;
+}
+.pageIcon.next{
+    background-image : url('../image/pageNextIcon.png');
+    background-size : cover;
+    margin-left : 40px;
+}
+.pageIcon.prev{
+    background-image : url('../image/pagePrevIcon.png');
+    background-size : cover;
+    margin-right : 40px;
+}
+
+@media screen and (max-width : 578px){    
+    article{
+        width : 100%;
+    }
+    #historyList{
+        align-items: start;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom : 14px !important;
+    }
+
+    #historyList > .prevIcon{
+        margin-bottom: 20px;
+        width : 16px;
+        height : 16px;        
+    }
+
+    #historyList > div:nth-child(2){
+        margin-bottom: 10px;
+    }
+    #historyList > div:nth-child(2){
+        margin-bottom: 10px;
+    }
+
+    #historyList .line {
+        display : none;
+    }
+
+    #projectHistoryArea{
+        margin-left : 0;
+    }
+
+    .projectHistoryBox{
+        padding : 20px;
+        font-size : 14px;
+    }
+
+    .historyBtn{
+        width : 17px;
+        height : 17px;
+        background-image: url('../image/confirmButtonm.png');
+        background-size : cover;
+    }
+
+    .projectContent > div:first-child {
+        margin-bottom : 4px;
+    }
+
+    .projectHistoryBox> div:first-child{
+       width : calc(100% - 17px);
+    }    
+
+    .mb1203{
+        margin-bottom: 3px;
+    }
+
+    .projectContent{
+        flex-direction: column;
+    }
+
+    .pagination{
+        gap: 10px;
+        margin: 30px 0;
+        justify-content: space-between;
+    }
+    
+    .pagination > .number{
+        width : 24px;
+        height : 24px;
+        font-size : 12px;
+        border-radius: 5px;
+    }
+
+    .pageIcon{
+        width: 24px;
+        height: 24px;
+    }
+    .pageIcon.next{
+        margin-left : 40px;
+    }
+    .pageIcon.prev{
+        margin-right : 40px;
+    }    
+
+
+}
+
+</style>    
+
+    <article class="">
+       <div id="historyList" class="w100 d-flex items-center mb20">
+                <div class="prevIcon"></div>
+                <div class="color_primary subtitle3">프로젝트 히스토리 전체보기</div>
+                <div class="line ver20 pc"></div>
+                <div class="fs1612">프로젝트에 관한 모든 히스토리가 최신순으로 표시됩니다</div>
+        </div>
+        <div id="projectHistoryArea">
+            <div class="projectHistoryBox">
+                <div class="fs1612">
+                    <div class="d-flex color_gray3 mb10 items-center">
+                        23-10-17
+                        <div class="line ver14"></div>
+                        13:00
+                    </div>
+                    <div class="projectContent">
+                        <div class="fw-bold">Vue.js 기반 웹 UX/UI 화면 디자인</div>
+                        <div>프로젝트 내역에 새로운 내용이 등록되었습니다.</div>                        
+                    </div>
+                </div>
+                <div class="historyBtn"></div>
+            </div>
+            <div class="projectHistoryBox">
+                <div class="fs1612">
+                    <div class="d-flex color_gray3 mb10 items-center">
+                        23-10-17
+                        <div class="line ver14"></div>
+                        13:00
+                    </div>
+                    <div class="projectContent">
+                        <div class="fw-bold">Vue.js 기반 웹 UX/UI 화면 디자인</div>
+                        <div>프로젝트 내역에 새로운 내용이 등록되었습니다.</div>                        
+                    </div>
+                </div>
+                <div class="historyBtn"></div>
+            </div>
+            <div class="projectHistoryBox">
+                <div class="fs1612">
+                    <div class="d-flex color_gray3 mb10 items-center">
+                        23-10-17
+                        <div class="line ver14"></div>
+                        13:00
+                    </div>
+                    <div class="projectContent">
+                        <div class="fw-bold">Vue.js 기반 웹 UX/UI 화면 디자인</div>
+                        <div>프로젝트 내역에 새로운 내용이 등록되었습니다.</div>                        
+                    </div>
+                </div>
+                <div class="historyBtn"></div>
+            </div>
+            <div class="projectHistoryBox">
+                <div class="fs1612">
+                    <div class="d-flex color_gray3 mb10 items-center">
+                        23-10-17
+                        <div class="line ver14"></div>
+                        13:00
+                    </div>
+                    <div class="projectContent">
+                        <div class="fw-bold">Vue.js 기반 웹 UX/UI 화면 디자인</div>
+                        <div>프로젝트 내역에 새로운 내용이 등록되었습니다.</div>                        
+                    </div>
+                </div>
+                <div class="historyBtn"></div>
+            </div>
+            <div class="projectHistoryBox">
+                <div class="fs1612">
+                    <div class="d-flex color_gray3 mb10 items-center">
+                        23-10-17
+                        <div class="line ver14"></div>
+                        13:00
+                    </div>
+                    <div class="projectContent">
+                        <div class="fw-bold">Vue.js 기반 웹 UX/UI 화면 디자인</div>
+                        <div>프로젝트 내역에 새로운 내용이 등록되었습니다.</div>                        
+                    </div>
+                </div>
+                <div class="historyBtn"></div>
+            </div>
+            <div class="projectHistoryBox">
+                <div class="fs1612">
+                    <div class="d-flex color_gray3 mb10 items-center">
+                        23-10-17
+                        <div class="line ver14"></div>
+                        13:00
+                    </div>
+                    <div class="projectContent">
+                        <div class="fw-bold">Vue.js 기반 웹 UX/UI 화면 디자인</div>
+                        <div>프로젝트 내역에 새로운 내용이 등록되었습니다.</div>                        
+                    </div>
+                </div>
+                <div class="historyBtn"></div>
+            </div>
+            <div class="projectHistoryBox">
+                <div class="fs1612">
+                    <div class="d-flex color_gray3 mb10 items-center">
+                        23-10-17
+                        <div class="line ver14"></div>
+                        13:00
+                    </div>
+                    <div class="projectContent">
+                        <div class="fw-bold">Vue.js 기반 웹 UX/UI 화면 디자인</div>
+                        <div>프로젝트 내역에 새로운 내용이 등록되었습니다.</div>                        
+                    </div>
+                </div>
+                <div class="historyBtn"></div>
+            </div>
+            <div class="projectHistoryBox">
+                <div class="fs1612">
+                    <div class="d-flex color_gray3 mb10 items-center">
+                        23-10-17
+                        <div class="line ver14"></div>
+                        13:00
+                    </div>
+                    <div class="projectContent">
+                        <div class="fw-bold">Vue.js 기반 웹 UX/UI 화면 디자인</div>
+                        <div>프로젝트 내역에 새로운 내용이 등록되었습니다.</div>                        
+                    </div>
+                </div>
+                <div class="historyBtn"></div>
+            </div>
+            <div class="projectHistoryBox">
+                <div class="fs1612">
+                    <div class="d-flex color_gray3 mb10 items-center">
+                        23-10-17
+                        <div class="line ver14"></div>
+                        13:00
+                    </div>
+                    <div class="projectContent">
+                        <div class="fw-bold">Vue.js 기반 웹 UX/UI 화면 디자인</div>
+                        <div>프로젝트 내역에 새로운 내용이 등록되었습니다.</div>                        
+                    </div>
+                </div>
+                <div class="historyBtn"></div>
+            </div>
+            <div class="projectHistoryBox">
+                <div class="fs1612">
+                    <div class="d-flex color_gray3 mb10 items-center">
+                        23-10-17
+                        <div class="line ver14"></div>
+                        13:00
+                    </div>
+                    <div class="projectContent">
+                        <div class="fw-bold">Vue.js 기반 웹 UX/UI 화면 디자인</div>
+                        <div>프로젝트 내역에 새로운 내용이 등록되었습니다.</div>                        
+                    </div>
+                </div>
+                <div class="historyBtn"></div>
+            </div>
+            <div class="projectHistoryBox">
+                <div class="fs1612">
+                    <div class="d-flex color_gray3 mb10 items-center">
+                        23-10-17
+                        <div class="line ver14"></div>
+                        13:00
+                    </div>
+                    <div class="projectContent">
+                        <div class="fw-bold">Vue.js 기반 웹 UX/UI 화면 디자인</div>
+                        <div>프로젝트 내역에 새로운 내용이 등록되었습니다.</div>                        
+                    </div>
+                </div>
+                <div class="historyBtn"></div>
+            </div>
+
+            <!-- 내역이 없을 때-->
+            <div class="projectHistoryBox">
+                히스토리가 없습니다.
+            </div>
+    
+            <div class="pagination">
+                <div class="pageIcon prev"></div>
+                <div class="number active">1</div>
+                <div class="number">2</div>
+                <div class="number">3</div>
+                <div class="number">4</div>
+                <div class="number">5</div>
+                <div class="pageIcon next"></div>
+            </div>
+        </div>
+        
+    </article>
+    <div class="mb144"></div>
+
+</div>

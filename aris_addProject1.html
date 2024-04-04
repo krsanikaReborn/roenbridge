@@ -1,0 +1,433 @@
+<style>
+
+#addProjectHeader{
+    width : 1320px;
+    margin : 0 auto;
+}
+
+#addHeaderTitleBox{
+    margin-top : 50px;
+    margin-bottom : 36px;
+    max-width : 1320px;
+    display : flex;
+    justify-content: center;
+}
+
+#addGuageBox{
+    width : 1320px;
+    margin : 0 auto;
+    position: relative;
+}
+
+#grayGuage{
+    background : #f5f5f5;
+    width : 100%;
+    height : 6px;
+    border-radius: 3px;
+}
+
+#progress1{
+    width : calc((100% / 5) * 0 + (100% / 5 / 2) + 60px);
+    height : 6px;
+    background: #F16B6C;
+}
+
+.progressGuage{    
+    position : absolute;
+    height : 6px;
+    background: #F16B6C;    
+    border-radius: 3px;
+    top : 0;
+}
+
+#progressDot{
+    position : absolute;
+    width : 18px;
+    height : 18px;
+    top: -6px;
+    right: -6px;
+    border-radius : 10px;
+    background: #F16B6C;
+}
+
+#progressContent{
+    display: flex;
+    justify-content: space-evenly;
+    width : 100%;
+    margin-top : 14px;
+    margin-bottom : 24px;
+    color : #a3a3a3;
+    font-size : 16px;    
+}
+#progressContent .active{
+    color : #F16B6C;
+    font-weight: 700;
+}
+
+article {
+    width : 100%; 
+    background : #f8f8f8;
+    padding-top: 40px;
+}
+
+#mainInner{
+    width : 872px;
+    margin : 0 auto;
+}
+
+input .longText{
+    width : 100%;
+    padding : 15px 20px;
+    font-size : 16px;
+    border-radius : 6px;
+    border : #d1d1d1 1px solid;
+}
+
+.lastMargin{
+    width : 100%;
+    height : 208px;
+}
+
+#categoryArea{
+    display: flex;
+    flex-wrap : wrap;
+    gap : 16px;
+}
+
+.categoryBox{
+    display: flex;
+    width : 280px;
+    height : 80px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: 700;
+    color : #a3a3a3;
+    border : #a3a3a3 2px solid;
+    background : white;
+    box-sizing: border-box;
+}
+
+.categoryBox.active{
+    border : #F16B6C 2px solid;
+    color : #F16B6C;
+}
+
+#keywordArea{
+    display: flex;
+    flex-wrap : wrap;
+    gap : 20px;
+}
+.keywords{
+    background : white;
+    padding : 8px 20px;
+    border-radius : 10px;
+    font-weight: 700;   
+    font-size : 14px;
+    display: flex;
+    align-items: center;
+    gap : 10px;
+}
+
+.keywords.none{
+    font-weight: 400;
+    color : #a3a3a3;
+}
+
+.removeKeyword{
+    display : inline-block;
+    background-image : url('../image/iconClose.png');
+    background-size : cover;
+    width : 20px;
+    height : 20px;
+}
+
+#directService{
+    display: flex;
+    gap : 10px;
+}
+
+#directService > input{
+    width : 20px !important;
+    height : 20px !important;
+}
+
+#persenalInfo{
+    display: flex;
+    gap : 24px;
+}
+
+#persenalInfo > div{
+    width : 50%;
+    background : white;
+    border-radius: 6px;
+    border : #e8e8e8 2px solid;
+    color : #e8e8e8;
+    font-weight : 700;
+    padding : 23px;
+    display: flex;
+    justify-content: center;
+}
+
+#persenalInfo > div.active{
+    border : #F16B6C 2px solid;
+    color : #F16B6C;
+}
+
+#techInfo{
+    display: flex;
+    gap : 24px;
+}
+
+#techInfo > div{
+    width : 50%;
+    background : white;
+    border-radius: 6px;
+    border : #e8e8e8 2px solid;
+    color : #474747;
+    text-align: center;
+    padding : 30px;
+    gap : 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;    
+}
+
+#prevNextController{
+    width : 872px;
+    margin : 0 auto;
+    display: flex;   
+    justify-content: space-between;
+}
+
+#prevNextController > div{
+    display: flex;   
+    justify-content: center;
+    width : 200px;
+    padding : 15px 20px;
+    color : white;
+    border-radius : 10px;
+    background : #d1d1d1;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+
+#prevNextController > div.back{
+    color : #F16B6C;
+    border : #F16B6C 2px solid;
+    background : white;
+}
+
+#prevNextController > div.active{
+    color : white;
+    border : #F16B6C 2px solid;
+    background : #F16B6C;
+}
+
+
+
+
+
+
+
+@media screen and (max-width : 578px){    
+    #addProjectHeader{
+        max-width : calc(100% - 64px);
+        margin : 0 auto;
+    }
+    #main {
+       max-width : 100% !important;
+    }
+    article {
+        width : 100%;
+    }
+    #mainInner{
+        max-width : calc(100% - 64px);
+    }
+    #addHeaderTitleBox{
+        margin-top : 24px;
+        margin-bottom : 14px;
+        max-width : 100%;
+        justify-content: space-between;
+    }
+
+    #mProgress{
+        font-size : 14px;
+        font-weight: 700;
+        margin-bottom : 24px;
+    }
+
+    .categoryBox{
+        width : calc(50% - 8px);
+        flex-direction: column;
+        border: #e8e8e8 1px solid;
+    }
+
+    #keywordArea{
+        gap : 10px;
+    }
+
+    .lastMargin{        
+        height : 208px;
+    }
+
+    input .longText{
+        font-size : 12px;
+    }
+
+    #techInfo{
+        flex-direction: column;
+    }
+
+    #techInfo > div{
+        width : 100%;
+        box-sizing: border-box;
+        font-size : 14px;
+        gap : 10px;
+    }
+
+    #prevNextController{
+        margin : 0 auto;
+        width : calc(100% - 64px);
+        gap : 16px;
+    }
+    #prevNextController > div{
+
+    }
+
+    
+}
+
+</style>    
+
+<div id="addProjectHeader">
+    <div id="addHeaderTitleBox">
+        <div id="" class="fs2014 fw-bold color_primary">프로젝트 등록하기</div>
+        <div class="fs12 mobile color_primary"> 
+            <b>1</b> / 5
+        </div>
+    </div>
+    <div id="mProgress" class="mobile">
+        1. 기본정보
+    </div>
+    <div id="addGuageBox" class="pc">
+        <div id="grayGuage"></div>
+        <div id="progress1" class="progressGuage">
+            <div id="progressDot"></div>
+        </div>
+        <div id="progressContent">
+            <div class="active">1. 기본정보</div>
+            <div class="">2. 준비상태</div>
+            <div class="">3. 상세정보 </div>
+            <div class="">4. 예산 및 일정</div>
+            <div class="">5. 모집요건</div>
+        </div>
+    </div>
+</div>
+<article class="">
+    <div id="mainInner">
+        <div class="mb40">
+            <div class="fs1814 fw-bold mb2010">프로젝트 제목</div>
+            <input class="longText" placeholder="프로젝트 제목을 입력해주세요">    
+        </div>
+        <div class="mb40">
+            <div class="fs1814 fw-bold mb20">카테고리 선택</div>
+            <div id="categoryArea">
+                <div class="categoryBox active">
+                    <div>기술 및&nbsp;</div><div>마켓 조사분석</div>
+                </div>
+                <div class="categoryBox">
+                    <div>기술사업화 BM&nbsp;</div><div>기획 및 전략</div>
+                </div>
+                <div class="categoryBox">
+                    R&D
+                </div>
+                <div class="categoryBox">
+                    <div>기술권리화</div><div>(특허 등)</div>
+                </div>
+                <div class="categoryBox">
+                    서비스 디자인
+                </div>
+                <div class="categoryBox">
+                    마케팅
+                </div>
+                <div class="categoryBox">
+                    프로토타입
+                </div>
+                <div class="categoryBox">
+                    <div>자금조달</div><div>(투자유치 등)</div>
+                </div>
+                <div class="categoryBox">
+                    글로벌 진출
+                </div>
+                <div class="categoryBox">
+                    기타
+                </div>
+
+                <div style="clear:both"></div>
+            </div>                
+        </div>
+        <div class="mb40">
+            <div class="fs1814 fw-bold mb20">키워드 등록</div>
+            <div class="onelineInputBtn">
+                <input type="text" placeholder="최대 5개의 키워드를 등록할 수 있습니다.">
+                <button class="basicBtn border_primary color_primary fw-bold bg_white_true">등록하기</button>
+            </div>
+            <div id="keywordArea">
+                <div class="keywords none">
+                    <div>등록된 키워드가 없습니다.</div>
+                </div>
+                <div class="keywords">
+                    <div>vue.js</div> 
+                    <div class="removeKeyword"></div>
+                </div>
+                <div class="keywords">
+                    <div>Next.js</div>                    
+                </div>
+            </div>
+        </div>
+        <div class="mb40">
+            <div class="fs1814 fw-bold mb2010">서비스 신청</div>
+            <div id="directService" class="color_gray2 items-center fs1814 mb20">
+                <div class="check__line">
+                    <input id="agreeDirect" type="checkbox">
+                    <label for="agreeDirect">
+                        ROEN에서 제공하는 다이렉트 서비스를 신청합니다.    
+                    </label>
+                </div>
+            </div>            
+        </div>
+        <div class="mb40">
+            <div class="fs1814 fw-bold mb20">개인정보 공개여부</div>
+            <div id="persenalInfo" class="d-flex">
+                <div class="active">
+                    <span class="pc">개인정보를 공개합니다</span>
+                    <span class="mobile">공개</span>
+                </div>
+                <div>
+                    <span class="pc">개인정보를 비공개합니다</span>
+                    <span class="mobile">비공개</span>                    
+                </div>
+            </div>
+        </div>
+        <div class="mb50">
+            <div class="w100 text-center fs1814 fw-bold mb20">기술검토가 필요하세요? 아래 사이트를 방문해보세요.</div>
+            <div id="techInfo" class="d-flex">
+                <div>
+                    <div><img src="../image/kipris.png"></div>
+                    <div>특허정보검색서비스 <b>키프리스</b></div>
+                </div>
+                <div>
+                    <div>선행도움조사 <b>도움 사이트</b></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="prevNextController">
+        <div class="fs1612 back">이전<span class="pc">으로</span></div>
+        <div class="fs1612 active">다음<span class="pc">으로</span></div>
+        <!-- active붙이면 버튼이 활성화됩니다.-->
+    </div>
+    <div class="lastMargin"></div>
+
+</article>

@@ -1,0 +1,180 @@
+<style>
+    #loginBg{
+        z-index: -1;
+        background-image: url(./image/loginBg.png);
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1212px;    
+    }
+
+    #loginAreaWrapper{        
+        width : 100%;
+        min-height : 1080px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #headerGnb > div{
+        color : white !important;
+    }
+    #headerAccountBox > .logOut{
+        background : none !important;
+        border : white 2px solid;
+        color : white !important;
+    }
+    #toBlogIcon {
+        background : url('../image/toBlogIconWhite.png');            
+    }
+
+
+    #visualTitle{
+        background-image : url('../image/visual_banner.png');
+        background-size : cover;
+    }
+
+    #loginArea{
+        display: flex;
+        gap : 20px;
+    }
+
+    #formArea{
+        background-color: white;
+    }
+
+    #loginButton{
+        text-align: center;
+        margin-top : 20px;
+        font-weight: 800;
+    }
+
+    
+
+    #loginFormBox{
+        
+    }
+
+    .loginLabel{
+        font-size : 16px;
+        margin-bottom : 16px;
+    }
+
+    .psudoCard input{
+        width : calc(100% - 42px);
+    }
+
+    .psudoCard{
+        min-width : 424px;
+        min-height: 518px;
+        padding : 40px;
+        border-radius : 10px;
+    }
+
+    
+    .socialIcon {
+        width : 44px;
+        height: 44px;
+    }
+
+    .socialIcon.kakao {
+        background-image : url('./image/social_kakao.png');
+        background-size : cover;
+    }
+    .socialIcon.naver {
+        background-image : url('./image/social_naver.png');
+        background-size : cover;
+    }
+    .socialIcon.google {
+        background-image : url('./image/social_google.png');
+        background-size : cover;
+    }
+    .socialIcon.facebook {
+        background-image : url('./image/social_facebook.png');
+        background-size : cover;
+    }
+
+    #socialLoginBox {
+        text-align: center;
+        padding : 30px 40px;        
+    }
+
+    #formArea .error{
+        display: flex;
+        width : 100%;
+        color : #ff4d14;
+        font-size : 14px;
+        justify-content: right;
+    }
+
+    @media screen and (max-width : 578px) {
+        .psudoCard{
+            min-width : calc(100% - 64px);
+            padding : 40px;
+        }
+        #loginAreaWrapper{
+            min-height : fit-content;
+        }
+
+        #socialLoginBox {
+            margin-bottom : 100px;
+        }
+    }
+
+</style>
+<div id="loginBg" class="pc">        
+</div>
+<div id="loginAreaWrapper">    
+    <article id="loginArea">
+        <div id="visualTitle" class="pc psudoCard">
+        </div>
+        <div id="formArea" class="psudoCard">
+            <div class="color_primary subtitle1 pt20 pd20">환영합니다</div>
+            <div class="text2 mb20">
+                <div class="loginLabel">이메일 아이디</div>
+                <input id="email" type="email" placeholder="이메일을 입력하세요">
+            </div>            
+            <div class="text2 mb20">
+                <div class="loginLabel">비밀번호</div> 
+                <input id="password" type="password" placeholder="비밀번호를 입력하세요">
+                <!-- 에러상황일 때-->
+                <div class="error">등록되지 않은 이메일입니다.</div>
+                <div class="error">비밀번호가 올바르지 않습니다.</div>
+                <div class="error">이메일이 올바르지 않습니다.</div>
+                <div class="error">SNS 계정으로 등록되어있는 이메일입니다.</div>
+            </div>
+            <div class="d-flex space-between">
+                <div>
+                    <input type="checkbox">
+                    로그인 상태 유지하기
+                </div>
+                <div>
+                    <a class="color_primary" href="">비밀번호 찾기</a>
+                </div>
+            </div>
+            <a href="#">
+                <div id="loginButton" class="basicBtn bg_gray4 color_white br10">
+                    로그인하기 
+                </div>    
+            </a>
+            <div class="divideBox">
+                <div class="line"></div>
+                <div>또는</div>
+            </div>
+            <div id="socialLoginBox" class="bg_gray6 p20">
+                <div class="pd20">소셜계정으로 로그인하기</div>
+                <div class="d-flex space-between">
+                    <div class="socialIcon kakao"></div>
+                    <div class="socialIcon naver"></div>
+                    <div class="socialIcon google"></div>
+                    <div class="socialIcon facebook"></div>
+                </div>
+            </div>
+            
+        </div>
+
+    </article>
+</div>

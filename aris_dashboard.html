@@ -1,0 +1,413 @@
+<style>
+
+.withSidebarBox{
+    display: flex;
+    width :100%;
+    gap : 44px;
+    max-width: 1320px;
+    margin : 0 auto;
+}
+
+.withSidebarBox > aside{
+    width : 312px;
+    /* height : 542px; */
+    height : 558px;
+    box-shadow: 0px 4px 20px 0px #00000024;
+    padding : 50px 34px 34px 40px;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    font-size : 14px;
+    box-sizing: border-box;
+}
+
+.withSidebarBox > article {
+    width : 964px;
+}
+
+#userImageBox{
+    background-image : url('../image/profileDefault.png');
+    background-size: cover;
+    width : 100px;
+    height : 100px;
+}
+
+#userTypeBox{
+    margin-bottom : 30px;
+    margin-top : 30px;
+    text-align: center;
+}
+
+.userTypeTag{
+    padding : 8px 14px;
+    border-radius : 20px;
+    width : 26px;
+    color : white;
+    background-color: #F16B6C;
+    margin: 0 auto;
+}
+
+.username{
+    font-weight: 700;
+    font-size : 24px;
+    margin-top: 20px;
+}
+
+.pointMark{
+    width : 20px;
+    height : 20px;
+    background-image : url('../image/pointMark.png');
+    background-size : cover;
+    margin-left : 4px;
+}
+
+#userDataArea{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+#chargeButton{
+    box-sizing : border-box;
+    border : #F16B6C 2px solid;
+    border-radius: 10px;
+    font-size : 14px;
+    color : #F16B6C;
+    padding : 6px 10px;
+    font-weight: 700;
+}
+
+.w6980{
+    width : 69%;
+}
+
+.w75{
+    width : 75%;
+}
+
+.mt20{
+    margin-top : 20px;
+}
+
+#asideDivide{
+    margin : 30px 0;
+}
+.projectTypeBox{
+    width : 220px;
+    height : 120px;
+    border : #e8e8e8 1px solid;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    padding : 29px 22px;
+}
+
+.historyBtn{
+    width : 170px;
+    height : 50px;
+    background-image: url('../image/confirmButton.png');
+    background-size : cover;
+}
+
+.line.ver20{
+    margin : 0 20px;
+    width : 2px;
+    height : 20px;
+    background : #f5f5f5;
+}
+
+.line.ver14{
+    margin : 0 14px;
+    width : 2px;
+    height : 14px;
+    background : #e8e8e8;
+}
+
+#projectHistoryArea{
+    display: flex;
+    flex-direction: column;
+    gap : 14px;
+}
+.projectHistoryBox{
+    background: #f8f8f8;
+    border-radius: 10px;
+    padding : 30px 40px;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width : 100%;
+    box-sizing: border-box;
+}
+
+
+.mb144{
+    margin-bottom : 144px;
+}
+#asideBtnArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mb1203{
+    margin-bottom : 12px;
+}
+
+.projectContent{
+    display: flex;
+
+}
+@media screen and (max-width : 578px){    
+    .withSidebarBox{
+        flex-direction: column;
+        gap : 40px;
+    }
+    .withSidebarBox > aside{      
+        width : 100%;
+        height : 164px;
+        flex-direction: row;
+        padding : 0;
+        box-shadow: none;
+        margin-top : 30px;
+    }
+
+    .withSidebarBox > article{
+        width : 100%;
+    }
+
+    #projectTypeArea{
+        gap : 16px;
+        flex-wrap: wrap;
+    }
+
+    #userDataArea{
+        flex-direction: row;
+    }
+
+    #userDataArea > div:last-child{
+        width : calc(100% - 62px);
+    }
+    #userImageBox{
+        width : 40px;
+        height : 40px;
+        margin-right: 22px;        
+    }
+
+
+    #userImageBox::after{
+        
+    }
+    #asideDivide{
+        margin: 24px 0;
+    }
+
+    #userTypeBox{
+        display: flex;
+        margin : 0;
+    }
+    .userTypeTag{
+        font-size : 10px;
+        padding : 6px 10px;
+        margin: 0;
+        margin-right: 10px;
+        width: 19px;
+    }
+    .username{
+        font-size : 20px;
+        margin: 0;
+    }
+    .projectTypeBox{
+        width: calc(50% - 8px);
+        height: auto;
+        padding: 20px 35px;
+    }
+    #chargeButton {
+        font-size : 10px;
+    }
+    .w6980{
+        width: 80%;
+    }
+
+    .withSidebarBox .basicBtn {
+        width: calc(50% - 8px);
+        margin : 0 !important;
+    }
+    #asideBtnArea{
+        flex-direction: row;
+        gap : 16px;        
+    }
+
+    #historyList{
+        align-items: start;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    #historyList .line {
+        display : none;
+    }
+
+    .projectHistoryBox{
+        padding : 20px;
+        font-size : 14px;
+    }
+
+    .projectContent{
+        flex-direction: column;
+    }
+    .historyBtn{
+        width : 17px;
+        height : 17px;
+        background-image: url('../image/confirmButtonm.png');
+        background-size : cover;
+    }
+
+    .projectHistoryBox> div:first-child{
+       width : calc(100% - 17px);
+    }    
+
+    .mb1203{
+        margin-bottom: 3px;
+    }
+
+}
+
+</style>
+
+<div class="withSidebarBox">
+    <aside>
+        <div class="w100">
+            <div id="userDataArea">
+                <div id="userImageBox"></div>
+                <div class="w100">
+                    <div id="userTypeBox">
+                        <div class="userTypeTag">Aris</div>
+                        <div class="username">로엔브릿지</div>
+                    </div>
+                    <div class="d-flex space-between items-center">
+                        <div class="d-flex space-between w6980 items-center">
+                            <div class="fw-bold color_primary fs1612">내포인트</div>
+                            <div class="d-flex items-center">
+                                <div class="">3,000</div>
+                                <div class="pointMark"></div>    
+                            </div>
+                        </div>
+                        <div id="chargeButton">충전<span class="pc">하기</span></div>            
+                    </div>    
+                </div>    
+            </div>
+            <div id="asideDivide" class="divideBox">
+                <div class="line w100"></div>
+                <div></div>
+            </div>
+            <div id="asideBtnArea">
+                <div class="basicBtn w100 border_primary fs1612 fw-bold color_primary mb20">
+                    프로젝트 등록
+                </div>
+                <div class="basicBtn w100 border_primary fs1612 fw-bold color_primary">
+                    Aris 정보 변경
+                </div>
+            </div>
+        </div>
+        
+</aside>
+    <article>
+        <div class="d-flex w100 space-between items-center">
+            <div class="subtitle3 color_primary mb20 mt20">내 프로젝트</div>
+            <div class="fs12"><u>내 프로젝트 →</u></div>
+        </div>
+        <div id="projectTypeArea" class="w100 d-flex space-between mb40">
+            <div class="projectTypeBox">
+                <div class="text2 mb1203">모집</div>
+                <div class="subtitle1 color_primary">10건</div>
+            </div>
+            <div class="projectTypeBox">
+                <div class="text2 mb1203">진행</div>
+                <div class="subtitle1 color_primary">10건</div>
+            </div>
+            <div class="projectTypeBox">
+                <div class="text2 mb1203">완료</div>
+                <div class="subtitle1 color_primary">10건</div>
+            </div>
+            <div class="projectTypeBox bg_gray5">
+                <div class="text2 mb1203">마감</div>
+                <div class="subtitle1 color_primary">10건</div>
+            </div>
+        </div>
+        <div class="color_primary subtitle3 mobile">프로젝트 히스토리 일람</div>
+        <div id="historyList" class="w100 d-flex space-between items-center mb20">
+            <div class="d-flex items-center">
+                <div class="color_primary subtitle3 pc">프로젝트 히스토리 일람</div>
+                <div class="line ver20"></div>
+                <div class="fs1612">가장 최근 4개의 히스토리가 표시됩니다.</div>
+            </div>
+            <div class="fs12"><u>더보기 →</u></div>
+        </div>
+        <div id="projectHistoryArea">
+            <div class="projectHistoryBox">
+                <div class="fs1612">
+                    <div class="d-flex color_gray3 mb10 items-center">
+                        23-10-17
+                        <div class="line ver14"></div>
+                        13:00
+                    </div>
+                    <div class="projectContent">
+                        <div class="fw-bold">Vue.js 기반 웹 UX/UI 화면 디자인</div>
+                        <div>프로젝트 내역에 새로운 내용이 등록되었습니다.</div>                        
+                    </div>
+                </div>
+                <div class="historyBtn"></div>
+            </div>
+            <div class="projectHistoryBox">
+                <div class="fs1612">
+                    <div class="d-flex color_gray3 mb10 items-center">
+                        23-10-17
+                        <div class="line ver14"></div>
+                        13:00
+                    </div>
+                    <div class="projectContent">
+                        <div class="fw-bold">Vue.js 기반 웹 UX/UI 화면 디자인</div>
+                        <div>프로젝트 내역에 새로운 내용이 등록되었습니다.</div>                        
+                    </div>
+                </div>
+                <div class="historyBtn"></div>
+            </div>
+            <div class="projectHistoryBox">
+                <div class="fs1612">
+                    <div class="d-flex color_gray3 mb10 items-center">
+                        23-10-17
+                        <div class="line ver14"></div>
+                        13:00
+                    </div>
+                    <div class="projectContent">
+                        <div class="fw-bold">Vue.js 기반 웹 UX/UI 화면 디자인</div>
+                        <div>프로젝트 내역에 새로운 내용이 등록되었습니다.</div>                        
+                    </div>
+                </div>
+                <div class="historyBtn"></div>
+            </div>
+            <div class="projectHistoryBox">
+                <div class="fs1612">
+                    <div class="d-flex color_gray3 mb10 items-center">
+                        23-10-17
+                        <div class="line ver14"></div>
+                        13:00
+                    </div>
+                    <div class="projectContent">
+                        <div class="fw-bold">Vue.js 기반 웹 UX/UI 화면 디자인</div>
+                        <div>프로젝트 내역에 새로운 내용이 등록되었습니다.</div>                        
+                    </div>
+                </div>
+                <div class="historyBtn"></div>
+            </div>
+        </div>
+        <div class="mb144"></div>
+        <!-- 내역이 없을 때-->
+        <div class="projectHistoryBox">
+            히스토리가 없습니다.
+        </div>
+        <div class="mb144"></div>
+        
+    </article>
+
+</div>

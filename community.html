@@ -1,0 +1,529 @@
+<style>
+    #communityWrapper{
+        width : 648px;
+        margin : 0 auto;
+    }
+
+    #pageTitle{
+        text-align: center;
+        margin-top : 70px;
+        margin-bottom : 60px;
+    }
+
+    ul.tabs {
+        list-style: none;
+        padding-left : 0;
+        margin : 0;
+        border-bottom : 1px solid #F16B6C;
+    }
+
+    ul.tabs li {
+        display: inline-block;
+        padding: 20px 0px;
+        cursor: pointer;
+        width: 213px;
+        border-bottom: 1px solid #e6e6e6;
+        text-align: center;
+        font-weight: 700;
+        box-sizing: border-box;
+    }
+
+    ul.tabs li.current {
+        background-color: #F16B6C;
+        color : white;
+        border-radius : 10px 10px 0px 0px;
+    }
+
+
+    .tab-content{
+        display : none;
+    }
+
+    .tab-content.current{
+        display : block;
+    }
+
+    .boardListWrapper{
+
+    }
+    .boardList, .qList{
+        width : 100%;
+        display : flex;
+        justify-content: start;
+        align-items: center;
+        padding : 20px 0px;
+        border-bottom : 1px solid #e8e8e8;
+    }
+
+    .boardList .number, .aList .number, .qList .number{
+        width :32px;        
+        padding : 0 20px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .boardList .title{
+        padding : 0 20px;
+        min-width : 424px;
+    }
+
+    .boardList .date{
+        color : #a3a3a3;
+    }
+
+    .aList{
+        display : none;
+    }
+
+    .aBox {
+        width : 100%;
+    }
+
+    .aList.active{
+        width : 100%;
+        display : flex;
+        justify-content: start;
+        align-items: center;
+        padding : 20px 20px 20px 0px;
+        background:#e8e8e8;
+        border-bottom : 1px solid #e8e8e8;
+        box-sizing: border-box;
+    }
+
+
+    .pagination{    
+        width : 320px;
+        margin : 50px auto;
+        display : flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pagination > .number{
+        width : 40px;
+        height : 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        font-size : 16px;
+    }
+
+    .pagination > .number.active{
+        color : white;
+        background-color: #F16B6C;    
+    }
+
+    .pageIcon{
+        width: 20px;
+        height: 20px;
+    }
+    .pageIcon.next{
+        background-image : url('../image/pageNextIcon.png');
+        background-size : cover;
+        margin-left : 40px;
+    }
+    .pageIcon.prev{
+        background-image : url('../image/pagePrevIcon.png');
+        background-size : cover;
+        margin-right : 40px;
+    }
+
+    #content {
+        width : calc(100% - 42px);
+        height: 280px;
+        font-size : 16px;
+        padding : 15px 20px;
+        border-radius: 10px;
+        border : #d1d1d1 1px solid;
+        resize: none;
+    }
+
+    #sendBtn{
+        width : 200px;
+        margin : 0 auto;
+    }
+
+    .qList{
+        cursor: pointer;
+    }
+    .qList .title{
+        min-width :520px;
+    }
+
+    .arrowBtn{
+        width : 20px;
+        height : 20px;
+        background-image : url('../image/arrowDown.png');
+        background-size : cover;
+        margin-left : 20px;        
+    }
+
+    .arrowBtn.active{
+        transform: rotateX(180deg);
+    }
+
+    
+
+
+    @media screen and (max-width : 578px) {
+        #pageTitle{
+            margin-top : 80px;
+            margin-bottom : 50px;
+        }
+
+        #communityWrapper{
+            width : 100%;
+            margin : 0;
+        }
+
+        ul.tabs{
+            width : 100%;
+        }
+
+        ul.tabs li {
+            width : 106.9px;
+            font-size: 12px;
+            padding : 14px;
+        }
+        
+        .tab-content > div {
+            width : 100%;
+        }
+        .boardList{
+            margin : 10px 0px;
+        }
+
+        .boardList .number{
+            padding-left : 0px;
+            padding-right : 20px;
+        }
+        .boardList .title, .aList .aBox, .qList .title{
+            min-width :250px;
+            padding-left : 0;
+            padding-right : 0;
+        }
+        .boardList .date{
+            padding-left : 20px;
+            padding-right : 0;
+        }
+        
+
+        .pagination{
+            gap: 10px;
+            margin: 30px 0;
+            justify-content: space-between;
+        }
+        
+        .pagination > .number{
+            width : 24px;
+            height : 24px;
+            font-size : 12px;
+            border-radius: 5px;
+        }
+
+        .pageIcon{
+            width: 24px;
+            height: 24px;
+        }
+        .pageIcon.next{
+            margin-left : 40px;
+        }
+        .pageIcon.prev{
+            margin-right : 40px;
+        }    
+
+        .pagination > .number.active{
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+            color: #474747;
+
+            background-color: transparent;    
+        }
+
+        .pageIcon.next{
+            background-image : url('../image/pageNextIcon_b.png');
+            background-size : cover;
+            margin-left : 40px;
+        }
+        .pageIcon.prev{
+            background-image : url('../image/pagePrevIcon_g.png');
+            background-size : cover;
+            margin-right : 40px;
+        }       
+
+        #content {
+            height: 298px;
+            font-size : 12px;
+        }
+        #sendBtn{
+            width : calc(100% - 38px);
+        }
+        
+        .qList .number, .aList .number{
+            padding : 0;
+        }
+
+        .aList .title{
+            min-width :254px;
+        }
+
+    }
+</style>
+<div id="communityWrapper">
+    <div id="pageTitle" class="fs2014 color_primary fw-bold">커뮤니티</div>
+    <article class="tabBox01">        
+        <ul class="tabs fs1612">
+            <li class="tab-link current" data-tab="tab-1">공지사항</li>
+            <li class="tab-link " data-tab="tab-2">문의하기</li>
+            <li class="tab-link " data-tab="tab-3">FAQ</li>    
+        </ul>
+        <div id="tabWrapper">
+            <div id="tab-1" class="tab-content current">
+                <div class="boardListWrapper">
+                    <div class="boardList">
+                        <div class="number fs1410">100</div>
+                        <div class="title fs1612">11월 10일 공지사항입니다.</div>
+                        <div class="date fs1410">2023-11-10</div>
+                    </div>
+                    <div class="boardList">
+                        <div class="number fs1410">99</div>
+                        <div class="title fs1612">11월 10일 공지사항입니다.</div>
+                        <div class="date fs1410">2023-11-10</div>
+                    </div>
+                    <div class="boardList">
+                        <div class="number fs1410">98</div>
+                        <div class="title fs1612">11월 10일 공지사항입니다.</div>
+                        <div class="date fs1410">2023-11-10</div>
+                    </div>
+                    <div class="boardList">
+                        <div class="number fs1410">97</div>
+                        <div class="title fs1612">11월 10일 공지사항입니다.</div>
+                        <div class="date fs1410">2023-11-10</div>
+                    </div>
+                    <div class="boardList">
+                        <div class="number fs1410">96</div>
+                        <div class="title fs1612">11월 10일 공지사항입니다.</div>
+                        <div class="date fs1410">2023-11-10</div>
+                    </div>
+                    <div class="boardList">
+                        <div class="number fs1410">95</div>
+                        <div class="title fs1612">11월 10일 공지사항입니다.</div>
+                        <div class="date fs1410">2023-11-10</div>
+                    </div>
+                    <div class="boardList">
+                        <div class="number fs1410">94</div>
+                        <div class="title fs1612">11월 10일 공지사항입니다.</div>
+                        <div class="date fs1410">2023-11-10</div>
+                    </div>
+                    <div class="boardList">
+                        <div class="number fs1410">93</div>
+                        <div class="title fs1612">11월 10일 공지사항입니다.</div>
+                        <div class="date fs1410">2023-11-10</div>
+                    </div>
+                    <div class="boardList">
+                        <div class="number fs1410">92</div>
+                        <div class="title fs1612">11월 10일 공지사항입니다.</div>
+                        <div class="date fs1410">2023-11-10</div>
+                    </div>
+                    <div class="boardList">
+                        <div class="number fs1410">91</div>
+                        <div class="title fs1612">11월 10일 공지사항입니다.</div>
+                        <div class="date fs1410">2023-11-10</div>
+                    </div>
+                </div>
+
+
+                <div class="pagination">
+                    <div class="pageIcon prev"></div>
+                    <div class="number active">1</div>
+                    <div class="number">2</div>
+                    <div class="number">3</div>
+                    <div class="number">4</div>
+                    <div class="number">5</div>
+                    <div class="pageIcon next"></div>
+                </div>
+
+
+            </div>
+
+
+
+            <div id="tab-2" class="tab-content">
+                <div class="mb3420"></div>
+                <div class="mb3420">
+                    <div class="fw-bold fs1612 mb14">제목</div>
+                    <input id="qTitle" type="text" placeholder="문의 제목을 입력하세요.">
+                </div>
+                <div class="mb30" style="position: relative;">
+                    <div class="fw-bold fs1612 mb14">문의 내용</div>
+                    <textarea id="content" placeholder="문의 내용을 입력하세요"></textarea>                    
+                </div>
+                <div id="sendBtn" class="basicBtn fw-bold bg_gray5 f-white">문의하기</div>
+            </div>
+
+
+            <div id="tab-3" class="tab-content">
+                <div class="faqListWrapper">
+                    <div class="faqWrapper">
+                        <div class="qList">
+                            <div class="number fs1612">Q.</div>
+                            <div class="title fs1612">등록은 어떻게 하나요?</div>
+                            <div class="arrowBtn fs1612"></div>                        
+                        </div>
+                        <div class="aList d-none">
+                            <div class="number fs1612">A.</div>
+                            <div class="aBox fs1612">
+                                등록은 상단 GNB에서 프로젝트 등록을 눌러주세요.<br>
+                                내용을 모두 작성하고 등록 버튼을 누르면 프로젝트가 등록됩니다.<br>
+                                프로젝트 등록 후에는 AI를 통해 적절한 베테랑을 추천해주는 서비스도 있으니<br>
+                                여러 방면으로 활용해보시는 것을 추천드립니다.<br>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="faqWrapper">
+                        <div class="qList">
+                            <div class="number fs1612">Q.</div>
+                            <div class="title fs1612">프로젝트를 찾으려면 어떻게 해야 하나요?</div>
+                            <div class="arrowBtn fs1612"></div>                        
+                        </div>
+                        <div class="aList d-none">
+                            <div class="number fs1612">A.</div>
+                            <div class="aBox fs1612">
+                                등록은 상단 GNB에서 프로젝트 등록을 눌러주세요.<br>
+                                내용을 모두 작성하고 등록 버튼을 누르면 프로젝트가 등록됩니다.<br>
+                                프로젝트 등록 후에는 AI를 통해 적절한 베테랑을 추천해주는 서비스도 있으니<br>
+                                여러 방면으로 활용해보시는 것을 추천드립니다.<br>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="faqWrapper">
+                        <div class="qList">
+                            <div class="number fs1612">Q.</div>
+                            <div class="title fs1612">프로젝트를 중단하고 싶어요.</div>
+                            <div class="arrowBtn fs1612"></div>                        
+                        </div>
+                        <div class="aList d-none">
+                            <div class="number fs1612">A.</div>
+                            <div class="aBox fs1612">
+                                등록은 상단 GNB에서 프로젝트 등록을 눌러주세요.<br>
+                                내용을 모두 작성하고 등록 버튼을 누르면 프로젝트가 등록됩니다.<br>
+                                프로젝트 등록 후에는 AI를 통해 적절한 베테랑을 추천해주는 서비스도 있으니<br>
+                                여러 방면으로 활용해보시는 것을 추천드립니다.<br>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="faqWrapper">
+                        <div class="qList">
+                            <div class="number fs1612">Q.</div>
+                            <div class="title fs1612">베테랑 AI 추천을 받고싶어요.</div>
+                            <div class="arrowBtn fs1612"></div>                        
+                        </div>
+                        <div class="aList d-none">
+                            <div class="number fs1612">A.</div>
+                            <div class="aBox fs1612">
+                                등록은 상단 GNB에서 프로젝트 등록을 눌러주세요.<br>
+                                내용을 모두 작성하고 등록 버튼을 누르면 프로젝트가 등록됩니다.<br>
+                                프로젝트 등록 후에는 AI를 통해 적절한 베테랑을 추천해주는 서비스도 있으니<br>
+                                여러 방면으로 활용해보시는 것을 추천드립니다.<br>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="faqWrapper">
+                        <div class="qList">
+                            <div class="number fs1612">Q.</div>
+                            <div class="title fs1612">PM으로 등록하려면 어떻게 해야 하나요?</div>
+                            <div class="arrowBtn fs1612"></div>                        
+                        </div>
+                        <div class="aList d-none">
+                            <div class="number fs1612">A.</div>
+                            <div class="aBox fs1612">
+                                등록은 상단 GNB에서 프로젝트 등록을 눌러주세요.<br>
+                                내용을 모두 작성하고 등록 버튼을 누르면 프로젝트가 등록됩니다.<br>
+                                프로젝트 등록 후에는 AI를 통해 적절한 베테랑을 추천해주는 서비스도 있으니<br>
+                                여러 방면으로 활용해보시는 것을 추천드립니다.<br>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="faqWrapper">
+                        <div class="qList">
+                            <div class="number fs1612">Q.</div>
+                            <div class="title fs1612">제 프로젝트에 PM을 신청하고 싶어요.</div>
+                            <div class="arrowBtn fs1612"></div>                        
+                        </div>
+                        <div class="aList d-none">
+                            <div class="number fs1612">A.</div>
+                            <div class="aBox fs1612">
+                                등록은 상단 GNB에서 프로젝트 등록을 눌러주세요.<br>
+                                내용을 모두 작성하고 등록 버튼을 누르면 프로젝트가 등록됩니다.<br>
+                                프로젝트 등록 후에는 AI를 통해 적절한 베테랑을 추천해주는 서비스도 있으니<br>
+                                여러 방면으로 활용해보시는 것을 추천드립니다.<br>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="faqWrapper">
+                        <div class="qList">
+                            <div class="number fs1612">Q.</div>
+                            <div class="title fs1612">회원 탈퇴는 어떻게 하나요?</div>
+                            <div class="arrowBtn fs1612"></div>                        
+                        </div>
+                        <div class="aList d-none">
+                            <div class="number fs1612">A.</div>
+                            <div class="aBox fs1612">
+                                등록은 상단 GNB에서 프로젝트 등록을 눌러주세요.<br>
+                                내용을 모두 작성하고 등록 버튼을 누르면 프로젝트가 등록됩니다.<br>
+                                프로젝트 등록 후에는 AI를 통해 적절한 베테랑을 추천해주는 서비스도 있으니<br>
+                                여러 방면으로 활용해보시는 것을 추천드립니다.<br>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="faqWrapper">
+                        <div class="qList">
+                            <div class="number fs1612">Q.</div>
+                            <div class="title fs1612">프로젝트를 완료 상태로 변경하고 싶어요.</div>
+                            <div class="arrowBtn fs1612"></div>                        
+                        </div>
+                        <div class="aList d-none">
+                            <div class="number fs1612">A.</div>
+                            <div class="aBox fs1612">
+                                등록은 상단 GNB에서 프로젝트 등록을 눌러주세요.<br>
+                                내용을 모두 작성하고 등록 버튼을 누르면 프로젝트가 등록됩니다.<br>
+                                프로젝트 등록 후에는 AI를 통해 적절한 베테랑을 추천해주는 서비스도 있으니<br>
+                                여러 방면으로 활용해보시는 것을 추천드립니다.<br>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="faqWrapper">
+                        <div class="qList">
+                            <div class="number fs1612">Q.</div>
+                            <div class="title fs1612">프로젝트를 변경하고 싶어요.</div>
+                            <div class="arrowBtn fs1410"></div>                        
+                        </div>
+                        <div class="aList d-none">
+                            <div class="number fs1612">A.</div>
+                            <div class="aBox fs1612">
+                                등록은 상단 GNB에서 프로젝트 등록을 눌러주세요.<br>
+                                내용을 모두 작성하고 등록 버튼을 누르면 프로젝트가 등록됩니다.<br>
+                                프로젝트 등록 후에는 AI를 통해 적절한 베테랑을 추천해주는 서비스도 있으니<br>
+                                여러 방면으로 활용해보시는 것을 추천드립니다.<br>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <div class="pagination">
+                    <div class="pageIcon prev"></div>
+                    <div class="number active">1</div>
+                    <div class="number">2</div>
+                    <div class="number">3</div>
+                    <div class="number">4</div>
+                    <div class="number">5</div>
+                    <div class="pageIcon next"></div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+</div>
+<div class="pb140"></div>

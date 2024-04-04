@@ -1,0 +1,484 @@
+article {
+    max-width: 1320px;
+    margin : 0 auto;
+}
+
+#article2, #article4, #article5{
+    max-width: 100%;
+}
+
+#article1{
+    position: relative;
+}
+#art1TextBox {
+    text-align: center;
+    position: relative;    
+    z-index: 10;
+}
+
+#art1Bg{
+    position: absolute;
+    z-index: 1;
+    right : 0;
+    bottom : 86px;
+}
+
+#indexPicto{
+    width : 243px;
+    height : 270px;    
+    background: url('../image/indexpicto.png');
+    background-size : cover;
+}
+
+#art1TextBox > div {
+    margin : 0 auto;
+}
+
+#art1TextBox > div:first-child{
+    padding-top : 130px;
+    /* color : #62C89A; */
+    font-size : 20px;
+}
+
+#art1TextBox > div:last-child{
+    padding-bottom : 98px;
+}
+
+
+
+.mb0430{
+    margin-bottom : 04px;
+}
+
+#article2 {
+    max-width : 100%;
+    height : 200px;
+}
+
+#bannerSwiper{
+    position: relative;
+}
+#banner1 {
+    background-image: url('../image/banner1.png');
+    background-size : cover;
+    width: 100%;    
+    height : 100%;
+}
+
+.banners > div {
+    max-width: 1320px;
+    margin : 0 auto;
+    padding-top : 234px;
+    padding-bottom : 235px;
+}
+
+#bannerSwiperNavBox{    
+    background-color : rgba(0, 0, 0, .25);
+    width : 88px;
+    height : 20px;
+    border-radius: 20px;
+    position : absolute;
+    display: flex;
+    bottom : 40px;
+    right : calc((100% - 1320px)/2 );
+    z-index: 10;
+    padding : 10px 12px;
+}
+
+#bannerSwiperNavBox .swiper-button-next:after,
+#bannerSwiperNavBox .swiper-button-prev:after {
+    color : white;
+    font-size: 20px;
+}
+
+#bannerSwiperNavBox .swiper-pagination {
+    color : white;
+    top : 9px;
+    z-index : -1;
+}
+
+#article3 {
+    width : 1264px;
+    min-height : 426px;
+    text-align: center;
+}
+
+#article3 .boxArea{
+    display: flex;
+    gap : 44px;
+    width : 1096px;
+    justify-content: space-between;
+    margin : 0 auto 90px auto;
+}
+
+.boxArea .card{
+    width : 336px;
+    height : 420px;
+    padding : 60px 55px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 40px 0px #00000014;   
+    border-radius: 80px;
+}
+
+.card .pictos{
+    width : 70px;
+    height : 70px;    
+    margin : 0 auto;
+    margin-bottom : 16px;
+}
+
+#picto1{
+    background-image: url('../image/arispicto1.png');
+    background-size : cover;
+}
+#picto2{
+    background-image: url('../image/arispicto2.png');    
+    background-size : cover;
+}
+#picto3{
+    background-image: url('../image/arispicto3.png');    
+    background-size : cover;
+}
+
+
+
+#article4{
+    background : #f8f8f8;
+}
+
+#article4 >.mainInner{
+    width : 872px;
+    margin : 0 auto;    
+    padding : 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap : 40px;
+    
+}
+
+#article4 .memberBox{
+    display: flex;
+    flex-wrap: nowrap;
+    gap : 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+.memberCircle{
+    background-color : white;
+    box-shadow: 0px 4px 40px 0px #00000014;
+    border-radius : 100%;
+    width : 160px;
+    height : 160px;
+    box-sizing: border-box;
+    padding : 45px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.memberContent{
+    line-height : 2;
+    max-width : 688px;
+}
+
+#article4 .pictos{
+    width : 40px;
+    height : 40px;
+}
+
+#article7 > .mainInner{
+    margin : 60px auto 180px auto;
+    text-align: center;
+}
+
+#article7 > .mainInner > div:first-child{
+    margin-bottom : 40px;
+}
+
+#article7 .pictos{
+    width : 70px;
+    height : 70px;
+}
+
+#article7 .cards{
+    width : 336px;
+    height : 420px;
+    box-shadow: 0px 4px 40px 0px #00000014;
+    border-radius : 80px;
+    box-sizing: border-box;
+    padding : 74px 55px;
+}
+
+.cards > div:nth-child(2){
+    margin-top : 16px;
+}
+
+.cards .line{
+    height : 2px;
+    width : 100%;
+    background-color: #f5f5f5;
+    margin : 30px 0;
+}
+
+#article7 .pictos{
+    margin : 0 auto;
+}
+
+#bridgeSwiper{
+    max-width : 1096px;
+}
+
+
+#bridgeCard1{
+    border : #6403C9 3px solid;    
+}
+
+#bridgeCard2{
+    border : #6DCF9B 3px solid;    
+}
+#bridgeCard3{
+    border : #EEC4BF 3px solid;    
+}
+
+#picto4{
+    background-image : url('../image/arispicto4.png');
+    background-size : cover;
+}
+#picto5{
+    background-image : url('../image/arispicto5.png');
+    background-size : cover;
+}
+#picto6{
+    background-image : url('../image/arispicto6.png');
+    background-size : cover;
+}
+
+
+.mainInner{
+    max-width: 1320px;
+    margin : 0 auto;
+}
+
+
+.reviewBox{
+    width : 424px;
+}
+
+#reviewSwiper {
+    margin-bottom : 200px;    
+    width: 100%;
+}
+
+#reviewSwiper .swiper-slide {
+    width : auto;  
+}
+
+#reviewSwiper a {
+    display : inline-block;
+}
+
+.reviewImage{
+    background-image: url('../image/reviewsample.png');
+    background-size : cover;
+    width : 100%;
+    height : 229px;
+    border-radius : 10px;    
+}
+
+.reviewTitle{
+    margin : 20px 0;
+}
+
+.reviewTags{
+    display: flex;
+    gap : 10px;
+    margin-bottom : 20px;
+}
+
+.reviewTag{
+    font-size : 14px;
+    border-radius: 10px;
+    padding : 8px 14px;
+    background-color: #f5f5f5;
+    color : #757575;    
+}
+
+.reviewContent{
+    font-size : 18px;
+}
+
+
+
+@media screen and (max-width : 578px) {
+    #main {
+        max-width : 100% !important;
+        margin : 0 !important;
+    }
+    #article1{
+        box-sizing: border-box;
+        height : 458px;
+        width : 100%;
+        padding-left : 32px;
+    }
+    #article1 > div:first-child {
+        padding-top: 0;
+        font-size : 24px;
+    }
+
+    #art1TextBox{
+        text-align: left;
+    }
+
+    #art1TextBox > div:first-child{
+        font-size: 14px;
+        justify-content: start;
+        flex-wrap: wrap;
+        width: 171px;
+        margin: 0;
+        padding-top: 118px;
+    }
+
+    #art1TextBox > div:nth-child(3){
+        flex-direction: column;
+    }
+    #art1TextBox > div:last-child {
+        flex-direction: column;
+    }
+
+    #art1Bg{
+        bottom : 25px;
+    }
+    #indexPicto{   
+        width : 180px;
+        height : 200px;        
+    }
+
+    #article2{
+        height : 339px;
+    }
+    
+    .mInverse{
+        background-color: #F16B6C;
+        color : white;
+        font-weight: 700;
+    }
+
+    .banners {
+        max-height : 339px;
+    }
+
+    .banners > div {
+        opacity : 0;
+    }
+
+    #banner1 {
+        background-image: url('../image/banner1m.png');
+    }
+
+    #banner2 {
+        background-image: url('../image/banner1m.png');
+    }
+
+
+    #article3{
+        width : 100%;
+        padding : 60px 32px 50px 32px;
+        box-sizing: border-box;
+    }
+
+    #article3 >div>div>div:nth-child(2){
+        line-height : 30px;
+    }
+
+    #article3 .boxArea{
+        flex-direction : column;
+    }
+    #article3 .card{
+        padding : 40px 35px;
+        height : 280px;
+    }
+
+    .card .pictos{
+        width : 50px;
+        height : 50px;
+        margin-bottom : 10px;
+    }
+    
+    #article4 {
+    }
+
+    #article4 >.mainInner{
+        max-width : calc(100% - 64px);
+        margin : 0 auto;    
+    }
+
+    #article4 .memberBox{
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .memberCircle{
+        padding : 12px 22px;
+        width : auto;
+        height : auto;
+        flex-direction: row;
+        border-radius: 20px;
+    }
+
+    .memberContent{
+        line-height : 18px;
+    }
+
+    #article4 .pictos{
+        width :20px;
+        height : 20px;   
+    }
+
+    #a4thirdBox .swiper-slide {
+        width : auto;
+    }
+
+    #article7 .mainInner {
+        margin : 70px 0;
+    }
+
+    #article7 .cards{
+        width : 204px;
+        height : 266px;
+        padding : 30px 22px;        
+        border-radius: 40px;
+    }
+
+    #article7 .pictos{
+        width : 50px;
+        height : 50px;
+    }
+
+    .cards .line{
+        margin-top : 20px;
+        margin-bottom : 20px;
+    }
+
+    .cards > div:last-child{
+        font-size :14px;
+    }
+
+    #article7 .swiper-slide{
+        width : 202px;
+    }
+
+    #article5 {
+        padding-top : 36px;
+    }
+    #article5 > .mainInner{
+        padding-left : 32px;
+    }
+
+    .reviewBox{
+        width : 296px;
+    }
+}
+ 

@@ -1,0 +1,128 @@
+<style>
+
+    .psudoCard{
+        min-height: 518px;
+        min-width : 424px;
+        padding : 40px;
+        border-radius : 10px;
+        display: inline;
+    }
+    #logo{
+        width : 124px;
+        height : 30px;    
+        background-image : url("../image/logo.png");
+        margin-bottom : 40px;
+    }
+    #areaWrapper{        
+        width : 100%;
+        min-height : 1080px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cardWrapper{
+        width : 100%;
+        display : flex;
+        align-items: center;        
+        flex-direction: column;
+        flex-wrap : nowrap;
+        gap : 20px;
+    }
+
+    .userTypeBox{
+        padding : 33px 36px 34px;
+        width : calc(100% - 72px);
+        border-radius : 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color : #f5f5f5;
+    }
+
+    .usertype {
+        line-height: 34px;
+        font-size : 28px;
+        font-weight: 700;
+    }
+
+    #goPrev{
+        color : #F16B6C;
+        border : #F16B6C 2px solid;        
+    }
+
+    #goNext{
+        color : white;
+        background-color: #d1d1d1;
+    }
+    #goNext.active{
+        background-color: #F16B6C;       
+    }
+
+    #btnBox{
+        gap : 24px;
+    }
+    @media screen and (max-width : 578px) {
+        #areaWrapper{
+            min-height: auto;
+        }
+        .psudoCard{
+            min-width : 100%;
+            padding : 40px;
+            
+        }
+        .fs20{
+            font-size : 14px;
+        }
+        .usertypeBox > div:first-child{
+            font-size : 20px;
+        } 
+        .userTypeBox > div:last-child{
+            font-size : 12px;
+        }
+        #btnBox{
+            gap : 16px;
+        }
+    }
+</style>
+<div id="areaWrapper">
+    <article class="psudoCard">
+        <div class="cardWrapper">
+            <!-- <div id="logo" class="pc"></div>             -->
+            <div class="subtitle3 mb30">회원 종류를 선택하세요</div>    
+            <div class="userTypeBox">
+                <div class="color_primary">
+                    <div class="fs20">베테랑</div>
+                    <div class="usertype">Veteran</div>
+                </div>
+                <div class="text-right">
+                    다양한 분야를 아우르는<br>프로젝트 전문가들입니다.
+                </div>
+            </div>
+            <div class="userTypeBox">
+                <div class="color_primary">
+                    <div class="fs20">아리스</div>
+                    <div class="usertype">Aris</div>
+                </div>
+                <div class="text-right">
+                    더 큰 성장을 지향하는<br>프로젝트 의뢰자들입니다.
+                </div>
+            </div>
+            <div class="userTypeBox mb30">
+                <div class="color_primary">
+                    <div class="fs20">프로젝트 매니저</div>
+                    <div class="usertype">PM</div>
+                </div>
+                <div class="text-right">
+                    시너지 넘치는 협업을 도울<br>프로젝트 매니저입니다.
+                </div>
+            </div>
+            <div id="btnBox" class="d-flex space-between w100">
+                <div id="goPrev" class="basicBtn text2">이전으로</div>
+                <div id="goNext" class="basicBtn text2">다음으로</div>
+                <!-- goNext에 .active붙이면 색깔 붙습니다.-->
+            </div>
+        </div>
+    
+    </article>
+</div>

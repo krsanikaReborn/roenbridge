@@ -1,0 +1,95 @@
+<style>
+
+    .psudoCard{
+        min-height: 518px;
+        width : 424px;
+        padding : 40px;
+        border-radius : 10px;
+        display: inline;
+    }
+    #logo{
+        width : 124px;
+        height : 30px;    
+        background-image : url("../image/logo.png");
+        margin-bottom : 40px;
+    }
+    #areaWrapper{        
+        width : 100%;
+        min-height : 1080px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cardWrapper{
+        width : 100%;
+        display : flex;
+        align-items: center;        
+        flex-direction: column;
+        flex-wrap : nowrap;
+        gap : 20px;
+    }
+
+    .cardWrapper > a{
+        width : calc(100%);
+    }
+
+    .grayBox{
+        padding : 38px;
+        width : calc(100% - 76px);
+        border-radius : 10px;
+        background-color : #f5f5f5;
+        text-align: center;
+    }
+
+
+
+    @media screen and (max-width : 578px) {
+        #areaWrapper{
+            min-height: auto;
+        }
+        .psudoCard{
+            min-width : 100%;
+            padding : 40px;
+        }
+
+        .fs20{
+            font-size : 14px;
+        }       
+        .grayBox > div:first-child{
+            font-size : 14px;
+        } 
+        .fs12{
+            font-size : 12px;
+        }
+    }
+</style>
+<div id="areaWrapper">
+    <article class="psudoCard">
+        <div class="cardWrapper">
+            <div id="logo"></div>
+            <div class="grayBox mb14">
+                <div class="text2 mb20">프로젝트 진행이 어려우신가요?</div>
+                <div class="mb10 fs12">프로젝트 진행에 어려움을 겪으신다면<br>
+                    ROEN BRIDGE에 전문 PM을 요청할 수 있습니다.</div>
+                <div class="fs12">PM 추천을 요청하시면 ROEN BRIDGE에서 직접<br>
+                    프로젝트 최적의 PM을 제안하여 연락드리겠습니다.</div>
+            </div>
+            <a>
+                <div data-remodal-target="modal1" class="basicBtn bg_color_primary f-white text2">PM 추천받기</div>
+            </a>
+        </div>
+    </article>
+</div>
+
+<div id="modal1" class="remodal small" data-remodal-id="modal1">
+    <!-- <button data-remodal-action="close" class="remodal-close"></button> -->
+    <div class="popupTitle">PM 요청이 완료되었습니다.</div>
+    <div class="popupContent fs1612 mb30">
+        해당 프로젝트에 대한 내용을 검토 후<br>연락처로 안내드리겠습니다.
+    </div>
+    <div class="remodalBtnArea">
+        <button data-remodal-action="confirm" class="remodal-confirm">확인</button>
+    </div>
+</div>  
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+    <title>ROEN BRIDGE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1 user-scalable=no" />
+    <!-- <link rel="stylesheet" href="normalize.css"> -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/remodal.css">
+    <link rel="stylesheet" href="../css/remodal-default-theme.css">      
+</head>
+
+<body>
+    <div class="remodal-bg">
+        <div data-include-path="./header.html"></div>   
+        <section id="main">
+            <div data-include-path="./aris_veteranInfo1.html"></div>
+        </section>
+        <div data-include-path="./footer.html"></div>      
+    </div>
+</body>
+<script>
+    window.addEventListener('load', function() {
+        var allElements = document.getElementsByTagName('*');
+        Array.prototype.forEach.call(allElements, function(el) {
+            var includePath = el.dataset.includePath;
+            if (includePath) {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        el.outerHTML = this.responseText;
+                    }
+                };
+                xhttp.open('GET', includePath, true);
+                xhttp.send();
+            }
+        });
+    });    
+ </script>
+ 
+<script  src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />  
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>    
+<script src="../css/remodal.js"></script>
+<script src="../css/touch-scroll.min.js"></script>
+<script>
+
+    $(()=>{ 
+        setTimeout(()=>{
+            //햄버거 온오프
+            $('#hamburgerButton').click(()=>{
+                $('#hamburgerButton').toggleClass('close');
+                $('#mMenuArea').toggleClass('active')
+            });
+            //모바일에서 상단 접기 화살표 관련
+            $('.foldArrow').click(()=>{
+                var $inner = $('#inner2');
+                var $abbreviation = $('#abbreviation');
+                $('.foldArrow').toggleClass('on');
+                if($inner.height() == 60){
+                    $inner.css({height : 240})
+                    $abbreviation.css('box-shadow','0px 10px 20px 0px #0000001A' );
+                }else{
+                    $inner.css({height : 60});
+                    $abbreviation.css('box-shadow','');
+                }
+            });
+    
+            //팝업
+            $('[data-remodal-id=suggestionsCase]').remodal();            
+            $(document).on('confirmation', '#suggestionsCase', ()=>{
+            });            
+
+            if($(window).width() < 578){
+                $('#mAside').touchScroll({hScroll : true, elastic : true, });
+            }
+
+        }, 1000);
+
+
+    });
+
+
+</script>
+

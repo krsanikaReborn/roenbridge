@@ -1,0 +1,230 @@
+<style>
+
+#addProjectHeader{
+    width : 1320px;
+    margin : 0 auto;
+}
+
+#addHeaderTitleBox{
+    margin-top : 50px;
+    margin-bottom : 36px;
+    max-width : 1320px;
+    display : flex;
+    justify-content: center;
+}
+
+#addGuageBox{
+    width : 1320px;
+    margin : 0 auto;
+    position: relative;
+}
+
+#grayGuage{
+    background : #f5f5f5;
+    width : 100%;
+    height : 6px;
+    border-radius: 3px;
+}
+
+#progress3{
+    width : calc((100% / 5) * 2 + (100% / 5 / 2));
+    height : 6px;
+    background: #F16B6C;
+}
+
+.progressGuage{    
+    position : absolute;
+    height : 6px;
+    background: #F16B6C;    
+    border-radius: 3px;
+    top : 0;
+}
+
+#progressDot{
+    position : absolute;
+    width : 18px;
+    height : 18px;
+    top: -6px;
+    right: -6px;
+    border-radius : 10px;
+    background: #F16B6C;
+}
+
+#progressContent{
+    display: flex;
+    justify-content: space-evenly;
+    width : 100%;
+    margin-top : 14px;
+    margin-bottom : 24px;
+    color : #a3a3a3;
+    font-size : 16px;    
+}
+#progressContent .active{
+    color : #F16B6C;
+    font-weight: 700;
+}
+
+article {
+    width : 100%; 
+    background : #f8f8f8;
+    padding-top: 40px;
+}
+
+#mainInner{
+    width : 872px;
+    margin : 0 auto;
+}
+
+input .longText{
+    width : 100%;
+    padding : 15px 20px;
+    font-size : 16px;
+    border-radius : 6px;
+    border : #d1d1d1 1px solid;
+}
+
+.lastMargin{
+    width : 100%;
+    height : 208px;
+}
+
+#content{
+    width : 100%;
+    height : 444px;
+    border : #d1d1d1 1px solid;
+    box-sizing: border-box;
+    padding : 20px;
+}
+
+
+#prevNextController{
+    width : 872px;
+    margin : 0 auto;
+    display: flex;   
+    justify-content: center;
+    gap : 40px;
+}
+
+#prevNextController > div{
+    display: flex;   
+    justify-content: center;
+    width : 200px;
+    padding : 15px 20px;
+    color : white;
+    border-radius : 10px;
+    background : #d1d1d1;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+
+#prevNextController > div.back{
+    color : #F16B6C;
+    border : #F16B6C 2px solid;
+    background : white;
+}
+
+#prevNextController > div.active{
+    color : white;
+    border : #F16B6C 2px solid;
+    background : #F16B6C;
+}
+
+
+
+
+@media screen and (max-width : 578px){    
+    #addProjectHeader{
+        max-width : calc(100% - 64px);
+        margin : 0 auto;
+    }
+    #main {
+       max-width : 100% !important;
+    }
+    article {
+        width : 100%;
+    }
+    #mainInner{
+        max-width : calc(100% - 64px);
+    }
+    #addHeaderTitleBox{
+        margin-top : 24px;
+        margin-bottom : 14px;
+        max-width : 100%;
+        justify-content: space-between;
+    }
+
+    #mProgress{
+        font-size : 14px;
+        font-weight: 700;
+        margin-bottom : 24px;
+    }
+
+    #categoryArea{
+        flex-wrap : nowrap;
+        gap : 7px;
+    }
+
+    .categoryBox{
+        width : calc(33%);
+        height : 64px;
+        border: #e8e8e8 1px solid;
+    }
+
+    #prevNextController{
+        margin : 0 auto;
+        width : calc(100% - 64px);
+        gap : 16px;
+    }
+
+    
+    #content{
+        height : 300px;
+
+    }
+
+    
+}
+
+</style>    
+
+<div id="addProjectHeader">
+    <div id="addHeaderTitleBox">
+        <div id="" class="fs2014 fw-bold color_primary">프로젝트 등록하기</div>
+        <div class="fs12 mobile color_primary"> 
+            <b>3</b> / 5
+        </div>
+    </div>
+    <div id="mProgress" class="mobile">
+        3. 상세정보
+    </div>
+    <div id="addGuageBox" class="pc">
+        <div id="grayGuage"></div>
+        <div id="progress3" class="progressGuage">
+            <div id="progressDot"></div>
+        </div>
+        <div id="progressContent">
+            <div class="">1. 기본정보</div>
+            <div class="">2. 준비상태</div>
+            <div class="active">3. 상세정보 </div>
+            <div class="">4. 예산 및 일정</div>
+            <div class="">5. 모집요건</div>
+        </div>
+    </div>
+</div>
+<article class="">
+    <div id="mainInner">
+        <div class="mb40">
+            <div class="fs1814 fw-bold mb2010">상세업무내용</div>
+            <div class="fs1614 mb2010">협업 시 고려해야 할 사항, 기타 업무 내용에 대한상세 내용을 작성해주세요.</div>
+            <textarea id="content" class="fs1612" placeholder="업무내용을 작성하세요."></textarea>
+        </div>
+    </div>
+    <div id="prevNextController">
+        <div class="fs1612 back">이전으로</div>
+        <div class="fs1612">다음으로</div>
+        <!-- active붙이면 버튼이 활성화됩니다.-->                
+    </div>
+    <div class="lastMargin"></div>    
+    </div>
+</article>
+

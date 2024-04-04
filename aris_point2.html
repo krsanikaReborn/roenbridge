@@ -1,0 +1,446 @@
+<style>
+
+article {
+    width : 1320px;
+    margin : 0 auto;
+}
+
+.prevIcon {
+    width : 24px;
+    height : 24px;
+    background-image: url('../image/prevIcon.png');
+    background-size : cover;
+    margin-right : 30px;
+}
+
+#historyList{
+    margin-top : 30px;
+}
+.w6980{
+    width : 69%;
+}
+
+.w75{
+    width : 75%;
+}
+
+.mt20{
+    margin-top : 20px;
+}
+
+#asideDivide{
+    margin : 30px 0;
+}
+.projectTypeBox{
+    width : 220px;
+    height : 120px;
+    border : #e8e8e8 1px solid;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    padding : 29px 22px;
+}
+
+.historyBtn{
+    width : 170px;
+    height : 50px;
+    background-image: url('../image/confirmButton.png');
+    background-size : cover;
+}
+
+.line.ver20{
+    margin : 0 20px;
+    width : 2px;
+    height : 20px;
+    background : #f5f5f5;
+}
+
+.line.ver14{
+    margin : 0 14px;
+    width : 2px;
+    height : 14px;
+    background : #e8e8e8;
+}
+
+#projectHistoryArea{
+    display: flex;
+    flex-direction: column;
+    gap : 14px;   
+    min-height : 1180px;
+
+}
+
+.pointHistoryBox{
+    border: #f8f8f8 2px solid;
+    border-radius: 10px;
+    padding : 30px 40px;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width : 100%;
+    box-sizing: border-box;
+}
+
+.pointHistoryBox > .line{
+    width : 2px;
+    height : 30px;
+    margin-left : 30px;
+    margin-right : 30px;
+    background-color: #e8e8e8;
+}
+
+
+.mb144{
+    margin-bottom : 144px;
+}
+#asideBtnArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mb1203{
+    margin-bottom : 12px;
+}
+
+.projectContent{
+    display: flex;
+}
+
+.projectContent > div:first-child {
+    margin-right : 14px;
+}
+
+.pagination{    
+    margin : 50px auto;
+    display : flex;
+    align-items: center;
+}
+
+.pagination > .number{
+    width : 40px;
+    height : 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size : 16px;
+}
+
+.pagination > .number.active{
+    color : white;
+    background-color: #F16B6C;    
+}
+
+.pageIcon{
+    width: 20px;
+    height: 20px;
+}
+.pageIcon.next{
+    background-image : url('../image/pageNextIcon.png');
+    background-size : cover;
+    margin-left : 40px;
+}
+.pageIcon.prev{
+    background-image : url('../image/pagePrevIcon.png');
+    background-size : cover;
+    margin-right : 40px;
+}
+
+#desc{
+    margin-left : 54px;
+    margin-bottom : 20px;
+}
+
+#myPointBox{
+    background : #f8f8f8;
+    font-size : 16px;
+    border-radius : 10px;
+    box-sizing: border-box;
+    width : 370px;
+    height : 100px;
+    padding : 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pointMark{
+    width : 20px;
+    height : 20px;
+    background : url('../image/union.png');
+}
+.pointArea{
+    display : flex;
+    gap : 4px;
+    align-items: center;
+}
+
+#dFlexArea{
+    display: flex;
+    gap : 24px;
+    margin-left : 54px;
+    align-items: start;
+}
+
+.statusBtn{
+    padding : 14px 20px;
+    width : 126px;
+    height : 48px;
+    box-sizing: border-box;
+    border-radius : 6px;
+    font-size : 16px;
+    font-weight: 700;
+    margin-left : 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.statusBtn.on{
+    background-color: #F16B6C;
+    color : white;
+}
+
+.statusBtn.off{
+    color: #F16B6C;
+    border : #F16B6C 2px solid;
+}
+
+.statusBtn.disable{
+    color: white;
+    background-color: #d1d1d1;
+}
+
+.logArea{
+    width : 533px;
+}
+
+.logArea >div:last-child{
+    margin-top : 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pointHistoryBox.none{
+    justify-content: center;
+    padding : 40px auto;
+    background: #f8f8f8;
+}
+
+@media screen and (max-width : 578px){    
+    article{
+        width : 100%;
+    }
+    #historyList{
+        align-items: start;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom : 0px !important;
+    }
+
+    #historyList > .prevIcon{
+        margin-bottom: 20px;
+        width : 16px;
+        height : 16px;        
+    }
+
+    #historyList > div:nth-child(2){
+        margin-bottom: 10px;
+    }
+    #historyList > div:nth-child(2){
+        margin-bottom: 10px;
+    }
+
+    #historyList .line {
+        display : none;
+    }
+
+    #projectHistoryArea{
+        margin-left : 0;
+        width : 100%;
+    }
+
+    #desc{
+        margin-left : 0px;
+    }
+
+    #dFlexArea{
+        margin-left : 0;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap : 14px;
+    }
+
+    #myPointBox{
+        width : 100%;
+        height : auto;
+        padding : 10px 20px;
+        align-items: center;
+    }
+
+    .pointHistoryBox{
+        padding : 20px;
+        font-size : 14px;
+        width : 100%;
+        flex-direction: column;
+        position: relative;
+        align-items: start;
+        gap: 20px;
+    }
+    .logArea{
+        width : 100%;
+    }
+
+    .statusBtn{
+        position : absolute;
+        top : 20px;
+        right : 20px;
+        width : 80px;
+        height : 24px;
+        padding : 6px 10px;
+        font-size : 10px;
+
+    }
+
+    .mb1203{
+        margin-bottom: 3px;
+    }
+
+    .pagination{
+        gap: 10px;
+        margin: 30px 0;
+        justify-content: space-between;
+    }
+    
+    .pagination > .number{
+        width : 24px;
+        height : 24px;
+        font-size : 12px;
+        border-radius: 5px;
+    }
+
+    .pageIcon{
+        width: 24px;
+        height: 24px;
+    }
+    .pageIcon.next{
+        margin-left : 40px;
+    }
+    .pageIcon.prev{
+        margin-right : 40px;
+    }    
+
+
+}
+
+</style>    
+
+    <article class="">
+        <div id="historyList" class="w100 d-flex items-center mb20">
+                <div class="prevIcon"></div>
+                <div class="color_primary subtitle3">포인트 내역</div>
+        </div>
+        <div id="desc" class="fs1812">결제일을 기준으로 5일이 경과되면 환불이 불가능합니다.</div>
+        <div id="dFlexArea">
+            <div id="myPointBox">
+                <div class="fs1612 fw-bold color_primary">내 포인트</div>
+                <div class="pointArea">
+                    <div class="">3,000</div>
+                    <div class="pointMark"></div>
+                </div>
+            </div>
+            <div id="projectHistoryArea">
+                <div class="pointHistoryBox">
+                    <div class="pointArea">
+                        <div class="fs1814 fw-bold color_primary">1,000</div>
+                        <div class="pointMark"></div>
+                    </div>
+                    <div class="line pc"></div>
+                    <div class="logArea">
+                        <div class="fs1412">
+                            <span class="color_gray2">2023-10-17 13:10:48</span>
+                            <span class="fw-bold color_primary">결제완료</span>                            
+                        </div>
+                        <div class="">
+                            <div class="fw-bold fs1612">신용/체크카드</div>
+                            <div class="fw-bold fs1814">10,000원</div>
+                        </div>
+                    </div>
+                    <div class="statusBtn on">환불 요청하기</div>
+                </div>
+                <div class="pointHistoryBox">
+                    <div class="pointArea">
+                        <div class="fs1814 fw-bold color_primary">1,000</div>
+                        <div class="pointMark"></div>
+                    </div>
+                    <div class="line pc"></div>
+                    <div class="logArea">
+                        <div class="fs1412">
+                            <span class="color_gray2">2023-10-17 13:10:48</span>
+                            <span class="fw-bold color_primary">환불 진행중</span>                            
+                        </div>
+                        <div class="">
+                            <div class="fw-bold fs1612">신용/체크카드</div>
+                            <div class="fw-bold fs1814">10,000원</div>
+                        </div>
+                    </div>
+                    <div class="statusBtn off">환불 진행중</div>
+                </div>
+                <div class="pointHistoryBox">
+                    <div class="pointArea">
+                        <div class="fs1814 fw-bold color_primary">1,000</div>
+                        <div class="pointMark"></div>
+                    </div>
+                    <div class="line pc"></div>
+                    <div class="logArea">
+                        <div class="fs1412">
+                            <span class="color_gray2">2023-10-17 13:10:48</span>
+                            <span class="fw-bold color_primary">환불완료</span>                            
+                        </div>
+                        <div class="">
+                            <div class="fw-bold fs1612">신용/체크카드</div>
+                            <div class="fw-bold fs1814">10,000원</div>
+                        </div>
+                    </div>
+                    <div class="statusBtn off">환불 완료</div>
+                </div>
+                <div class="pointHistoryBox">
+                    <div class="pointArea">
+                        <div class="fs1814 fw-bold color_primary">1,000</div>
+                        <div class="pointMark"></div>
+                    </div>
+                    <div class="line pc"></div>
+                    <div class="logArea">
+                        <div class="fs1412">
+                            <span class="color_gray2">2023-10-17 13:10:48</span>
+                            <span class="fw-bold color_primary">결제완료</span>                            
+                        </div>
+                        <div class="">
+                            <div class="fw-bold fs1612">신용/체크카드</div>
+                            <div class="fw-bold fs1814">10,000원</div>
+                        </div>
+                    </div>
+                    <div class="statusBtn disable">환불 요청하기</div>
+                </div>
+    
+                <!-- 내역이 없을 때-->
+                <div class="pointHistoryBox none">
+                    포인트 내역이 없습니다.
+                </div>
+        
+                <div class="pagination">
+                    <div class="pageIcon prev"></div>
+                    <div class="number active">1</div>
+                    <div class="number">2</div>
+                    <div class="number">3</div>
+                    <div class="number">4</div>
+                    <div class="number">5</div>
+                    <div class="pageIcon next"></div>
+                </div>
+            </div>
+        </div>
+        
+    </article>
+    <div class="mb144"></div>
+
+</div>

@@ -1,0 +1,868 @@
+<style>
+    .mb2014 {
+        margin-bottom: 20px;
+    }
+    .mb2030{
+        margin-bottom: 20px;
+    }
+    .mb0610{
+        margin-bottom: 6px;
+    }
+    .mb4020{
+        margin-bottom: 40px;
+    }
+    .mb4030{
+        margin-bottom: 40px;
+    }
+    .pb194{
+        padding-bottom: 194px;
+    }
+    #abbreviation {
+        background-color: #f8f8f8;
+        width: 100%;
+    }
+
+    #abbreviation>#mainInner {
+        width: 1320px;
+        margin: 0 auto;
+    }
+
+    #inner2 {
+        padding: 30px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .tagArea {
+        display: flex;
+        gap: 13px;
+    }
+
+    .blacktags>.tag {
+        color: #474747;
+        background: white;
+    }
+
+    .whitetags>.tag {
+        color: white;
+        background: #474747;
+
+    }
+
+    .tags {
+        display: flex;
+        gap: 4px;
+    }
+
+    .tag {
+        font-size: 12px;
+        padding: 6px 10px;
+        border-radius: 10px;
+        font-weight: 700;
+    }
+
+    #btnArea {
+        display: flex;
+        gap: 24px;
+    }
+
+    #btnArea>div:first-child {
+        gap: 24px;
+    }
+
+    #btnArea .btn {
+        padding: 17px 20px;
+        font-weight: 700;
+        background: white;
+        border-radius: 10px;
+        font-size: 16px;
+        width: 200px;
+        height: 84px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    #btnArea .btn.primary {
+        background: #F16B6C;
+        color: white;
+    }
+
+    #btnArea .btn.gray {
+        background: #E8E8E8;
+        color: white;
+    }
+
+    .withSidebarBox {
+        display: flex;
+        width: 100%;
+        gap: 112px;
+        max-width: 1320px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    #whiteMarginCover {
+        position: absolute;
+        background-color: white;
+        width: 30px;
+        height: 86px;
+        top: 36px;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .withSidebarBox>aside {
+        width: 288px;
+        height: 340px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        box-sizing: border-box;
+        font-weight: 700;
+    }
+
+    .withSidebarBox>aside>div {
+        padding: 22px 0;
+    }
+
+    .withSidebarBox>aside>div.active {
+        color: #F16B6C;
+    }
+
+    .withSidebarBox>article {
+        width: 984px;
+    }
+
+    article {
+        padding-top: 50px;
+    }
+
+
+    .header.d-flex {
+        align-items: center;
+    }
+
+    #arisDataArea {
+        display: flex;
+        gap: 40px;
+    }
+
+    .smallFlexBox {
+        display: flex;
+        gap: 20px;
+        font-size: 16px;
+    }
+
+    .smallFlexBox.rowBox {
+        align-items: center;
+    }
+    .smallFlexBox .textBox {
+        gap: 0px;
+    }
+
+    .smallFlexBox .line {
+        width: 2px;
+        height: 20px;
+        background: #e8e8e8;
+    }
+
+    .evaluationBox {
+        width: 984px;
+        border-radius: 10px;
+        border: #e8e8e8 2px solid;
+        height: 194px;
+        padding: 30px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    .evaluationBox .ratingStarBox img{
+        width: 60px;
+        height: 60px;
+    }
+    .evaluationBox .ratingStarBox img~img{
+        margin-left: 20px;
+    }
+    .evaluationBox .textBox{
+        color: #757575;
+    }
+
+
+    .evaluationBtn {
+        width: 170px;
+        line-height: 20px;
+        padding: 13px 20px;
+        background-color: white;
+    }
+
+    .evaluationBtn.bg_color_primary {
+        background-color: #F16B6C;
+    }
+
+    .remodal.small {
+        height: auto;
+    }
+
+    .remodalBtnArea {
+        gap: 0px;
+        margin-top: 30px;
+    }
+
+    .remodalBtnArea>button:first-child:not(:only-child) {
+        margin-right: 24px;
+    }
+
+    .profileInfoBox {
+        display: flex;
+        align-items: center;
+    }
+
+    .profileInfoItem {
+        display: flex;
+        align-items: center;
+    }
+
+    .profileInfoItem>div {
+        margin-right: 14px;
+    }
+
+    .iconInfo{
+        width : 20px;
+        height : 20px;
+        background-image: url('../image/iconInfo.png');
+        background-size: cover;
+    }
+    .grayBox{
+        display: flex;
+        flex-direction: column;
+        padding : 38px;
+        width : calc(100% - 76px);
+        border-radius : 10px;
+        background-color : #f5f5f5;
+        text-align: center;
+        align-items: center;
+    }
+    .grayBox .textBox>div{
+        display: flex;
+        line-height: 20px;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+    }
+    .basicBtn{
+        width: 170px;
+        display: flex;
+        justify-content: center;
+        padding: 15px 20px;
+        color: white;
+        border-radius: 6px;
+        background: #d1d1d1;
+        font-weight: 700;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+    .contentBox>.basicBtn.active {
+        color: white;
+        background: #F16B6C;
+    }
+
+    .evaluationText{
+        width: 984px;
+        height: 140px;
+        padding: 20px;
+        border: #d1d1d1 1px solid;
+        border-radius: 6px;
+        resize: none;
+        font-size: 16px;
+        margin-bottom: 30px;
+        box-sizing: border-box;
+    }
+    .contentBox{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .evaluationItem {
+        display: flex;
+        padding: 30px;
+        border-radius: 10px;
+        min-height: 54px;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .evaluationItem.aris{
+        background: #f8f8f8;
+    }
+    
+    .evaluationItem .profile {
+        display: flex;
+        align-items: center;
+        margin-bottom: 14px;
+    }
+
+    .evaluationItem .profile .profileInfoBox>div {
+        margin-right: 14px;
+    }
+
+    .evaluationItem .profile .userTypeTag {
+        font-size: 12px;
+        width: fit-content;
+        padding: 6px 10px;
+        gap: 10px;
+        border-radius: 100px;
+    }
+
+    .evaluationItem.aris .profile .userTypeTag {
+        background-color: #FFFFFF;
+    }
+
+    .evaluationItem.veteran .profile .userTypeTag {
+        background-color: #f5f5f5;
+    }
+
+    .evaluationItem img {
+        width: 30px;
+        height: 30px;
+        border-radius: 100px;
+        margin-right: 14px;
+    }
+
+    .evaluationItem .dateBox {
+        color: #a3a3a3;
+    }
+
+    .evaluationItem .evaluationContents {
+        max-width: 814px;
+    }
+
+    .userName {
+        font-size: 18px;
+        margin: 0;
+    }
+    @media screen and (max-width : 578px) {
+        .mb2030{
+            margin-bottom: 30px;
+        }
+        .mb0610{
+            margin-bottom: 10px;
+        }
+        .mb4020{
+            margin-bottom: 20px;
+        }
+        .mb4030{
+            margin-bottom: 30px;
+        }
+        .meetingHistoryList::-webkit-scrollbar {
+            display: none;
+        }
+
+        .header.mobile {
+            display: flex !important;
+        }
+
+        .mb2014 {
+            margin-bottom: 14px;
+        }
+
+        #main {
+            max-width: 100% !important;
+        }
+
+        .withSidebarBox {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        #abbreviation {
+            position: absolute;
+            z-index: 10;
+        }
+
+        #abbreviation>#mainInner {
+            width: 100%;
+        }
+
+        #inner2 {
+            padding: 0;
+            width: 100%;
+            flex-direction: column;
+            overflow: hidden;
+            height: 60px;
+        }
+
+        #inner2 .subtitle3 {
+            padding: 21px 32px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 0 !important;
+            box-sizing: border-box;
+        }
+
+        .foldArrow {
+            width: 20px;
+            height: 20px;
+            background: url('../image/iconArrowDown.png');
+        }
+
+        .foldArrow.on {
+            background: url('../image/iconArrowUp.png') !important;
+        }
+
+        .tagArea {
+            margin-top: 14px;
+            padding-left: 32px;
+            padding-right: 32px;
+            margin-bottom: 16px;
+        }
+
+        .tag {
+            font-size: 9px;
+        }
+
+        #userdata {
+            flex-direction: row;
+            padding: 21px 30px;
+            gap: 20px;
+            width: 100%;
+        }
+
+        #userdata .userImg {
+            margin-bottom: 0;
+        }
+
+        #btnArea {
+            gap: 16px;
+            flex-direction: column;
+            width: calc(100% - 64px);
+            margin: 0 auto;
+            box-sizing: border-box;
+            padding-bottom: 30px;
+        }
+
+        #btnArea>div:first-child {
+            gap: 16px;
+        }
+
+        #btnArea .btn {
+            padding: 13px 20px;
+            font-size: 12px;
+            width: 100%;
+            height: 40px;
+            flex-direction: row;
+        }
+
+
+        .withSidebarBox>aside {
+            margin-top: 60px;
+            flex-direction: row;
+            width: 100%;
+            height: auto;
+            margin-left: 32px;
+            margin-right: 32px;
+            overflow-x: auto;
+            transform: translateX(0px);
+            -ms-overflow-style: none;
+            /* 인터넷 익스플로러 */
+            scrollbar-width: none;
+            /* 파이어폭스 */
+        }
+
+        .withSidebarBox>aside::-webkit-scrollbar {
+            display: none;
+        }
+
+        .withSidebarBox>aside>div {
+            display: flex;
+            justify-content: center;
+            min-width: 100px;
+            padding: 14px 0;
+            font-size: 14px;
+        }
+
+        .withSidebarBox>article {
+            width: calc(100% - 64px);
+            margin: 0 auto;
+            padding-top: 0;
+        }
+
+        #arisDataArea {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #attachmentFilesBox {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #asideDivide {
+            margin: 24px 0;
+        }
+
+        #userTypeBox {
+            display: flex;
+            margin: 0;
+        }
+
+        .userTypeTag {
+            font-size:  9px;
+            padding: 6px 10px;
+            margin: 0;
+            margin-right: 10px;
+            width: 19px;
+        }
+        
+        .username {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .projectTypeBox {
+            width: calc(50% - 8px);
+            height: auto;
+            padding: 20px 35px;
+        }
+
+        .w6980 {
+            width: 80%;
+        }
+
+        .withSidebarBox .basicBtn {
+            width: calc(50% - 8px);
+            margin: 0 !important;
+        }
+
+        #asideBtnArea {
+            flex-direction: row;
+            gap: 16px;
+        }
+
+        .mb1203 {
+            margin-bottom: 3px;
+        }
+
+        .smallFlexBox {
+            font-size: 12px;
+            align-items: center;
+        }
+
+        .smallFlexBox.rowBox {
+            gap: 10px;
+        }
+
+        .smallFlexBox>.line {
+            height: 10px;
+        }
+
+        .evaluationBox {
+            width: 100%;
+            position: relative;
+            border-radius: 6px;
+            height: 118px;
+            padding: 20px;
+            flex-direction: column;
+        }
+
+        .evaluationBox .ratingStarBox img{
+            width: 30px;
+            height: 30px;
+        }
+        .evaluationBox .ratingStarBox img~img{
+            margin-left: 10px;
+        }
+        .smallFlexBox {
+            font-size: 12px;
+        }
+        
+        .remodal button {
+            width: 110px;
+        }
+
+        .remodal .popupResource {
+            width: 100%;
+            padding: 20px;
+            font-size: 12px;
+            box-sizing: border-box;
+        }
+
+        .remodal.small {
+            height: auto;
+        }
+
+        .remodal.small .popupContent {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            flex-direction: column;
+        }
+
+        .remodal.small .popupTitle {
+            margin-bottom: 12px;
+        }
+
+        .remodalBtnArea>button:first-child:not(:only-child) {
+            margin-right: 16px;
+        }
+
+        .remodal.small .popupTitle {
+            margin-bottom: 14px;
+        }
+        
+        .profileInfoBox {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .profileInfoItem {
+            margin-bottom: 6px;
+        }
+
+        .profileInfoItem>div {
+            margin-right: 4px;
+        }
+
+        .userName {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        #projectInfo{
+            font-size : 14px;
+            min-height : auto;
+            height : fit-content;
+        }
+        #projectInfo > div {
+            gap: 10px;
+            float: left;
+            margin-right : 20px;
+        }   
+        #projectInfo > div+div {
+            margin-top : 10px;
+        }   
+        .grayBox > div:first-child{
+            font-size : 14px;
+        } 
+        .grayBox .textBox>div{
+            line-height: 14px;
+            flex-direction: column;
+        }
+        .grayBox .textBox>div+div{
+            margin-top: 14px;
+        }
+        .contentBox .basicBtn{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 15px 20px;
+            color: white;
+            border-radius: 6px;
+            background: #d1d1d1;
+            font-weight: 700;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+        .evaluationText{
+            width: 100%;
+            height: 120px;
+            padding: 20px;
+            font-size: 12px;
+            border: #d1d1d1 1px solid;
+            border-radius: 6px;
+            resize: none;
+            margin-bottom: 14px;
+            box-sizing: border-box;
+        }
+        .evaluationContents{
+            font-size: 12px;
+        }
+    }
+
+</style>
+
+<div id="abbreviation">
+    <div id="mainInner">
+        <div id="inner2">
+            <div>
+                <div class="subtitle3 mb14">
+                    <div class="">Vue.js기반 웹 UX/UI 화면 디자인</div>
+                    <div class="mobile foldArrow"></div>
+                </div>
+                <div class="tagArea">
+                    <div class="whitetags tags">
+                        <div class="tag">기술거래</div>
+                        <div class="tag">디자인</div>
+                    </div>
+                    <div class="blacktags tags">
+                        <div class="tag">UX/UI 디자인</div>
+                        <div class="tag">UX/UI</div>
+                        <div class="tag">Vue.js기반</div>
+                    </div>
+                </div>
+            </div>
+            <div id="btnArea" class="fs2014">
+                <div class="d-flex">
+                    <div class="btn">
+                        <div>프로젝트 상태</div>
+                        <div class="color_primary">완료</div>
+                    </div>
+                </div>
+                <div class="btn gray">
+                    <div>PM 매칭 불가</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="withSidebarBox">
+    <div id="whiteMarginCover" class="mobile"></div>
+    <aside id="mAside" class="fs2014">
+        <div class="">프로젝트 정보</div>
+        <div class="">신청 내역</div>
+        <div class="">미팅<div class="new icon"></div>
+        </div>
+        <div class="">선정</div>
+        <div class="active">평가</div>
+    </aside>
+    <article>
+        <!-- 내용없음 -->
+        <div>
+            <div class="header d-flex mb2014">
+                <div class="fs1814 fw-bold">프로젝트 평가</div>
+            </div>
+        </div>
+        <div class="evaluationBox mb4030">
+            <span class="fs2014 fw-bold mb2010">이 프로젝트의 만족도를 평가해주세요</span>
+            <div class="smallFlexBox rowBox ratingBox">
+                <div class="ratingStarBox">
+                    <img src="../image/star_rate_empty_big.png"/>
+                    <img src="../image/star_rate_empty_big.png"/>
+                    <img src="../image/star_rate_empty_big.png"/>
+                    <img src="../image/star_rate_empty_big.png"/>
+                    <img src="../image/star_rate_empty_big.png"/>
+                </div>
+                <div class="textBox fw-bold fs2014">
+                    <span><span class="color_primary">0</span>/5</span>
+                </div>
+            </div>
+        </div>
+        <div class="mb4020">
+            <div class="mb2014">
+                <div class="fs1814 fw-bold mb2014">평가 내용</div>
+                <div class="fs1612">프로젝트를 마무리하며 베테랑에 대한 평가를 남겨보세요.</div>
+            </div>
+            
+            <div class="contentBox">
+                <textarea class="evaluationText" placeholder="평가 내용을 작성하세요"></textarea>
+                <div class="basicBtn">평가 작성하기</div>
+                <!-- active붙이면 색 들어옵니다.-->
+            </div>
+        </div>
+        <div class="pb140"></div>
+        <!-- 평가 중 -->
+        <div>
+            <div class="header d-flex mb2014">
+                <div class="fs1814 fw-bold">프로젝트 평가</div>
+            </div>
+        </div>
+        <div class="evaluationBox mb4030">
+            <span class="fs2014 fw-bold mb2010">이 프로젝트의 만족도를 평가해주세요</span>
+            <div class="smallFlexBox rowBox ratingBox">
+                <div class="ratingStarBox">
+                    <img src="../image/star_rate_big.png"/>
+                    <img src="../image/star_rate_big.png"/>
+                    <img src="../image/star_rate_big.png"/>
+                    <img src="../image/star_rate_empty_big.png"/>
+                    <img src="../image/star_rate_empty_big.png"/>
+                </div>
+                <div class="textBox fw-bold fs2014">
+                    <span><span class="color_primary">3</span>/5</span>
+                </div>
+            </div>
+        </div>
+        <div class="mb4020">
+            <div class="mb2014">
+                <div class="fs1814 fw-bold mb2014">평가 내용</div>
+                <div class="fs1612">프로젝트를 마무리하며 베테랑에 대한 평가를 남겨보세요.</div>
+            </div>
+            
+            <div class="contentBox">
+                <textarea class="evaluationText" placeholder="평가 내용을 작성하세요">요구사항이 적절히 반영되어서 금방 마무리할 수 있었던 것 같습니다. 
+프로젝트의 퀄리티나 커뮤니케이션적인 부분들도 잘 챙겨주셔서 만족스러웠습니다. </textarea>
+                <div class="basicBtn active" data-remodal-target="evalutationSaveCase">평가 작성하기</div>
+                <!-- active붙이면 색 들어옵니다.-->
+            </div>
+        </div>
+        <div class="pb140"></div>
+        <!-- 평가후 추가 -->
+        <div>
+            <div class="header d-flex mb2014">
+                <div class="fs1814 fw-bold">프로젝트 평가</div>
+            </div>
+        </div>
+        <div class="evaluationBox mb4030">
+            <span class="fs2014 fw-bold mb2010">이 프로젝트의 만족도를 평가해주세요</span>
+            <div class="smallFlexBox rowBox ratingBox">
+                <div class="ratingStarBox">
+                    <img src="../image/star_rate_big.png"/>
+                    <img src="../image/star_rate_big.png"/>
+                    <img src="../image/star_rate_big.png"/>
+                    <img src="../image/star_rate_big.png"/>
+                    <img src="../image/star_rate_empty_big.png"/>
+                </div>
+                <div class="textBox fw-bold fs2014">
+                    <span><span class="color_primary">4</span>/5</span>
+                </div>
+            </div>
+        </div>
+        <div class="mb4020">
+            <div class="mb2014">
+                <div class="fs1814 fw-bold mb2014">평가 내용</div>
+                <div class="fs1612">프로젝트를 마무리하며 베테랑에 대한 평가를 남겨보세요.</div>
+            </div>
+            <div class="evaluationItem aris d-flex direction-column">
+                <div class="profile">
+                    <img src="./image/profileDefault.png" />
+                    <div class="profileInfoBox">
+                        <div class="profileInfoItem">
+                            <div class="fw-bold userName">김유나</div>
+                            <div class="userTypeTag">아리스</div>
+                        </div>
+                        <div class="smallFlexBox rowBox textBox dateBox">
+                            <div class="">20-10-17</div>
+                            <div class="line"></div>
+                            <div class="">13:00</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="evaluationContents">요구사항이 적절히 반영되어서 금방 마무리할 수 있었던 것 같습니다.<br/>
+                    프로젝트의 퀄리티나 커뮤니케이션적인 부분들도 잘 챙겨주셔서 만족스러웠습니다. </div>
+            </div>
+        </div>
+</div>
+<div class="pb194"></div>
+</article>
+</div>
+<div id="evalutationSaveCase" class="remodal small" data-remodal-id="evalutationSaveCase">
+    <!-- <button data-remodal-action="close" class="remodal-close"></button> -->
+    <div class="popupTitle">평가 내용 저장하기</div>
+    <div class="popupContent fs1612 mb30">
+        프로젝트에 대한 평가 내용을 저장하시겠습니까?<br/>
+내용을 저장한 후에는 수정 또는 추가가 불가능합니다.
+    </div>
+    <div class="remodalBtnArea">
+        <button data-remodal-action="cancel" class="remodal-cancel">취소</button>
+        <button data-remodal-action="confirm" class="remodal-confirm">저장하기</button>
+    </div>
+</div>

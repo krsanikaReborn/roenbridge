@@ -1,0 +1,81 @@
+<style>
+
+    .psudoCard{
+        min-height: 518px;
+        width : 424px;
+        padding : 40px;
+        border-radius : 10px;
+        display: inline;
+    }
+    #logo{
+        width : 124px;
+        height : 30px;    
+        background-image : url("../image/logo.png");
+        margin-bottom : 40px;
+    }
+    #areaWrapper{        
+        width : 100%;
+        min-height : 1080px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cardWrapper{
+        width : 100%;
+        display : flex;
+        align-items: center;        
+        flex-direction: column;
+        flex-wrap : nowrap;
+        gap : 20px;
+    }
+
+    .cardWrapper > a{
+        width : calc(100%);
+    }
+
+    .grayBox{
+        padding : 38px;
+        width : calc(100% - 76px);
+        border-radius : 10px;
+        background-color : #f5f5f5;
+        text-align: center;
+    }
+
+
+
+    @media screen and (max-width : 578px) {
+        #areaWrapper{
+            min-height: auto;
+        }
+        .psudoCard{
+            min-width : 100%;
+            padding : 40px;
+        }
+
+        .fs20{
+            font-size : 14px;
+        }       
+        .grayBox > div:first-child{
+            font-size : 14px;
+        } 
+        .fs12{
+            font-size : 12px;
+        }
+    }
+</style>
+<div id="areaWrapper">
+    <article class="psudoCard">
+        <div class="cardWrapper">
+            <div id="logo"></div>
+            <div class="grayBox mb14">
+                <div class="text2 mb20">프로젝트 등록이 완료되었습니다</div>
+                <div class="mb10 fs12">지금 바로 AI매칭을 통해<br>
+                    다양한 베테랑을 만나보세요!</div>
+            </div>
+            <div class="basicBtn bg_color_primary f-white text2 active">AI로 추천받기</div>
+            <div class="basicBtn bg_white_true border_primary color_primary text2 w100">메인으로</div>
+        </div>
+    </article>
+</div>
+
